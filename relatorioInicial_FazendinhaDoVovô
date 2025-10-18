@@ -1,0 +1,25 @@
+Equipe: Fazendinha do vovô
+Nome: Rodrigo Pereira de Carvalho | ADS : 3º Semestre
+Nome: Leonardo Cesar | ADS : 1º Semestre
+Nome: Raquel Quiterio | ADS : 1º Semestre
+
+Titulo Provisório: Fazendinha do vovô
+Ferramenta: Godot
+
+Tema da gamejam: ODS da ONU
+Tema Obrigatório: Educação de Qualidade
+Tema Opcional escolhido: Vida terrestre
+
+Descrição:
+Estilo de jogo: Casual, 3D
+
+Relátorio Inicial do jogo e como esta incluido cada tema
+
+Tivemos uma ideia de fazer um jogo sobre restauração de uma floresta
+O jogador se encontra em uma floresta que foi devastada por algo(seca, queimada ou desmatamento)
+o objetivo dele é restaurar essa floresta, o jogador terá ao seu apoio uma cabana e, dentro desta
+cabana, possui um livro para instrui-lo nesse objetivo (por exemplo, habitat de algumas arvores, o mapa do local, como sobreviver, etc)
+este livro será a nossa implementação da educação de qualidade, já que é onde o jogador vai aprender onde plantar e como restaurar cada
+parte da floresta, já a nossa implementação de Vida Terrestre, será ao salvar a floresta, mais vida floresce na floresta, além disso,
+o jogador receberá premios da instituição que cuida da floresta
+
