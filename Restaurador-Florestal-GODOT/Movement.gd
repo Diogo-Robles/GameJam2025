@@ -13,7 +13,7 @@ var rotation_y = 0.0
 
 #relacionados a interação aqui a baixo
 
-@export var max_outline_distance: float = 1.0 # <-- ADICIONE ESTA LINHA
+@export var max_outline_distance: float = 1.50 # <-- ADICIONE ESTA LINHA
 @export var interact_distance: float = 2.0
 @export var interact_angle: float = 25.0
 var current_outline_target: Node3D = null # Novo rastreador de alvo com outline
