@@ -109,8 +109,6 @@ data = PackedVector3Array(0.0157, 0.0255, 0.3348, -0.0157, 0.0255, -0.061199997,
 
 [sub_resource type="LabelSettings" id="LabelSettings_y5ym7"]
 font_size = 64
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Node3D" type="Node3D"]
 

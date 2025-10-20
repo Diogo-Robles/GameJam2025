@@ -4,6 +4,6 @@
 [ext_resource type="Script" uid="uid://tvhptgycfmrb" path="res://Assets/kenney_nature-kit/Models/DAE format/Plantable.gd" id="2_5g5dj"]
 
 [node name="Plantable" type="Node3D"]
+script = ExtResource("2_5g5dj")
 
 [node name="crops_dirtSingle" parent="." instance=ExtResource("1_hldti")]
-script = ExtResource("2_5g5dj")
