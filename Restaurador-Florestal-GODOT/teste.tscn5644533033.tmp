@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://c5sa5fcfd2se2" path="res://Assets/Scripts/TreeStump.gd" id="7_nu3td"]
 [ext_resource type="PackedScene" uid="uid://drvsg7s4f065v" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_round.dae" id="7_wur0a"]
 [ext_resource type="Script" uid="uid://c0g4vq3hxnvxi" path="res://Assets/toolScript.gd" id="8_2krrl"]
-[ext_resource type="PackedScene" uid="uid://bxy5swtim2eip" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_square.dae" id="9_63wb4"]
+[ext_resource type="PackedScene" uid="uid://bxy5swtim2eip" path="res://Assets/TSCN/Stump_Square_bill.tscn" id="9_63wb4"]
 [ext_resource type="PackedScene" uid="uid://phwagfpskrmo" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_squareDetailed.dae" id="10_gir6c"]
 [ext_resource type="PackedScene" uid="uid://ck8di3xsnnqng" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_squareDetailedWide.dae" id="11_46aar"]
 [ext_resource type="PackedScene" uid="uid://xh4ixd8lg7h6" path="res://Assets/kenney_nature-kit/Models/DAE format/lily_large.dae" id="15_sqasj"]

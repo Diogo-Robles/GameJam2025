@@ -10,7 +10,7 @@ var outline_mesh: MeshInstance3D = null
 
 #config de outline
 const OUTLINE_COLOR = Color(0.809, 0.955, 0.0, 1.0)
-const OUTLINE_SCALE = 1.03 
+const OUTLINE_SCALE = 1.1 
 
 func find_first_mesh_instance(node: Node) -> MeshInstance3D:
 	if node is MeshInstance3D:
