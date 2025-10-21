@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bxedn5rhcci3w"]
+[gd_scene load_steps=48 format=3 uid="uid://bxedn5rhcci3w"]
 
 [ext_resource type="PackedScene" uid="uid://x7mhyqnilryn" path="res://Assets/mapateste.glb" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://5thdr68hydqi" path="res://Player.gd" id="2_s2wow"]
@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://6cw5ou6ry1yk" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_tall.dae" id="6_cgmdw"]
 [ext_resource type="PackedScene" uid="uid://cdkx036aw4j55" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_oldTall.dae" id="6_nh4wr"]
 [ext_resource type="Script" uid="uid://c5sa5fcfd2se2" path="res://Assets/Scripts/TreeStump.gd" id="7_nu3td"]
-[ext_resource type="PackedScene" uid="uid://drvsg7s4f065v" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_round.dae" id="7_wur0a"]
-[ext_resource type="PackedScene" uid="uid://bxy5swtim2eip" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_square.dae" id="9_63wb4"]
-[ext_resource type="PackedScene" uid="uid://phwagfpskrmo" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_squareDetailed.dae" id="10_gir6c"]
-[ext_resource type="PackedScene" uid="uid://ck8di3xsnnqng" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_squareDetailedWide.dae" id="11_46aar"]
+[ext_resource type="PackedScene" uid="uid://dib1tl7vd13sr" path="res://Assets/TSCN/stump_round_detailed_bill.tscn" id="9_oh2g8"]
+[ext_resource type="PackedScene" uid="uid://bp71ucojsg8uj" path="res://Assets/TSCN/stump_square_detailed_bill.tscn" id="11_3osue"]
+[ext_resource type="PackedScene" uid="uid://c4pmngll5ubw5" path="res://Assets/TSCN/stump_square_detailed_wide_bill.tscn" id="12_mk30p"]
+[ext_resource type="PackedScene" uid="uid://q7i6ondfdmfi" path="res://Assets/TSCN/stump_round_bill.tscn" id="12_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://xh4ixd8lg7h6" path="res://Assets/kenney_nature-kit/Models/DAE format/lily_large.dae" id="15_sqasj"]
 [ext_resource type="PackedScene" uid="uid://moipqr451wxy" path="res://Assets/kenney_nature-kit/Models/DAE format/lily_small.dae" id="16_4fthx"]
 [ext_resource type="PackedScene" uid="uid://brxl8nv1x0iar" path="res://Assets/kenney_survival-kit/Models/FBX format/structure-roof.fbx" id="17_ff505"]
@@ -22,6 +22,7 @@
 [ext_resource type="ArrayMesh" uid="uid://wfr4t8wrlo58" path="res://Assets/kenney_nature-kit/Models/OBJ format/canoe_paddle.obj" id="22_b5wkr"]
 [ext_resource type="PackedScene" uid="uid://dntfena8qh7d8" path="res://Assets/kenney_nature-kit/Models/DAE format/log.dae" id="22_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://c50h3035wdo1y" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_thin.dae" id="30_guoat"]
+[ext_resource type="PackedScene" uid="uid://dr0jisf651qrx" path="res://Assets/TSCN/Stump_Square_bill.tscn" id="30_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://l4v20i1mhdsk" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_simple.dae" id="31_3m8kk"]
 [ext_resource type="PackedScene" uid="uid://bf3vxg8uyoh6f" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_default.dae" id="32_0m6ms"]
 [ext_resource type="PackedScene" uid="uid://d2qkiglo8lycy" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_palmBend.dae" id="33_0m6ms"]
@@ -106,7 +107,7 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Node3D" type="Node3D"]
 
 [node name="mapateste" parent="." instance=ExtResource("1_7w86a")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.17955422, -6.8255854, 0.04678631)
+transform = Transform3D(0.29999766, 0.000855662, -0.0008133287, -0.00085774297, 0.2999978, -0.0007670484, 0.00081113377, 0.0007693691, 0.29999793, -0.17955422, -6.8255854, 0.04678631)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.9810563, 4.979698, 15.459994)
@@ -732,9 +733,6 @@ transform = Transform3D(-0.04638639, 0, 0.59820426, 0, 0.59999996, 0, -0.5982042
 [node name="stump_oldTall128" parent="Stumps" instance=ExtResource("6_nh4wr")]
 transform = Transform3D(0.2398727, 0, 1.277678, 0, 1.3, 0, -1.277678, 0, 0.2398727, 34.92262, 3.6567132, 33.099724)
 
-[node name="stump_oldTall129" parent="Stumps" instance=ExtResource("6_nh4wr")]
-transform = Transform3D(0.90868306, 0, 0.41748652, 0, 1, 0, -0.41748652, 0, 0.90868306, -25.705814, 0.14986134, 11.054314)
-
 [node name="stump_old60" parent="Stumps" instance=ExtResource("5_ceje6")]
 transform = Transform3D(0.1471535, 0, -0.9891136, 0, 1, 0, 0.9891136, 0, 0.1471535, 34.425793, 3.6567135, 38.81725)
 
@@ -815,9 +813,6 @@ transform = Transform3D(-0.26589274, 0, -0.96400267, 0, 1, 0, 0.96400267, 0, -0.
 
 [node name="stump_oldTall147" parent="Stumps" instance=ExtResource("6_nh4wr")]
 transform = Transform3D(0.2828102, 0, -0.9591758, 0, 1, 0, 0.9591758, 0, 0.2828102, 34.69469, 3.6567135, 37.87402)
-
-[node name="stump_oldTall148" parent="Stumps" instance=ExtResource("6_nh4wr")]
-transform = Transform3D(0.90868306, 0, 0.41748652, 0, 1, 0, -0.41748652, 0, 0.90868306, -25.940643, 0.14986134, 15.828262)
 
 [node name="stump_old69" parent="Stumps" instance=ExtResource("5_ceje6")]
 transform = Transform3D(-0.8909035, 0, -0.45419264, 0, 1, 0, 0.45419264, 0, -0.8909035, 26.56712, 3.624845, 27.895462)
@@ -1392,1433 +1387,839 @@ transform = Transform3D(-0.9320774, 0, -0.36225915, 0, 1, 0, 0.36225915, 0, -0.9
 
 [node name="Stumps2" type="Node" parent="."]
 
-[node name="stump_round3" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -22.624569, 3.6522732, 24.053822)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round4" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -22.624569, 3.6522732, 22.627483)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square3" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -21.967813, 3.6591368, 21.741209)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square4" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -21.832577, 3.6591368, 22.489685)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed3" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -23.186317, 3.6479993, 23.316114)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide3" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -22.101276, 3.6361313, 23.190119)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round5" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -22.624569, 3.6522732, 21.672096)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round6" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -22.624569, 3.6522732, 20.245758)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square5" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -22.356987, 3.6591368, 19.359484)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square6" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -21.832577, 3.6591368, 20.10796)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed4" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -23.186317, 3.6479993, 20.93439)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round7" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -23.503323, 3.6522732, 16.035774)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round8" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -22.746275, 3.6522732, 17.244625)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square7" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -22.832487, 3.6591368, 18.344341)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square8" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -23.344366, 3.6591368, 17.781773)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed5" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -22.635681, 3.6479993, 16.36284)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide5" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -23.488401, 3.6361313, 17.045525)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round9" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -22.239191, 3.6522732, 18.054335)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round10" parent="Stumps2" groups=["interactables"] instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -21.482143, 3.6522732, 19.263186)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square9" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -21.238523, 3.6591368, 20.156345)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square10" parent="Stumps2" groups=["interactables"] instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -22.080235, 3.6591368, 19.800331)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed6" parent="Stumps2" groups=["interactables"] instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -12.1674, 3.6479993, 14.139517)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed66" parent="Stumps2" groups=["interactables"] instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -12.1674, 3.6479993, 13.40448)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed67" parent="Stumps2" groups=["interactables"] instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -11.327354, 3.6479993, 13.40448)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide4" parent="Stumps2" groups=["interactables"] instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -22.101276, 3.6361313, 20.808393)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round11" parent="Stumps2" groups=["interactables"] instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -24.71259, 3.6522732, 23.527779)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round12" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -24.71259, 3.6522732, 22.627483)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square11" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -24.055834, 3.6591368, 21.741209)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square12" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -23.920597, 3.6591368, 22.489685)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed7" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -25.274338, 3.6479993, 23.316114)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide6" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -24.189297, 3.6361313, 23.190119)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round13" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -24.71259, 3.6522732, 21.672096)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round14" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -24.71259, 3.6522732, 20.245758)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square13" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -24.445007, 3.6591368, 19.359484)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square14" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -23.920597, 3.6591368, 20.10796)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed8" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -25.274338, 3.6479993, 20.93439)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round15" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -25.591343, 3.6522732, 16.035774)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round16" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -24.834295, 3.6522732, 17.244625)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square15" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -24.920507, 3.6591368, 18.344341)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square16" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -25.432386, 3.6591368, 17.781773)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed9" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -24.723701, 3.6479993, 16.36284)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide7" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -25.576422, 3.6361313, 17.045525)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round17" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -24.327211, 3.6522732, 18.054335)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round18" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -23.570164, 3.6522732, 19.263186)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square17" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -23.326544, 3.6591368, 20.156345)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square18" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -24.168255, 3.6591368, 19.800331)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed10" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -23.459572, 3.6479993, 18.381403)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide8" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -24.189297, 3.6361313, 20.808393)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round19" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -26.432203, 3.6522732, 15.87616)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round20" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.99438804, 0, 0.10579552, 0, 1, 0, -0.10579552, 0, 0.99438804, -26.506752, 3.6522732, 17.300549)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square19" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -27.208933, 3.6591368, 18.151285)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square20" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -27.304865, 3.6591368, 17.396763)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed11" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.9579128, 0, 0.28705963, 0, 1, 0, -0.28705963, 0, 0.9579128, -25.909779, 3.6479993, 16.642218)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide9" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -26.999924, 3.6361313, 16.71133)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round21" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -26.556686, 3.6522732, 18.25463)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round22" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.99438804, 0, 0.10579552, 0, 1, 0, -0.10579552, 0, 0.99438804, -26.631237, 3.6522732, 19.679018)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square21" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -26.944775, 3.6591368, 20.550095)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square22" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -27.429348, 3.6591368, 19.775234)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed12" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.9579128, 0, 0.28705963, 0, 1, 0, -0.28705963, 0, 0.9579128, -26.034264, 3.6479993, 19.020689)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round23" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -25.973724, 3.6522732, 23.929176)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round24" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.7866119, 0, -0.617448, 0, 1, 0, 0.617448, 0, -0.7866119, -26.666555, 3.6522732, 22.68241)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square23" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -26.522982, 3.6591368, 21.588703)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square24" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -26.041206, 3.6591368, 22.177258)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed13" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.6594902, 0, -0.75171334, 0, 1, 0, 0.75171334, 0, -0.6594902, -26.823086, 3.6479993, 23.557209)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide10" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -25.935848, 3.6361313, 22.920027)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round25" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -27.130625, 3.6522732, 21.847303)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round26" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.7866119, 0, -0.617448, 0, 1, 0, 0.617448, 0, -0.7866119, -27.823456, 3.6522732, 20.600536)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square25" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -28.020061, 3.6591368, 19.695866)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square26" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -27.198107, 3.6591368, 20.095387)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed14" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.6594902, 0, -0.75171334, 0, 1, 0, 0.75171334, 0, -0.6594902, -27.979984, 3.6479993, 21.475334)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round27" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -27.88694, 3.6522732, 30.046936)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round28" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -27.88694, 3.6522732, 28.620598)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square27" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -27.230185, 3.6591368, 27.734324)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square28" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -27.094948, 3.6591368, 28.4828)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed15" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -28.448689, 3.6479993, 29.309229)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide12" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -27.363647, 3.6361313, 29.183233)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round29" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -27.88694, 3.6522732, 27.66521)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round30" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -27.88694, 3.6522732, 26.238873)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square29" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -27.619358, 3.6591368, 25.352598)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square30" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -27.094948, 3.6591368, 26.101074)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed16" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -28.448689, 3.6479993, 26.927504)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round31" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -28.765694, 3.6522732, 22.028889)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round32" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -28.008646, 3.6522732, 23.23774)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square31" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -28.094858, 3.6591368, 24.337456)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square32" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -28.606737, 3.6591368, 23.774887)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed17" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -27.898052, 3.6479993, 22.355955)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide13" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -28.750772, 3.6361313, 23.03864)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round33" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -27.501562, 3.6522732, 24.04745)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round34" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -26.744514, 3.6522732, 25.2563)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square33" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -26.500895, 3.6591368, 26.14946)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square34" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -27.342606, 3.6591368, 25.793446)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed18" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -26.633923, 3.6479993, 24.374517)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide14" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -27.363647, 3.6361313, 26.801508)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round35" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -29.97496, 3.6522732, 29.520893)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round36" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -29.97496, 3.6522732, 28.620598)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square35" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -29.318205, 3.6591368, 27.734324)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square36" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -29.182968, 3.6591368, 28.4828)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed19" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -30.53671, 3.6479993, 29.309229)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide15" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -29.451668, 3.6361313, 29.183233)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round37" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -29.97496, 3.6522732, 27.66521)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round38" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9874993, 0, -0.15762389, 0, 1, 0, 0.15762389, 0, -0.9874993, -29.97496, 3.6522732, 26.238873)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square37" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -29.707378, 3.6591368, 25.352598)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square38" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.90571696, 0, -0.4238833, 0, 1, 0, 0.4238833, 0, 0.90571696, -29.182968, 3.6591368, 26.101074)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed20" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.94159997, 0, -0.33673382, 0, 1, 0, 0.33673382, 0, -0.94159997, -30.53671, 3.6479993, 26.927504)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round39" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -30.853712, 3.6522732, 22.028889)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round40" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -30.096666, 3.6522732, 23.23774)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square39" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -30.182878, 3.6591368, 24.337456)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square40" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -30.694757, 3.6591368, 23.774887)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed21" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -29.986073, 3.6479993, 22.355955)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide16" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -30.838793, 3.6361313, 23.03864)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round41" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.4297076, 0, 0.9029683, 0, 1, 0, -0.9029683, 0, -0.4297076, -29.589582, 3.6522732, 24.04745)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round42" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.753265, 0, 0.6577173, 0, 1, 0, -0.6577173, 0, 0.753265, -28.832535, 3.6522732, 25.2563)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square41" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -28.588915, 3.6591368, 26.14946)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square42" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.9925951, 0, -0.12147093, 0, 1, 0, 0.12147093, 0, -0.9925951, -29.430626, 3.6591368, 25.793446)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed22" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.61929953, 0, 0.78515494, 0, 1, 0, -0.78515494, 0, 0.61929953, -28.721943, 3.6479993, 24.374517)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide17" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.11507583, 0, -0.9933567, 0, 1, 0, 0.9933567, 0, -0.11507583, -29.451668, 3.6361313, 26.801508)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round43" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -31.694574, 3.6522732, 21.869274)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round44" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.99438804, 0, 0.10579552, 0, 1, 0, -0.10579552, 0, 0.99438804, -31.769125, 3.6522732, 23.293663)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square43" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -32.471306, 3.6591368, 24.1444)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square44" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -32.567238, 3.6591368, 23.389877)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed23" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.9579128, 0, 0.28705963, 0, 1, 0, -0.28705963, 0, 0.9579128, -31.172148, 3.6479993, 22.635332)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide18" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -32.2623, 3.6361313, 22.704445)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round45" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -31.81906, 3.6522732, 24.247744)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round46" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.99438804, 0, 0.10579552, 0, 1, 0, -0.10579552, 0, 0.99438804, -31.893606, 3.6522732, 25.672132)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square45" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -32.207146, 3.6591368, 26.54321)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square46" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.8823242, 0, 0.4706424, 0, 1, 0, -0.4706424, 0, -0.8823242, -32.69172, 3.6591368, 25.768349)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed24" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.9579128, 0, 0.28705963, 0, 1, 0, -0.28705963, 0, 0.9579128, -31.296637, 3.6479993, 25.013803)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round47" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -31.236097, 3.6522732, 29.92229)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round48" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.7866119, 0, -0.617448, 0, 1, 0, 0.617448, 0, -0.7866119, -31.928926, 3.6522732, 28.675524)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square47" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -31.785353, 3.6591368, 27.581818)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square48" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -31.30358, 3.6591368, 28.170372)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed25" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.6594902, 0, -0.75171334, 0, 1, 0, 0.75171334, 0, -0.6594902, -32.085457, 3.6479993, 29.550323)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide19" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -31.198217, 3.6361313, 28.913141)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round49" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.38192546, 0, -0.9241933, 0, 1, 0, 0.9241933, 0, 0.38192546, -32.392998, 3.6522732, 27.840418)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round50" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.7866119, 0, -0.617448, 0, 1, 0, 0.617448, 0, -0.7866119, -33.08583, 3.6522732, 26.59365)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square49" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -33.282433, 3.6591368, 25.68898)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square50" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.99758726, 0, 0.06942564, 0, 1, 0, -0.06942564, 0, 0.99758726, -32.46048, 3.6591368, 26.088501)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed26" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.6594902, 0, -0.75171334, 0, 1, 0, 0.75171334, 0, -0.6594902, -33.242355, 3.6479993, 27.468449)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round51" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -36.886974, 3.6522732, 18.215132)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round52" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2525422, 0, 0.9675859, 0, 1, 0, -0.9675859, 0, 0.2525422, -35.5809, 3.6522732, 18.788376)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square51" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -35.033302, 3.6591368, 19.74595)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square52" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -35.77302, 3.6591368, 19.568972)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed27" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.070087254, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.070087254, -35.985703, 3.6479993, 17.99723)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide20" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -36.306408, 3.6361313, 19.041424)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round53" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -34.706066, 3.6522732, 19.172346)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round54" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2525422, 0, 0.9675859, 0, 1, 0, -0.9675859, 0, 0.2525422, -33.399994, 3.6522732, 19.745592)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square53" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -32.695984, 3.6591368, 20.346806)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square54" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -33.592113, 3.6591368, 20.526188)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed28" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.070087254, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.070087254, -33.804794, 3.6479993, 18.954447)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round55" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -29.191807, 3.6522732, 20.632923)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round56" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.29952383, 0, -0.9540889, 0, 1, 0, 0.9540889, 0, 0.29952383, -30.60299, 3.6522732, 20.840302)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square55" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -31.575333, 3.6591368, 20.319384)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square56" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -30.854475, 3.6591368, 20.076761)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed29" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.47005716, 0, -0.8826361, 0, 1, 0, 0.8826361, 0, 0.47005716, -29.840002, 3.6479993, 21.29596)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide21" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -30.122417, 3.6361313, 20.240768)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round57" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -31.548225, 3.6522732, 20.979208)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round58" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.29952383, 0, -0.9540889, 0, 1, 0, 0.9540889, 0, 0.29952383, -32.959408, 3.6522732, 21.186588)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square57" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -33.875168, 3.6591368, 21.050705)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square58" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -33.21089, 3.6591368, 20.423046)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed30" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.47005716, 0, -0.8826361, 0, 1, 0, 0.8826361, 0, 0.47005716, -32.19642, 3.6479993, 21.642242)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide22" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -34.1255, 3.6361313, 19.998638)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round59" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -35.56611, 3.6522732, 16.514582)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round60" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2525422, 0, 0.9675859, 0, 1, 0, -0.9675859, 0, 0.2525422, -34.741722, 3.6522732, 16.876411)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square59" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -34.194126, 3.6591368, 17.833984)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square60" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -34.933846, 3.6591368, 17.657005)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed31" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.070087254, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.070087254, -35.146526, 3.6479993, 16.085264)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide23" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -35.46723, 3.6361313, 17.129457)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round61" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -33.86689, 3.6522732, 17.26038)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round62" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2525422, 0, 0.9675859, 0, 1, 0, -0.9675859, 0, 0.2525422, -32.560818, 3.6522732, 17.833626)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square61" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -31.856812, 3.6591368, 18.43484)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square62" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.75215054, 0, -0.6589915, 0, 1, 0, 0.6589915, 0, -0.75215054, -32.752937, 3.6591368, 18.614222)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed32" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.070087254, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.070087254, -32.96562, 3.6479993, 17.042479)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round63" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -28.352633, 3.6522732, 18.720957)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round64" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.29952383, 0, -0.9540889, 0, 1, 0, 0.9540889, 0, 0.29952383, -29.763815, 3.6522732, 18.928337)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square63" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -30.736158, 3.6591368, 18.407417)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square64" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -30.015299, 3.6591368, 18.164795)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed33" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.47005716, 0, -0.8826361, 0, 1, 0, 0.8826361, 0, 0.47005716, -29.000828, 3.6479993, 19.383995)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide24" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -29.283241, 3.6361313, 18.328804)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round65" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9995327, 0, 0.030573338, 0, 1, 0, -0.030573338, 0, 0.9995327, -30.70905, 3.6522732, 19.067242)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round66" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.29952383, 0, -0.9540889, 0, 1, 0, 0.9540889, 0, 0.29952383, -32.12023, 3.6522732, 19.274622)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square65" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -33.035995, 3.6591368, 19.13874)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square66" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.2876949, 0, 0.9577222, 0, 1, 0, -0.9577222, 0, 0.2876949, -32.371716, 3.6591368, 18.51108)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed34" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.47005716, 0, -0.8826361, 0, 1, 0, 0.8826361, 0, 0.47005716, -31.357244, 3.6479993, 19.730278)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide25" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.86335164, 0, 0.5046031, 0, 1, 0, -0.5046031, 0, -0.86335164, -33.286324, 3.6361313, 18.086672)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round67" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.83579785, 0, -0.5490376, 0, 1, 0, 0.5490376, 0, 0.83579785, -27.868534, 3.6522732, 18.015146)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round68" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.3027692, 0, -0.9530641, 0, 1, 0, 0.9530641, 0, -0.3027692, -29.14286, 3.6522732, 17.374416)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square67" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.7855655, 0, 0.6187787, 0, 1, 0, -0.6187787, 0, 0.7855655, -29.639662, 3.6591368, 16.38953)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square68" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.7855655, 0, 0.6187787, 0, 1, 0, -0.6187787, 0, 0.7855655, -28.910202, 3.6591368, 16.60493)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed35" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.12212923, 0, -0.99251425, 0, 1, 0, 0.99251425, 0, -0.12212923, -28.779964, 3.6479993, 18.18564)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide26" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.83579785, 0, -0.5490376, 0, 1, 0, 0.5490376, 0, 0.83579785, -28.405119, 3.6361313, 17.159634)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round69" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.83579785, 0, -0.5490376, 0, 1, 0, 0.5490376, 0, 0.83579785, -29.99643, 3.6522732, 16.945248)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round70" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.3027692, 0, -0.9530641, 0, 1, 0, 0.9530641, 0, -0.3027692, -31.270758, 3.6522732, 16.304523)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square69" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.7855655, 0, 0.6187787, 0, 1, 0, -0.6187787, 0, 0.7855655, -31.942377, 3.6591368, 15.667337)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square70" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.7855655, 0, 0.6187787, 0, 1, 0, -0.6187787, 0, 0.7855655, -31.038101, 3.6591368, 15.535038)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed36" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.12212923, 0, -0.99251425, 0, 1, 0, 0.99251425, 0, -0.12212923, -30.90786, 3.6479993, 17.115742)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round71" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.99976444, 0, 0.021710277, 0, 1, 0, -0.021710277, 0, -0.99976444, -35.42681, 3.6522732, 15.198456)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round72" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.24924776, 0, 0.9684399, 0, 1, 0, -0.9684399, 0, -0.24924776, -34.00672, 3.6522732, 15.065123)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square71" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.33735827, 0, -0.94137645, 0, 1, 0, 0.94137645, 0, -0.33735827, -33.062935, 3.6591368, 15.6361475)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square72" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.33735827, 0, -0.94137645, 0, 1, 0, 0.94137645, 0, -0.33735827, -33.795486, 3.6591368, 15.840759)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed37" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.4232825, 0, 0.90599775, 0, 1, 0, -0.90599775, 0, -0.4232825, -34.74485, 3.6479993, 14.570207)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide27" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.99976444, 0, 0.021710277, 0, 1, 0, -0.021710277, 0, -0.99976444, -34.517975, 3.6361313, 15.63872)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round73" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.99976444, 0, 0.021710277, 0, 1, 0, -0.021710277, 0, -0.99976444, -33.05552, 3.6522732, 14.975807)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round74" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.24924776, 0, 0.9684399, 0, 1, 0, -0.9684399, 0, -0.24924776, -31.635424, 3.6522732, 14.842467)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square73" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.33735827, 0, -0.94137645, 0, 1, 0, 0.94137645, 0, -0.33735827, -30.728016, 3.6591368, 15.02603)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square74" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.33735827, 0, -0.94137645, 0, 1, 0, 0.94137645, 0, -0.33735827, -31.424194, 3.6591368, 15.618111)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed38" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.4232825, 0, 0.90599775, 0, 1, 0, -0.90599775, 0, -0.4232825, -32.373554, 3.6479993, 14.347559)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square99" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.89311254, 0, -0.44983345, 0, 1, 0, 0.44983345, 0, 0.89311254, -42.86786, 3.7866163, 23.022158)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square100" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.89311254, 0, -0.44983345, 0, 1, 0, 0.44983345, 0, 0.89311254, -42.754272, 3.7866163, 23.774223)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square101" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.995686, 0, -0.09278773, 0, 1, 0, 0.09278773, 0, -0.995686, -42.09316, 3.6591368, 21.458988)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round75" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.45075303, 0, -0.8926489, 0, 1, 0, 0.8926489, 0, 0.45075303, -39.314964, 3.6522732, 19.060194)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round99" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.73764277, 0, -0.67519134, 0, 1, 0, 0.67519134, 0, -0.73764277, -40.100136, 3.6522732, 17.869417)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square102" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.98947525, 0, 0.14470166, 0, 1, 0, -0.14470166, 0, 0.98947525, -39.514797, 3.6591368, 17.3184)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed51" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.60072726, 0, -0.79945433, 0, 1, 0, 0.79945433, 0, -0.60072726, -40.190033, 3.6479993, 18.753553)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide36" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.45075303, 0, -0.8926489, 0, 1, 0, 0.8926489, 0, 0.45075303, -39.353546, 3.6361313, 18.05107)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round100" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.14368258, 0, -0.9896239, 0, 1, 0, 0.9896239, 0, -0.14368258, -38.470592, 3.6522732, 19.200058)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round101" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.99163526, 0, -0.1290726, 0, 1, 0, 0.1290726, 0, -0.99163526, -38.429447, 3.6522732, 17.774311)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square103" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.89311254, 0, -0.44983345, 0, 1, 0, 0.44983345, 0, 0.89311254, -37.747395, 3.6591368, 16.90735)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square104" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.89311254, 0, -0.44983345, 0, 1, 0, 0.44983345, 0, 0.89311254, -37.63381, 3.6591368, 17.659418)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed52" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.95092154, 0, -0.30943197, 0, 1, 0, 0.30943197, 0, -0.95092154, -39.01083, 3.6479993, 18.446453)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide37" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.14368258, 0, -0.9896239, 0, 1, 0, 0.9896239, 0, -0.14368258, -37.922596, 3.6361313, 18.351809)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round102" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.14368258, 0, -0.9896239, 0, 1, 0, 0.9896239, 0, -0.14368258, -38.40189, 3.6522732, 16.819323)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed53" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.95092154, 0, -0.30943197, 0, 1, 0, 0.30943197, 0, -0.95092154, -38.94212, 3.6479993, 16.065718)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round103" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -33.193974, 3.6522732, 22.731497)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round104" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.22979484, 0, -0.97323924, 0, 1, 0, 0.97323924, 0, -0.22979484, -34.513126, 3.6522732, 22.189022)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square105" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -35.08301, 3.6591368, 21.244545)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square106" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -34.33935, 3.6591368, 21.404139)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed54" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.04668793, 0, -0.99890953, 0, 1, 0, 0.99890953, 0, -0.04668793, -34.08989, 3.6479993, 22.97046)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide38" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -33.793747, 3.6361313, 21.919039)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round105" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -35.39672, 3.6522732, 21.82566)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round106" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.22979484, 0, -0.97323924, 0, 1, 0, 0.97323924, 0, -0.22979484, -36.715866, 3.6522732, 21.283184)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square107" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -37.433773, 3.6591368, 20.698637)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square108" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -36.542095, 3.6591368, 20.4983)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed55" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.04668793, 0, -0.99890953, 0, 1, 0, 0.99890953, 0, -0.04668793, -36.292633, 3.6479993, 22.064625)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round107" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -40.943695, 3.6522732, 20.494726)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round108" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.32180315, 0, 0.94680667, 0, 1, 0, -0.94680667, 0, -0.32180315, -39.537758, 3.6522732, 20.254332)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square109" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -38.553474, 3.6591368, 20.752316)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square110" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -39.268448, 3.6591368, 21.011768)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed56" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.49061495, 0, 0.8713766, 0, 1, 0, -0.8713766, 0, -0.49061495, -40.31122, 3.6479993, 19.816679)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide39" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -40.00415, 3.6361313, 20.864962)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round109" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -38.59604, 3.6522732, 20.093307)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round110" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.32180315, 0, 0.94680667, 0, 1, 0, -0.94680667, 0, -0.32180315, -37.19011, 3.6522732, 19.85291)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square111" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -36.271408, 3.6591368, 19.967293)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square112" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -36.92079, 3.6591368, 20.610348)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed57" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.49061495, 0, 0.8713766, 0, 1, 0, -0.8713766, 0, -0.49061495, -37.963562, 3.6479993, 19.415262)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide40" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -35.996494, 3.6361313, 21.013205)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round111" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -34.474617, 3.6522732, 24.46254)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round112" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.22979484, 0, -0.97323924, 0, 1, 0, 0.97323924, 0, -0.22979484, -35.30726, 3.6522732, 24.120129)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square113" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -35.87715, 3.6591368, 23.175655)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square114" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -35.133484, 3.6591368, 23.335247)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed58" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.04668793, 0, -0.99890953, 0, 1, 0, 0.99890953, 0, -0.04668793, -34.88403, 3.6479993, 24.901571)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide41" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -34.58788, 3.6361313, 23.850147)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round113" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -36.19085, 3.6522732, 23.75677)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round114" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.22979484, 0, -0.97323924, 0, 1, 0, 0.97323924, 0, -0.22979484, -37.510002, 3.6522732, 23.214294)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square115" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -38.2279, 3.6591368, 22.629745)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square116" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.73649865, 0, 0.6764391, 0, 1, 0, -0.6764391, 0, 0.73649865, -37.336227, 3.6591368, 22.429409)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed59" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.04668793, 0, -0.99890953, 0, 1, 0, 0.99890953, 0, -0.04668793, -37.08677, 3.6479993, 23.995735)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round115" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -41.737827, 3.7056193, 22.425837)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round116" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.32180315, 0, 0.94680667, 0, 1, 0, -0.94680667, 0, -0.32180315, -40.331894, 3.6522732, 22.185436)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square117" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -39.347607, 3.6591368, 22.683426)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square118" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -40.062584, 3.7061849, 22.942875)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed60" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.49061495, 0, 0.8713766, 0, 1, 0, -0.8713766, 0, -0.49061495, -41.105354, 3.6861706, 21.747787)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide42" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -40.79828, 3.7130027, 22.79607)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round117" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9985416, 0, -0.053991675, 0, 1, 0, 0.053991675, 0, -0.9985416, -39.390175, 3.6522732, 22.024418)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round118" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.32180315, 0, 0.94680667, 0, 1, 0, -0.94680667, 0, -0.32180315, -37.984238, 3.6522732, 21.78402)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square119" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -37.06554, 3.6591368, 21.8984)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square120" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.26516908, 0, -0.964202, 0, 1, 0, 0.964202, 0, -0.26516908, -37.71493, 3.6591368, 22.541458)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed61" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.49061495, 0, 0.8713766, 0, 1, 0, -0.8713766, 0, -0.49061495, -38.757694, 3.6479993, 21.34637)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide43" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.87494123, 0, -0.4842295, 0, 1, 0, 0.4842295, 0, 0.87494123, -36.790623, 3.6361313, 22.944313)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round119" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.84843653, 0, 0.52929765, 0, 1, 0, -0.52929765, 0, -0.84843653, -42.211197, 3.7622933, 23.1428)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round120" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.28034836, 0, 0.9598984, 0, 1, 0, -0.9598984, 0, 0.28034836, -40.916252, 3.7552905, 23.753487)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square121" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.770847, 0, -0.63702047, 0, 1, 0, 0.63702047, 0, -0.770847, -40.396507, 3.7856178, 24.726458)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square122" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.770847, 0, -0.63702047, 0, 1, 0, 0.63702047, 0, -0.770847, -41.130814, 3.8485484, 24.528214)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed62" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.09883342, 0, 0.995104, 0, 1, 0, -0.995104, 0, 0.09883342, -41.298065, 3.7187629, 22.95099)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide44" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.84843653, 0, 0.52929765, 0, 1, 0, -0.52929765, 0, -0.84843653, -41.648758, 3.7636108, 23.9855)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round121" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.84843653, 0, 0.52929765, 0, 1, 0, -0.52929765, 0, -0.84843653, -40.05286, 3.8317442, 24.16253)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round122" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.28034836, 0, 0.9598984, 0, 1, 0, -0.9598984, 0, 0.28034836, -38.763866, 3.7665434, 24.773212)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square123" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.770847, 0, -0.63702047, 0, 1, 0, 0.63702047, 0, -0.770847, -38.0775, 3.8140116, 25.394482)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square124" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.770847, 0, -0.63702047, 0, 1, 0, 0.63702047, 0, -0.770847, -38.978424, 3.8138385, 25.547937)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed63" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.09883342, 0, 0.995104, 0, 1, 0, -0.995104, 0, 0.09883342, -39.14568, 3.7414346, 23.970722)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round123" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9999986, 0, 0.0017278641, 0, 1, 0, -0.0017278641, 0, 0.9999986, -34.58303, 3.6522732, 25.781567)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round124" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2718773, 0, -0.96233207, 0, 1, 0, 0.96233207, 0, 0.2718773, -35.999603, 3.6522732, 25.948147)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square125" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.31520194, 0, 0.94902474, 0, 1, 0, -0.94902474, 0, 0.31520194, -36.956516, 3.6591368, 25.399399)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square126" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.31520194, 0, 0.94902474, 0, 1, 0, -0.94902474, 0, 0.31520194, -36.22896, 3.6591368, 25.177675)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed64" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.4444008, 0, -0.8958281, 0, 1, 0, 0.8958281, 0, 0.4444008, -35.250076, 3.6479993, 26.425629)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide45" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.9999986, 0, 0.0017278641, 0, 1, 0, -0.0017278641, 0, 0.9999986, -35.501934, 3.6361313, 25.362724)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round125" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9999986, 0, 0.0017278641, 0, 1, 0, -0.0017278641, 0, 0.9999986, -36.948452, 3.6522732, 26.059732)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round126" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.2718773, 0, -0.96233207, 0, 1, 0, 0.96233207, 0, 0.2718773, -38.365036, 3.6522732, 26.226318)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square127" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.31520194, 0, 0.94902474, 0, 1, 0, -0.94902474, 0, 0.31520194, -38.583015, 3.7582788, 25.45584)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed65" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.4444008, 0, -0.8958281, 0, 1, 0, 0.8958281, 0, 0.4444008, -37.61551, 3.6479993, 26.703793)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round76" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.107218474, 0, 0.9942356, 0, 1, 0, -0.9942356, 0, 0.107218474, -25.597498, 3.6522732, 29.272928)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square75" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -24.914785, 3.6591368, 30.139366)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square76" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -25.672508, 3.6591368, 30.073313)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed39" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.077658735, 0, 0.9969801, 0, 1, 0, -0.9969801, 0, -0.077658735, -26.114452, 3.6479993, 28.550064)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide28" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -26.277803, 3.6361313, 29.630114)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round77" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -24.675638, 3.6522732, 29.523808)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round78" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.107218474, 0, 0.9942356, 0, 1, 0, -0.9942356, 0, 0.107218474, -23.299356, 3.6522732, 29.898355)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square77" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -22.514446, 3.6591368, 30.389275)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square78" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -23.374365, 3.6591368, 30.698738)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed40" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.077658735, 0, 0.9969801, 0, 1, 0, -0.9969801, 0, -0.077658735, -23.816309, 3.6479993, 29.17549)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round79" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -19.006357, 3.6522732, 30.155952)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round80" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.43683326, 0, -0.8995426, 0, 1, 0, 0.8995426, 0, 0.43683326, -20.371582, 3.6522732, 30.568996)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square79" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -21.410067, 3.6591368, 30.197033)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square80" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -20.732826, 3.6591368, 29.850845)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed41" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.5949772, 0, -0.8037427, 0, 1, 0, 0.8037427, 0, 0.5949772, -19.549784, 3.6479993, 30.90726)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide29" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -19.984592, 3.6361313, 29.905197)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round81" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -21.286036, 3.6522732, 30.845661)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round82" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.43683326, 0, -0.8995426, 0, 1, 0, 0.8995426, 0, 0.43683326, -22.651258, 3.6522732, 31.258707)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square81" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -23.577045, 3.6591368, 31.259237)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square82" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -23.0125, 3.6591368, 30.540552)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed42" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.5949772, 0, -0.8037427, 0, 1, 0, 0.8037427, 0, 0.5949772, -21.82946, 3.6479993, 31.596966)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide30" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -23.97966, 3.6361313, 30.255539)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round83" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -25.917898, 3.6522732, 27.021772)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round84" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.107218474, 0, 0.9942356, 0, 1, 0, -0.9942356, 0, 0.107218474, -25.049196, 3.6522732, 27.258184)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square83" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -24.366484, 3.6591368, 28.124622)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square84" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -25.124207, 3.6591368, 28.058567)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed43" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.077658735, 0, 0.9969801, 0, 1, 0, -0.9969801, 0, -0.077658735, -25.566153, 3.6479993, 26.535318)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide31" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -25.729502, 3.6361313, 27.615368)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round85" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -24.127337, 3.6522732, 27.509062)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round86" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.107218474, 0, 0.9942356, 0, 1, 0, -0.9942356, 0, 0.107218474, -22.751055, 3.6522732, 27.88361)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square85" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -21.966148, 3.6591368, 28.37453)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square86" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.64684314, 0, -0.76262325, 0, 1, 0, 0.76262325, 0, -0.64684314, -22.826063, 3.6591368, 28.683994)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed44" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.077658735, 0, 0.9969801, 0, 1, 0, -0.9969801, 0, -0.077658735, -23.268007, 3.6479993, 27.160742)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round87" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -18.45806, 3.6522732, 28.141209)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round88" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.43683326, 0, -0.8995426, 0, 1, 0, 0.8995426, 0, 0.43683326, -19.823282, 3.6522732, 28.554253)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square87" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -20.861767, 3.6591368, 28.182287)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square88" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -20.184525, 3.6591368, 27.8361)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed45" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.5949772, 0, -0.8037427, 0, 1, 0, 0.8037427, 0, 0.5949772, -19.001486, 3.6479993, 28.892517)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide32" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -19.43629, 3.6361313, 27.890455)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round89" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.98411846, 0, 0.17751412, 0, 1, 0, -0.17751412, 0, 0.98411846, -20.737734, 3.6522732, 28.830915)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round90" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.43683326, 0, -0.8995426, 0, 1, 0, 0.8995426, 0, 0.43683326, -22.102957, 3.6522732, 29.243961)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square89" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -23.028748, 3.6591368, 29.244495)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square90" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.14344086, 0, 0.989659, 0, 1, 0, -0.989659, 0, 0.14344086, -22.4642, 3.6591368, 28.525806)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed46" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.5949772, 0, -0.8037427, 0, 1, 0, 0.8037427, 0, 0.5949772, -21.28116, 3.6479993, 29.582222)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide33" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.92827845, 0, 0.37188643, 0, 1, 0, -0.37188643, 0, -0.92827845, -23.431358, 3.6361313, 28.240793)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round91" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9075726, 0, -0.41989592, 0, 1, 0, 0.41989592, 0, 0.9075726, -18.08324, 3.6522732, 27.371773)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round92" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.15903698, 0, -0.9872728, 0, 1, 0, 0.9872728, 0, -0.15903698, -19.438065, 3.6522732, 26.9258)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square91" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.68581843, 0, 0.72777283, 0, 1, 0, -0.72777283, 0, 0.68581843, -20.07456, 3.6591368, 26.024864)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square92" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.68581843, 0, 0.72777283, 0, 1, 0, -0.72777283, 0, 0.68581843, -19.321325, 3.6591368, 26.130432)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed47" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.02544412, 0, -0.9996763, 0, 1, 0, 0.9996763, 0, 0.02544412, -18.959602, 3.6479993, 27.6747)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide34" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(0.9075726, 0, -0.41989592, 0, 1, 0, 0.41989592, 0, 0.9075726, -18.740023, 3.6361313, 26.60466)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round93" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(0.9075726, 0, -0.41989592, 0, 1, 0, 0.41989592, 0, 0.9075726, -20.345552, 3.6522732, 26.627083)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round94" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.15903698, 0, -0.9872728, 0, 1, 0, 0.9872728, 0, -0.15903698, -21.700378, 3.6522732, 26.181116)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square93" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.68581843, 0, 0.72777283, 0, 1, 0, -0.72777283, 0, 0.68581843, -22.458553, 3.6591368, 25.649843)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square94" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(0.68581843, 0, 0.72777283, 0, 1, 0, -0.72777283, 0, 0.68581843, -21.583641, 3.6591368, 25.385748)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed48" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(0.02544412, 0, -0.9996763, 0, 1, 0, 0.9996763, 0, 0.02544412, -21.221914, 3.6479993, 26.93001)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round95" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9920513, 0, -0.12583531, 0, 1, 0, 0.12583531, 0, -0.9920513, -25.974043, 3.6522732, 25.699488)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round96" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.38922048, 0, 0.9211448, 0, 1, 0, -0.9211448, 0, -0.38922048, -24.589098, 3.6522732, 25.358368)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square95" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.19497064, 0, -0.9808092, 0, 1, 0, 0.9808092, 0, -0.19497064, -23.571476, 3.6591368, 25.784101)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square96" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.19497064, 0, -0.9808092, 0, 1, 0, 0.9808092, 0, -0.19497064, -24.265884, 3.6591368, 26.094416)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed49" parent="Stumps2" instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.55215526, 0, 0.8337413, 0, 1, 0, -0.8337413, 0, -0.55215526, -25.392094, 3.6479993, 24.977613)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide35" parent="Stumps2" instance=ExtResource("11_46aar")]
-transform = Transform3D(-0.9920513, 0, -0.12583531, 0, 1, 0, 0.12583531, 0, -0.9920513, -25.010256, 3.6361313, 26.001034)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round97" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.9920513, 0, -0.12583531, 0, 1, 0, 0.12583531, 0, -0.9920513, -23.661438, 3.6522732, 25.129875)
-script = ExtResource("7_nu3td")
-
-[node name="stump_round98" parent="Stumps2" instance=ExtResource("7_wur0a")]
-transform = Transform3D(-0.38922048, 0, 0.9211448, 0, 1, 0, -0.9211448, 0, -0.38922048, -22.27649, 3.6522732, 24.788748)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square97" parent="Stumps2" instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.19497064, 0, -0.9808092, 0, 1, 0, 0.9808092, 0, -0.19497064, -21.351938, 3.6591368, 24.836607)
-script = ExtResource("7_nu3td")
-
-[node name="stump_square98" parent="Stumps2" groups=["interactables"] instance=ExtResource("9_63wb4")]
-transform = Transform3D(-0.19497064, 0, -0.9808092, 0, 1, 0, 0.9808092, 0, -0.19497064, -21.95328, 3.6591368, 25.524803)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailed50" parent="Stumps2" groups=["interactables"] instance=ExtResource("10_gir6c")]
-transform = Transform3D(-0.55215526, 0, 0.8337413, 0, 1, 0, -0.8337413, 0, -0.55215526, -23.079485, 3.6479993, 24.408)
-script = ExtResource("7_nu3td")
-
-[node name="stump_squareDetailedWide11" parent="Stumps2" groups=["interactables"] instance=ExtResource("11_46aar")]
-transform = Transform3D(0.16683763, 0, 0.9859845, 0, 1, 0, -0.9859845, 0, 0.16683763, -27.124407, 3.6361313, 19.089802)
-script = ExtResource("7_nu3td")
+[node name="stump_round" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -27.172926, 3.6567135, 23.641964)
+
+[node name="stump_roundDetailed" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -27.845507, 3.6567137, 23.622173)
+
+[node name="stump_square" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9738294, 0, -0.22728026, 0, 1, 0, 0.22728026, 0, -0.9738294, -27.331842, 3.6495569, 22.772015)
+
+[node name="stump_squareDetailed" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9738294, 0, -0.22728026, 0, 1, 0, 0.22728026, 0, -0.9738294, -26.449434, 3.6567135, 22.852024)
+
+[node name="stump_squareDetailedWide" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -27.067085, 3.6567132, 21.817307)
+
+[node name="stump_squareDetailed2" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -28.054743, 3.6567132, 22.255611)
+
+[node name="stump_square2" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -26.57085, 3.6567135, 23.837708)
+
+[node name="stump_roundDetailed2" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -26.300941, 3.6567132, 21.85345)
+
+[node name="stump_round2" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.5568467, 0, 0.8306153, 0, 1, 0, -0.8306153, 0, -0.5568467, -27.935595, 3.6567135, 21.272224)
+
+[node name="stump_round3" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -30.765444, 3.6567135, 22.931545)
+
+[node name="stump_roundDetailed3" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -30.920507, 3.6567137, 22.276783)
+
+[node name="stump_square3" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.446963, 0, -0.8945524, 0, 1, 0, 0.8945524, 0, -0.446963, -29.966328, 3.6495569, 22.55276)
+
+[node name="stump_squareDetailed3" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -29.815088, 3.6567135, 23.425783)
+
+[node name="stump_squareDetailedWide2" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -28.975624, 3.6567132, 22.561241)
+
+[node name="stump_squareDetailed4" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -29.65475, 3.6567132, 21.720787)
+
+[node name="stump_square4" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -30.79859, 3.6567135, 23.563772)
+
+[node name="stump_roundDetailed4" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.6857167, 0, -0.72786856, 0, 1, 0, 0.72786856, 0, 0.6857167, -28.812126, 3.6567132, 23.31061)
+
+[node name="stump_round4" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -28.674055, 3.6567135, 21.581202)
+
+[node name="stump_round5" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -27.684578, 3.6567135, 27.116335)
+
+[node name="stump_roundDetailed5" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -28.291712, 3.6567137, 26.82626)
+
+[node name="stump_square5" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -27.478134, 3.6495569, 26.256424)
+
+[node name="stump_squareDetailed5" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -26.703444, 3.6567135, 26.686424)
+
+[node name="stump_squareDetailedWide3" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.73085356, 0, -0.6825343, 0, 1, 0, 0.6825343, 0, 0.73085356, -26.84993, 3.6567132, 25.490314)
+
+[node name="stump_squareDetailed6" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.67018056, 0, 0.7421981, 0, 1, 0, -0.7421981, 0, -0.67018056, -27.930473, 3.6567132, 25.491802)
+
+[node name="stump_square6" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -27.213078, 3.6567135, 27.538826)
+
+[node name="stump_roundDetailed6" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9467617, 0, 0.32193518, 0, 1, 0, -0.32193518, 0, -0.9467617, -26.163836, 3.6567132, 25.833181)
+
+[node name="stump_round6" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.68685925, 0, 0.72679055, 0, 1, 0, -0.72679055, 0, 0.68685925, -27.423843, 3.6567135, 24.640583)
+
+[node name="stump_round7" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.6107258, 0, -0.7918421, 0, 1, 0, 0.7918421, 0, -0.6107258, -30.682993, 3.6567135, 25.013865)
+
+[node name="stump_roundDetailed7" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.40434358, 0, -0.91460717, 0, 1, 0, 0.91460717, 0, 0.40434358, -30.560043, 3.6567137, 24.35232)
+
+[node name="stump_square7" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9996057, 0, 0.028078705, 0, 1, 0, -0.028078705, 0, -0.9996057, -29.798956, 3.6495569, 24.990572)
+
+[node name="stump_squareDetailed7" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.5433211, 0, 0.839525, 0, 1, 0, -0.839525, 0, 0.5433211, -30.013662, 3.6567135, 25.850191)
+
+[node name="stump_squareDetailedWide4" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.20910652, 0, -0.9778929, 0, 1, 0, 0.9778929, 0, 0.20910652, -28.896294, 3.6567132, 25.398947)
+
+[node name="stump_squareDetailed8" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9940678, 0, 0.10876292, 0, 1, 0, -0.10876292, 0, -0.9940678, -29.17756, 3.6567132, 24.35565)
+
+[node name="stump_square8" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.5433211, 0, 0.839525, 0, 1, 0, -0.839525, 0, 0.5433211, -30.968966, 3.6567135, 25.578691)
+
+[node name="stump_roundDetailed8" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.99851495, 0, 0.05447957, 0, 1, 0, -0.05447957, 0, 0.99851495, -29.049788, 3.6567132, 26.150429)
+
+[node name="stump_round8" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.87799966, 0, -0.47866133, 0, 1, 0, 0.47866133, 0, 0.87799966, -28.224178, 3.6567135, 24.624556)
+
+[node name="stump_round9" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -30.065048, 3.6567135, 27.717684)
+
+[node name="stump_roundDetailed9" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10454571, -29.496872, 3.6567137, 28.078142)
+
+[node name="stump_square9" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10454571, -30.372639, 3.6495569, 28.546812)
+
+[node name="stump_squareDetailed9" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -31.090477, 3.6567135, 28.027433)
+
+[node name="stump_squareDetailedWide5" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -31.08778, 3.6567132, 29.232477)
+
+[node name="stump_squareDetailed10" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.9986784, 0, 0.051394835, 0, 1, 0, -0.051394835, 0, 0.9986784, -30.014782, 3.6567132, 29.359953)
+
+[node name="stump_square10" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.44388476, 0, 0.89608383, 0, 1, 0, -0.89608383, 0, -0.44388476, -30.48276, 3.6567135, 27.241943)
+
+[node name="stump_roundDetailed10" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.2747982, 0, 0.9615019, 0, 1, 0, -0.9615019, 0, 0.2747982, -31.728054, 3.6567132, 28.810183)
+
+[node name="stump_round10" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -30.619375, 3.6567135, 30.144627)
+
+[node name="stump_round11" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.30826998, 0, -0.9512989, 0, 1, 0, 0.9512989, 0, 0.30826998, -27.33897, 3.6567135, 30.162958)
+
+[node name="stump_roundDetailed11" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -27.53999, 3.6567137, 30.805103)
+
+[node name="stump_square11" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -28.21947, 3.6495569, 30.080584)
+
+[node name="stump_squareDetailed11" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -27.903711, 3.6567135, 29.252731)
+
+[node name="stump_squareDetailedWide6" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -29.066946, 3.6567132, 29.567404)
+
+[node name="stump_squareDetailed12" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -28.912195, 3.6567132, 30.636812)
+
+[node name="stump_square12" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.30826998, 0, -0.9512989, 0, 1, 0, 0.9512989, 0, 0.30826998, -26.987635, 3.6567135, 29.636297)
+
+[node name="stump_roundDetailed12" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9084936, 0, -0.41789883, 0, 1, 0, 0.41789883, 0, -0.9084936, -28.824867, 3.6567132, 28.839611)
+
+[node name="stump_round12" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9976413, 0, -0.06864217, 0, 1, 0, 0.06864217, 0, -0.9976413, -29.826674, 3.6567135, 30.256052)
+
+[node name="stump_round25" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.778013, 0, 0.62824845, 0, 1, 0, -0.62824845, 0, 0.778013, -26.251211, 3.6567135, 18.334904)
+
+[node name="stump_roundDetailed25" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.778013, 0, 0.62824845, 0, 1, 0, -0.62824845, 0, 0.778013, -26.587582, 3.6567137, 17.75214)
+
+[node name="stump_square25" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.70483243, 0, 0.7093739, 0, 1, 0, -0.7093739, 0, -0.70483243, -25.594337, 3.6495569, 17.742802)
+
+[node name="stump_squareDetailed25" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.70483243, 0, 0.7093739, 0, 1, 0, -0.7093739, 0, -0.70483243, -25.19902, 3.6567135, 18.535751)
+
+[node name="stump_squareDetailedWide13" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.8589868, 0, 0.51199806, 0, 1, 0, -0.51199806, 0, 0.8589868, -24.642838, 3.6567132, 17.466738)
+
+[node name="stump_squareDetailed26" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.8589868, 0, 0.51199806, 0, 1, 0, -0.51199806, 0, 0.8589868, -25.534515, 3.6567132, 16.856419)
+
+[node name="stump_square26" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.778013, 0, 0.62824845, 0, 1, 0, -0.62824845, 0, 0.778013, -26.101603, 3.6567135, 18.95007)
+
+[node name="stump_roundDetailed26" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.8589868, 0, 0.51199806, 0, 1, 0, -0.51199806, 0, 0.8589868, -24.271248, 3.6567132, 18.13771)
+
+[node name="stump_round26" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.4144231, 0, 0.91008437, 0, 1, 0, -0.91008437, 0, 0.4144231, -24.635077, 3.6567135, 16.441378)
+
+[node name="stump_round27" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9089598, 0, 0.41688368, 0, 1, 0, -0.41688368, 0, -0.9089598, -27.533287, 3.6567135, 14.904574)
+
+[node name="stump_roundDetailed27" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9089598, 0, 0.41688368, 0, 1, 0, -0.41688368, 0, -0.9089598, -27.057516, 3.6567137, 14.42876)
+
+[node name="stump_square27" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.99599457, 0, -0.08941582, 0, 1, 0, 0.08941582, 0, -0.99599457, -26.791275, 3.6495569, 15.385702)
+
+[node name="stump_squareDetailed27" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9089598, 0, 0.41688368, 0, 1, 0, -0.41688368, 0, -0.9089598, -27.454798, 3.6567135, 15.972884)
+
+[node name="stump_squareDetailedWide14" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.39318776, 0, -0.91945815, 0, 1, 0, 0.91945815, 0, -0.39318776, -26.278217, 3.6567132, 16.23325)
+
+[node name="stump_squareDetailed28" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.39318776, 0, -0.91945815, 0, 1, 0, 0.91945815, 0, -0.39318776, -25.919636, 3.6567132, 15.213936)
+
+[node name="stump_square28" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9089598, 0, 0.41688368, 0, 1, 0, -0.41688368, 0, -0.9089598, -28.088722, 3.6567135, 15.208387)
+
+[node name="stump_roundDetailed28" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.25930795, 0, -0.96579474, 0, 1, 0, 0.96579474, 0, -0.25930795, -26.830069, 3.6567132, 16.765924)
+
+[node name="stump_round28" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.39318776, 0, -0.91945815, 0, 1, 0, 0.91945815, 0, -0.39318776, -25.285828, 3.6567135, 15.975207)
+
+[node name="stump_round29" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.75262177, 0, 0.6584531, 0, 1, 0, -0.6584531, 0, 0.75262177, -29.476612, 3.6567135, 19.724085)
+
+[node name="stump_roundDetailed29" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.75262177, 0, 0.6584531, 0, 1, 0, -0.6584531, 0, 0.75262177, -29.5486, 3.6567137, 19.055077)
+
+[node name="stump_square29" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.75262177, 0, 0.6584531, 0, 1, 0, -0.6584531, 0, 0.75262177, -28.63641, 3.6495569, 19.44818)
+
+[node name="stump_squareDetailed29" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.75262177, 0, 0.6584531, 0, 1, 0, -0.6584531, 0, 0.75262177, -28.595505, 3.6567135, 20.333263)
+
+[node name="stump_squareDetailedWide15" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.19702423, 0, -0.98039865, 0, 1, 0, 0.98039865, 0, -0.19702423, -27.65454, 3.6567132, 19.580454)
+
+[node name="stump_squareDetailed30" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.2796614, 0, 0.96009874, 0, 1, 0, -0.96009874, 0, 0.2796614, -28.223263, 3.6567132, 18.66169)
+
+[node name="stump_square30" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.75262177, 0, 0.6584531, 0, 1, 0, -0.6584531, 0, 0.75262177, -29.588541, 3.6567135, 20.34721)
+
+[node name="stump_roundDetailed30" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.22323322, 0, 0.9747651, 0, 1, 0, -0.9747651, 0, -0.22323322, -27.58601, 3.6567132, 20.344383)
+
+[node name="stump_round30" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.9792123, 0, -0.20283854, 0, 1, 0, 0.20283854, 0, 0.9792123, -27.232811, 3.6567135, 18.645805)
+
+[node name="stump_round31" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.99458915, 0, 0.10388625, 0, 1, 0, -0.10388625, 0, -0.99458915, -29.262049, 3.6567135, 16.06829)
+
+[node name="stump_roundDetailed31" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.565989, 0, -0.8244128, 0, 1, 0, 0.8244128, 0, -0.565989, -28.634504, 3.6567137, 15.825504)
+
+[node name="stump_square31" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.5010577, 0, 0.86541396, 0, 1, 0, -0.86541396, 0, -0.5010577, -28.777967, 3.6495569, 16.808376)
+
+[node name="stump_squareDetailed31" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.9997692, 0, -0.021483421, 0, 1, 0, 0.021483421, 0, 0.9997692, -29.622261, 3.6567135, 17.077099)
+
+[node name="stump_squareDetailedWide16" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.72237605, 0, -0.6915004, 0, 1, 0, 0.6915004, 0, -0.72237605, -28.651453, 3.6567132, 17.791008)
+
+[node name="stump_squareDetailed32" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.42948684, 0, 0.90307325, 0, 1, 0, -0.90307325, 0, -0.42948684, -27.911314, 3.6567132, 17.00375)
+
+[node name="stump_roundDetailed32" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.57074225, 0, -0.8211294, 0, 1, 0, 0.8211294, 0, 0.57074225, -29.371576, 3.6567132, 18.055033)
+
+[node name="stump_round32" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.053747624, 0, -0.99855465, 0, 1, 0, 0.99855465, 0, 0.053747624, -27.639475, 3.6567135, 17.956303)
+
+[node name="stump_round33" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.4961864, 0, 0.86821604, 0, 1, 0, -0.86821604, 0, -0.4961864, -31.23849, 3.6567135, 18.014101)
+
+[node name="stump_roundDetailed33" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9012434, 0, 0.43331322, 0, 1, 0, -0.43331322, 0, 0.9012434, -31.246857, 3.6567137, 18.68692)
+
+[node name="stump_square32" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9012434, 0, 0.43331322, 0, 1, 0, -0.43331322, 0, 0.9012434, -32.105614, 3.6495569, 18.187765)
+
+[node name="stump_squareDetailed33" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.568203, 0, -0.8228885, 0, 1, 0, 0.8228885, 0, 0.568203, -32.60967, 3.6567132, 18.919333)
+
+[node name="stump_square33" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.5294602, 0, 0.8483348, 0, 1, 0, -0.8483348, 0, 0.5294602, -31.052998, 3.6567135, 17.408787)
+
+[node name="stump_round34" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.93602276, 0, -0.35193983, 0, 1, 0, 0.35193983, 0, -0.93602276, -33.594936, 3.6567135, 18.8169)
+
+[node name="stump_round35" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.6476679, 0, -0.76192296, 0, 1, 0, 0.76192296, 0, -0.6476679, -31.8878, 3.6567135, 21.618164)
+
+[node name="stump_roundDetailed34" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.7824235, 0, 0.62274677, 0, 1, 0, -0.62274677, 0, -0.7824235, -32.539837, 3.6567137, 21.784325)
+
+[node name="stump_square34" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.7824235, 0, 0.62274677, 0, 1, 0, -0.62274677, 0, -0.7824235, -32.2801, 3.6495569, 20.825596)
+
+[node name="stump_squareDetailed34" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7824235, 0, 0.62274677, 0, 1, 0, -0.62274677, 0, -0.7824235, -31.409773, 3.6567135, 20.659552)
+
+[node name="stump_squareDetailedWide17" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.7824235, 0, 0.62274677, 0, 1, 0, -0.62274677, 0, -0.7824235, -32.288445, 3.6567132, 19.834888)
+
+[node name="stump_squareDetailed35" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7824235, 0, 0.62274677, 0, 1, 0, -0.62274677, 0, -0.7824235, -33.11725, 3.6567132, 20.528193)
+
+[node name="stump_square35" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.6476679, 0, -0.76192296, 0, 1, 0, 0.76192296, 0, -0.6476679, -31.255102, 3.6567135, 21.64057)
+
+[node name="stump_roundDetailed35" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.8327378, 0, 0.55366766, 0, 1, 0, -0.55366766, 0, -0.8327378, -31.541962, 3.6567132, 19.658691)
+
+[node name="stump_round36" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.58233595, 0, 0.8129484, 0, 1, 0, -0.8129484, 0, -0.58233595, -33.273464, 3.6567135, 19.550007)
+
+[node name="stump_round13" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -32.656593, 3.6567135, 27.711159)
+
+[node name="stump_roundDetailed13" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -33.32917, 3.6567137, 27.691368)
+
+[node name="stump_square13" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9738294, 0, -0.22728026, 0, 1, 0, 0.22728026, 0, -0.9738294, -32.815506, 3.6495569, 26.84121)
+
+[node name="stump_squareDetailed13" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9738294, 0, -0.22728026, 0, 1, 0, 0.22728026, 0, -0.9738294, -31.9331, 3.6567135, 26.921219)
+
+[node name="stump_squareDetailedWide7" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -32.55075, 3.6567132, 25.886501)
+
+[node name="stump_squareDetailed14" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -33.538406, 3.6567132, 26.324806)
+
+[node name="stump_square14" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.12606052, 0, 0.9920225, 0, 1, 0, -0.9920225, 0, -0.12606052, -32.054516, 3.6567135, 27.906902)
+
+[node name="stump_roundDetailed14" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.015393138, 0, 0.9998815, 0, 1, 0, -0.9998815, 0, 0.015393138, -31.784607, 3.6567132, 25.922646)
+
+[node name="stump_round37" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.16274068, 0, -0.98666894, 0, 1, 0, 0.98666894, 0, 0.16274068, -22.172037, 3.6567135, 20.864504)
+
+[node name="stump_roundDetailed36" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.16274068, 0, -0.98666894, 0, 1, 0, 0.98666894, 0, 0.16274068, -21.499186, 3.6567137, 20.859354)
+
+[node name="stump_square36" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.96473676, 0, 0.26321658, 0, 1, 0, -0.26321658, 0, 0.96473676, -21.980988, 3.6495569, 21.727966)
+
+[node name="stump_squareDetailed36" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.96473676, 0, 0.26321658, 0, 1, 0, -0.26321658, 0, 0.96473676, -22.865755, 3.6567135, 21.680716)
+
+[node name="stump_squareDetailedWide18" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.021675458, -22.210178, 3.6567132, 22.69183)
+
+[node name="stump_squareDetailed37" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.021675458, -21.239445, 3.6567132, 22.217222)
+
+[node name="stump_square37" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.16274068, 0, -0.98666894, 0, 1, 0, 0.98666894, 0, 0.16274068, -22.780954, 3.6567135, 20.69121)
+
+[node name="stump_roundDetailed37" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.021675458, -22.977137, 3.6567132, 22.684107)
+
+[node name="stump_round38" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.5872487, 0, -0.80940646, 0, 1, 0, 0.80940646, 0, 0.5872487, -21.322063, 3.6567135, 23.20435)
+
+[node name="stump_round39" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.81099224, 0, 0.5850568, 0, 1, 0, -0.5850568, 0, 0.81099224, -18.555658, 3.6567135, 21.441288)
+
+[node name="stump_roundDetailed38" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.81099224, 0, 0.5850568, 0, 1, 0, -0.5850568, 0, 0.81099224, -18.376434, 3.6567137, 22.089853)
+
+[node name="stump_square38" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.4135017, 0, 0.9105034, 0, 1, 0, -0.9105034, 0, 0.4135017, -19.340187, 3.6495569, 21.84943)
+
+[node name="stump_squareDetailed38" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.81099224, 0, 0.5850568, 0, 1, 0, -0.5850568, 0, 0.81099224, -19.523678, 3.6567135, 20.98261)
+
+[node name="stump_squareDetailedWide19" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.6058774, 0, 0.795558, 0, 1, 0, -0.795558, 0, -0.6058774, -20.330523, 3.6567132, 21.877672)
+
+[node name="stump_squareDetailed39" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.6058774, 0, 0.795558, 0, 1, 0, -0.795558, 0, -0.6058774, -19.620714, 3.6567132, 22.692379)
+
+[node name="stump_square39" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.81099224, 0, 0.5850568, 0, 1, 0, -0.5850568, 0, 0.81099224, -18.545967, 3.6567135, 20.808266)
+
+[node name="stump_roundDetailed39" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.71222216, 0, 0.7019542, 0, 1, 0, -0.7019542, 0, -0.71222216, -20.521683, 3.6567132, 21.134878)
+
+[node name="stump_round40" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.6058774, 0, 0.795558, 0, 1, 0, -0.795558, 0, -0.6058774, -20.595562, 3.6567135, 22.868216)
+
+[node name="stump_round41" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.20153967, 0, -0.9794804, 0, 1, 0, 0.9794804, 0, 0.20153967, -21.789505, 3.6567135, 17.373556)
+
+[node name="stump_roundDetailed40" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.20153967, 0, -0.9794804, 0, 1, 0, 0.9794804, 0, 0.20153967, -21.172037, 3.6567137, 17.64093)
+
+[node name="stump_square40" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.20153967, 0, -0.9794804, 0, 1, 0, 0.9794804, 0, 0.20153967, -21.963938, 3.6495569, 18.240528)
+
+[node name="stump_squareDetailed40" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.20153967, 0, -0.9794804, 0, 1, 0, 0.9794804, 0, 0.20153967, -22.754032, 3.6567135, 17.839535)
+
+[node name="stump_squareDetailedWide20" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.7556478, 0, 0.6549781, 0, 1, 0, -0.6549781, 0, -0.7556478, -22.563316, 3.6567132, 19.029394)
+
+[node name="stump_squareDetailed41" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.6972278, 0, -0.7168497, 0, 1, 0, 0.7168497, 0, 0.6972278, -21.48357, 3.6567132, 18.98786)
+
+[node name="stump_square41" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.20153967, 0, -0.9794804, 0, 1, 0, 0.9794804, 0, 0.20153967, -22.27634, 3.6567135, 16.968832)
+
+[node name="stump_roundDetailed41" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.958043, 0, -0.2866247, 0, 1, 0, 0.2866247, 0, 0.958043, -23.261646, 3.6567132, 18.71219)
+
+[node name="stump_round42" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.65945077, 0, -0.75174785, 0, 1, 0, 0.75174785, 0, -0.65945077, -21.958303, 3.6567135, 19.857271)
+
+[node name="stump_round59" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.3774367, 0, -0.9260355, 0, 1, 0, 0.9260355, 0, -0.3774367, -24.90779, 3.6567135, 20.4834)
+
+[node name="stump_roundDetailed59" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.3774367, 0, -0.9260355, 0, 1, 0, 0.9260355, 0, -0.3774367, -24.331648, 3.6567137, 20.830986)
+
+[node name="stump_square59" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.95990336, 0, -0.28033155, 0, 1, 0, 0.28033155, 0, 0.95990336, -25.19665, 3.6495569, 21.31924)
+
+[node name="stump_squareDetailed57" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.5045124, 0, -0.86340445, 0, 1, 0, 0.86340445, 0, -0.5045124, -24.820591, 3.6567132, 22.124125)
+
+[node name="stump_square60" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.3774367, 0, -0.9260355, 0, 1, 0, 0.9260355, 0, -0.3774367, -25.336098, 3.6567135, 20.017178)
+
+[node name="stump_squareDetailedWide29" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.10020554, 0, 0.99496675, 0, 1, 0, -0.99496675, 0, -0.10020554, -23.868326, 3.6567132, 22.310202)
+
+[node name="stump_squareDetailed58" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.10020554, 0, 0.99496675, 0, 1, 0, -0.99496675, 0, -0.10020554, -23.68956, 3.6567132, 23.375854)
+
+[node name="stump_roundDetailed60" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.23980454, 0, 0.97082126, 0, 1, 0, -0.97082126, 0, -0.23980454, -23.642683, 3.6567132, 21.577147)
+
+[node name="stump_round60" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.10020554, 0, 0.99496675, 0, 1, 0, -0.99496675, 0, -0.10020554, -24.612371, 3.6567135, 23.015764)
+
+[node name="stump_round61" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9552733, 0, -0.29572484, 0, 1, 0, 0.29572484, 0, -0.9552733, -24.19874, 3.6567135, 19.736776)
+
+[node name="stump_round62" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.9544959, 0, -0.2982245, 0, 1, 0, 0.2982245, 0, 0.9544959, -24.715187, 3.6567135, 24.98475)
+
+[node name="stump_roundDetailed61" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9544959, 0, -0.2982245, 0, 1, 0, 0.2982245, 0, 0.9544959, -24.417284, 3.6567137, 24.38142)
+
+[node name="stump_square61" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.19861521, 0, 0.9800776, 0, 1, 0, -0.9800776, 0, 0.19861521, -23.858017, 3.6495569, 25.2023)
+
+[node name="stump_squareDetailed59" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.90277314, 0, -0.43011707, 0, 1, 0, 0.43011707, 0, 0.90277314, -23.087608, 3.6567132, 24.759886)
+
+[node name="stump_square62" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9544959, 0, -0.2982245, 0, 1, 0, 0.2982245, 0, 0.9544959, -25.14374, 3.6567135, 25.45075)
+
+[node name="stump_squareDetailedWide30" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9830155, 0, -0.18352258, 0, 1, 0, 0.18352258, 0, -0.9830155, -22.982271, 3.6567132, 23.795345)
+
+[node name="stump_squareDetailed60" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9830155, 0, -0.18352258, 0, 1, 0, 0.18352258, 0, -0.9830155, -21.935427, 3.6567132, 23.527596)
+
+[node name="stump_roundDetailed62" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9472159, 0, -0.32059655, 0, 1, 0, 0.32059655, 0, -0.9472159, -23.731705, 3.6567132, 23.632149)
+
+[node name="stump_round63" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9830155, 0, -0.18352258, 0, 1, 0, 0.18352258, 0, -0.9830155, -22.216637, 3.6567135, 24.47742)
+
+[node name="stump_round64" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.3750113, 0, -0.92702043, 0, 1, 0, 0.92702043, 0, 0.3750113, -25.518795, 3.6567135, 24.341002)
+
+[node name="stump_round43" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.58095866, 0, 0.813933, 0, 1, 0, -0.813933, 0, 0.58095866, -18.715227, 3.6567135, 19.363455)
+
+[node name="stump_roundDetailed42" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.4379633, 0, 0.89899284, 0, 1, 0, -0.89899284, 0, -0.4379633, -18.813574, 3.6567137, 20.029102)
+
+[node name="stump_square42" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9999596, 0, 0.008988382, 0, 1, 0, -0.008988382, 0, 0.9999596, -19.597794, 3.6495569, 19.419495)
+
+[node name="stump_squareDetailed42" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.51183295, 0, -0.85908496, 0, 1, 0, 0.85908496, 0, -0.51183295, -19.415094, 3.6567135, 18.55251)
+
+[node name="stump_squareDetailedWide21" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.24520592, 0, 0.96947104, 0, 1, 0, -0.96947104, 0, -0.24520592, -20.51497, 3.6567132, 19.044855)
+
+[node name="stump_squareDetailed43" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.9974158, 0, -0.07184564, 0, 1, 0, 0.07184564, 0, 0.9974158, -20.19523, 3.6567132, 20.077011)
+
+[node name="stump_square43" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.51183295, 0, -0.85908496, 0, 1, 0, 0.85908496, 0, -0.51183295, -18.450386, 3.6567135, 18.788416)
+
+[node name="stump_roundDetailed43" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.99580973, 0, -0.091449514, 0, 1, 0, 0.091449514, 0, -0.99580973, -20.389435, 3.6567132, 18.288202)
+
+[node name="stump_round44" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.8951368, 0, 0.44579166, 0, 1, 0, -0.44579166, 0, -0.8951368, -21.157925, 3.6567135, 19.843626)
+
+[node name="stump_round45" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.99999434, 0, 0.003368754, 0, 1, 0, -0.003368754, 0, 0.99999434, -19.432959, 3.6567135, 16.684395)
+
+[node name="stump_roundDetailed44" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.06761457, 0, -0.9977115, 0, 1, 0, 0.9977115, 0, -0.06761457, -20.014103, 3.6567137, 16.345243)
+
+[node name="stump_square44" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.06761457, 0, -0.9977115, 0, 1, 0, 0.9977115, 0, -0.06761457, -19.15631, 3.6495569, 15.844437)
+
+[node name="stump_square45" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.47679082, 0, -0.87901676, 0, 1, 0, 0.87901676, 0, 0.47679082, -18.997902, 3.6567135, 17.144327)
+
+[node name="stump_round46" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.34331566, 0, 0.93922013, 0, 1, 0, -0.93922013, 0, -0.34331566, -22.247791, 3.6567135, 14.341837)
+
+[node name="stump_roundDetailed45" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.92765385, 0, 0.37344128, 0, 1, 0, -0.37344128, 0, 0.92765385, -22.07071, 3.6567137, 13.692682)
+
+[node name="stump_square46" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.92765385, 0, 0.37344128, 0, 1, 0, -0.37344128, 0, 0.92765385, -21.364843, 3.6495569, 14.39152)
+
+[node name="stump_squareDetailed44" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.92765385, 0, 0.37344128, 0, 1, 0, -0.37344128, 0, 0.92765385, -21.649702, 3.6567135, 15.230507)
+
+[node name="stump_squareDetailedWide22" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.92765385, 0, 0.37344128, 0, 1, 0, -0.37344128, 0, 0.92765385, -20.49893, 3.6567132, 14.872938)
+
+[node name="stump_square47" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.34331566, 0, 0.93922013, 0, 1, 0, -0.93922013, 0, -0.34331566, -22.579365, 3.6567135, 14.881157)
+
+[node name="stump_roundDetailed46" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.8923811, 0, 0.45128268, 0, 1, 0, -0.45128268, 0, 0.8923811, -20.71387, 3.6567132, 15.609203)
+
+[node name="stump_round47" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.7541941, 0, -0.65665185, 0, 1, 0, 0.65665185, 0, -0.7541941, -22.896427, 3.6567135, 26.202078)
+
+[node name="stump_roundDetailed47" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.7541941, 0, -0.65665185, 0, 1, 0, 0.65665185, 0, -0.7541941, -22.538689, 3.6567137, 26.771975)
+
+[node name="stump_square48" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.7306393, 0, -0.6827637, 0, 1, 0, 0.6827637, 0, 0.7306393, -23.530903, 3.6495569, 26.81812)
+
+[node name="stump_squareDetailed45" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.7306393, 0, -0.6827637, 0, 1, 0, 0.6827637, 0, 0.7306393, -23.955338, 3.6567135, 26.040365)
+
+[node name="stump_squareDetailedWide23" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.8394208, 0, -0.5434825, 0, 1, 0, 0.5434825, 0, -0.8394208, -24.47152, 3.6567132, 27.12926)
+
+[node name="stump_squareDetailed46" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8394208, 0, -0.5434825, 0, 1, 0, 0.5434825, 0, -0.8394208, -23.557833, 3.6567132, 27.70611)
+
+[node name="stump_square49" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.7541941, 0, -0.65665185, 0, 1, 0, 0.65665185, 0, -0.7541941, -23.068731, 3.6567135, 25.59288)
+
+[node name="stump_roundDetailed48" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.8394208, 0, -0.5434825, 0, 1, 0, 0.5434825, 0, -0.8394208, -24.867722, 3.6567132, 26.472519)
+
+[node name="stump_round48" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.38040847, 0, -0.9248186, 0, 1, 0, 0.9248186, 0, -0.38040847, -24.441273, 3.6567135, 28.154202)
+
+[node name="stump_round49" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.9237861, 0, -0.38290906, 0, 1, 0, 0.38290906, 0, 0.9237861, -21.488094, 3.6567135, 29.582535)
+
+[node name="stump_roundDetailed49" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9237861, 0, -0.38290906, 0, 1, 0, 0.38290906, 0, 0.9237861, -21.945904, 3.6567137, 30.075655)
+
+[node name="stump_square50" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9919963, 0, 0.12626834, 0, 1, 0, -0.12626834, 0, 0.9919963, -22.247429, 3.6495569, 29.129238)
+
+[node name="stump_squareDetailed47" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.9237861, 0, -0.38290906, 0, 1, 0, 0.38290906, 0, 0.9237861, -21.606125, 3.6567135, 28.517868)
+
+[node name="stump_squareDetailedWide24" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.35884023, 0, 0.9333989, 0, 1, 0, -0.9333989, 0, 0.35884023, -22.791546, 3.6567132, 28.301287)
+
+[node name="stump_squareDetailed48" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.35884023, 0, 0.9333989, 0, 1, 0, -0.9333989, 0, 0.35884023, -23.112103, 3.6567132, 29.33319)
+
+[node name="stump_square51" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9237861, 0, -0.38290906, 0, 1, 0, 0.38290906, 0, 0.9237861, -20.944302, 3.6567135, 29.258345)
+
+[node name="stump_roundDetailed50" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.22333509, 0, 0.9747417, 0, 1, 0, -0.9747417, 0, 0.22333509, -22.259817, 3.6567132, 27.748526)
+
+[node name="stump_round50" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.35884023, 0, 0.9333989, 0, 1, 0, -0.9333989, 0, 0.35884023, -23.773691, 3.6567135, 28.595934)
+
+[node name="stump_round51" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.7277008, 0, -0.68589467, 0, 1, 0, 0.68589467, 0, -0.7277008, -19.724728, 3.6567135, 24.694311)
+
+[node name="stump_roundDetailed51" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.7277008, 0, -0.68589467, 0, 1, 0, 0.68589467, 0, -0.7277008, -19.627995, 3.6567137, 25.360191)
+
+[node name="stump_square52" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.7277008, 0, -0.68589467, 0, 1, 0, 0.68589467, 0, -0.7277008, -20.554127, 3.6495569, 25.001167)
+
+[node name="stump_squareDetailed49" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7277008, 0, -0.68589467, 0, 1, 0, 0.68589467, 0, -0.7277008, -20.627808, 3.6567135, 24.118206)
+
+[node name="stump_squareDetailedWide25" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.16055292, 0, 0.98702717, 0, 1, 0, -0.98702717, 0, 0.16055292, -21.540226, 3.6567132, 24.905375)
+
+[node name="stump_squareDetailed50" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.24388565, 0, -0.969804, 0, 1, 0, 0.969804, 0, -0.24388565, -20.937841, 3.6567132, 25.802427)
+
+[node name="stump_square53" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.7277008, 0, -0.68589467, 0, 1, 0, 0.68589467, 0, -0.7277008, -19.635971, 3.6567135, 24.067465)
+
+[node name="stump_roundDetailed52" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.25920698, 0, -0.96582186, 0, 1, 0, 0.96582186, 0, 0.25920698, -21.63702, 3.6567132, 24.144508)
+
+[node name="stump_round52" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9860572, 0, 0.16640723, 0, 1, 0, -0.16640723, 0, -0.9860572, -21.927023, 3.6567135, 25.855011)
+
+[node name="stump_round53" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.99775606, 0, -0.066953, 0, 1, 0, 0.066953, 0, 0.99775606, -19.803652, 3.6567135, 28.355547)
+
+[node name="stump_roundDetailed53" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.53504544, 0, 0.8448233, 0, 1, 0, -0.8448233, 0, 0.53504544, -20.421766, 3.6567137, 28.621424)
+
+[node name="stump_square54" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.53278774, 0, -0.8462489, 0, 1, 0, 0.8462489, 0, 0.53278774, -20.314829, 3.6495569, 27.63391)
+
+[node name="stump_squareDetailed51" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9998785, 0, -0.015585195, 0, 1, 0, 0.015585195, 0, -0.9998785, -19.481075, 3.6567135, 27.33408)
+
+[node name="stump_squareDetailedWide26" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.69625103, 0, 0.7177983, 0, 1, 0, -0.7177983, 0, 0.69625103, -20.477676, 3.6567132, 26.656643)
+
+[node name="stump_squareDetailed52" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.4626618, 0, -0.886535, 0, 1, 0, 0.886535, 0, 0.4626618, -21.188128, 3.6567132, 27.47079)
+
+[node name="stump_roundDetailed54" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.6007831, 0, 0.7994121, 0, 1, 0, -0.7994121, 0, -0.6007831, -19.767832, 3.6567132, 26.36611)
+
+[node name="stump_round54" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.09071952, 0, 0.99587655, 0, 1, 0, -0.99587655, 0, -0.09071952, -21.495085, 3.6567135, 26.528967)
+
+[node name="stump_round55" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.52802366, 0, -0.84922963, 0, 1, 0, 0.84922963, 0, 0.52802366, -17.900684, 3.6567135, 26.33782)
+
+[node name="stump_roundDetailed55" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.8845645, 0, -0.46641776, 0, 1, 0, 0.46641776, 0, -0.8845645, -17.91726, 3.6567137, 25.665154)
+
+[node name="stump_square55" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.8845645, 0, -0.46641776, 0, 1, 0, 0.46641776, 0, -0.8845645, -17.040592, 3.6495569, 26.132137)
+
+[node name="stump_squareDetailed53" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.59831077, 0, 0.8012641, 0, 1, 0, -0.8012641, 0, -0.59831077, -16.563997, 3.6567132, 25.382391)
+
+[node name="stump_square56" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.4976551, 0, -0.867375, 0, 1, 0, 0.867375, 0, -0.4976551, -18.063614, 3.6567135, 26.949594)
+
+[node name="stump_round56" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.92233586, 0, 0.38638926, 0, 1, 0, -0.38638926, 0, 0.92233586, -15.575611, 3.6567135, 25.448236)
+
+[node name="stump_round57" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.61898416, 0, 0.7854036, 0, 1, 0, -0.7854036, 0, 0.61898416, -17.385395, 3.6567135, 22.712168)
+
+[node name="stump_roundDetailed56" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.8049664, 0, -0.59332037, 0, 1, 0, 0.59332037, 0, 0.8049664, -16.739965, 3.6567137, 22.521955)
+
+[node name="stump_square57" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.8049664, 0, -0.59332037, 0, 1, 0, 0.59332037, 0, 0.8049664, -16.96399, 3.6495569, 23.489653)
+
+[node name="stump_squareDetailed54" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.8049664, 0, -0.59332037, 0, 1, 0, 0.59332037, 0, 0.8049664, -17.827566, 3.6567135, 23.68784)
+
+[node name="stump_squareDetailedWide27" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.8049664, 0, -0.59332037, 0, 1, 0, 0.59332037, 0, 0.8049664, -16.918934, 3.6567132, 24.47937)
+
+[node name="stump_squareDetailed55" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.8049664, 0, -0.59332037, 0, 1, 0, 0.59332037, 0, 0.8049664, -16.116394, 3.6567132, 23.755825)
+
+[node name="stump_square58" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.61898416, 0, 0.7854036, 0, 1, 0, -0.7854036, 0, 0.61898416, -18.01849, 3.6567135, 22.713228)
+
+[node name="stump_roundDetailed57" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.8526859, 0, -0.522424, 0, 1, 0, 0.522424, 0, 0.8526859, -17.658373, 3.6567132, 24.683113)
+
+[node name="stump_round58" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.6120656, 0, -0.79080707, 0, 1, 0, 0.79080707, 0, 0.6120656, -15.924032, 3.6567135, 24.727549)
+
+[node name="stump_squareDetailed56" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.96473676, 0, 0.26321658, 0, 1, 0, -0.26321658, 0, 0.96473676, -17.53667, 3.6567135, 17.411077)
+
+[node name="stump_squareDetailedWide28" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.021675458, -16.881096, 3.6567132, 18.422194)
+
+[node name="stump_roundDetailed58" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.021675458, -17.648052, 3.6567132, 18.414469)
+
+[node name="stump_round14" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.5568467, 0, 0.8306153, 0, 1, 0, -0.8306153, 0, -0.5568467, -33.41926, 3.6567135, 25.34142)
+
+[node name="stump_round15" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.249107, 3.7883112, 27.00074)
+
+[node name="stump_roundDetailed15" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.404175, 3.764527, 26.345978)
+
+[node name="stump_square15" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.446963, 0, -0.8945524, 0, 1, 0, 0.8945524, 0, -0.446963, -35.449993, 3.734456, 26.621954)
+
+[node name="stump_squareDetailed15" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -35.29875, 3.7397385, 27.494978)
+
+[node name="stump_squareDetailedWide8" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -34.45929, 3.6631734, 26.630436)
+
+[node name="stump_squareDetailed16" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -35.138416, 3.6920936, 25.789982)
+
+[node name="stump_square16" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.282257, 3.8133783, 27.632967)
+
+[node name="stump_roundDetailed16" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.6857167, 0, -0.72786856, 0, 1, 0, 0.72786856, 0, 0.6857167, -34.29579, 3.6978035, 27.379805)
+
+[node name="stump_round16" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -34.157722, 3.6838186, 25.650396)
+
+[node name="stump_round17" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -33.168243, 3.6567135, 31.18553)
+
+[node name="stump_roundDetailed17" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -33.775375, 3.6567137, 30.895454)
+
+[node name="stump_square17" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -32.9618, 3.6495569, 30.325619)
+
+[node name="stump_squareDetailed17" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -32.18711, 3.6567135, 30.75562)
+
+[node name="stump_squareDetailedWide9" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.73085356, 0, -0.6825343, 0, 1, 0, 0.6825343, 0, 0.73085356, -32.333595, 3.6567132, 29.55951)
+
+[node name="stump_squareDetailed18" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.67018056, 0, 0.7421981, 0, 1, 0, -0.7421981, 0, -0.67018056, -33.41414, 3.6567132, 29.560997)
+
+[node name="stump_square18" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.1650993, 0, 0.986277, 0, 1, 0, -0.986277, 0, -0.1650993, -32.696743, 3.6567135, 31.60802)
+
+[node name="stump_roundDetailed18" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9467617, 0, 0.32193518, 0, 1, 0, -0.32193518, 0, -0.9467617, -31.647501, 3.6567132, 29.902376)
+
+[node name="stump_round18" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.68685925, 0, 0.72679055, 0, 1, 0, -0.72679055, 0, 0.68685925, -32.90751, 3.6567135, 28.709778)
+
+[node name="stump_round19" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.6107258, 0, -0.7918421, 0, 1, 0, 0.7918421, 0, -0.6107258, -36.166656, 3.8357372, 29.08306)
+
+[node name="stump_roundDetailed19" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.40434358, 0, -0.91460717, 0, 1, 0, 0.91460717, 0, 0.40434358, -36.04371, 3.8134189, 28.421515)
+
+[node name="stump_square19" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9996057, 0, 0.028078705, 0, 1, 0, -0.028078705, 0, -0.9996057, -35.282623, 3.8285806, 29.059767)
+
+[node name="stump_squareDetailed19" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.5433211, 0, 0.839525, 0, 1, 0, -0.839525, 0, 0.5433211, -35.49733, 3.7900648, 29.919386)
+
+[node name="stump_squareDetailedWide10" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.20910652, 0, -0.9778929, 0, 1, 0, 0.9778929, 0, 0.20910652, -34.37996, 3.6567132, 29.468142)
+
+[node name="stump_squareDetailed20" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9940678, 0, 0.10876292, 0, 1, 0, -0.10876292, 0, -0.9940678, -34.661224, 3.72314, 28.424845)
+
+[node name="stump_square20" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.5433211, 0, 0.839525, 0, 1, 0, -0.839525, 0, 0.5433211, -36.45263, 3.8357372, 29.647886)
+
+[node name="stump_roundDetailed20" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.99851495, 0, 0.05447957, 0, 1, 0, -0.05447957, 0, 0.99851495, -34.533455, 3.6567132, 30.219624)
+
+[node name="stump_round20" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.87799966, 0, -0.47866133, 0, 1, 0, 0.47866133, 0, 0.87799966, -33.707844, 3.6567135, 28.69375)
+
+[node name="stump_round21" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -35.548714, 3.815348, 31.786879)
+
+[node name="stump_roundDetailed21" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10454571, -34.980537, 3.7696648, 32.14734)
+
+[node name="stump_square21" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10454571, -35.856304, 3.8285806, 32.616005)
+
+[node name="stump_squareDetailed21" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -36.574142, 3.8357372, 32.096626)
+
+[node name="stump_squareDetailedWide11" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.571445, 3.8607543, 33.301674)
+
+[node name="stump_squareDetailed22" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.9986784, 0, 0.051394835, 0, 1, 0, -0.051394835, 0, 0.9986784, -35.498447, 3.7204733, 33.429146)
+
+[node name="stump_square22" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.44388476, 0, 0.89608383, 0, 1, 0, -0.89608383, 0, -0.44388476, -35.966423, 3.8357372, 31.311138)
+
+[node name="stump_roundDetailed22" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.2747982, 0, 0.9615019, 0, 1, 0, -0.9615019, 0, 0.2747982, -37.21172, 3.943539, 32.87938)
+
+[node name="stump_round22" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.103043, 3.8357372, 34.21382)
+
+[node name="stump_round23" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.30826998, 0, -0.9512989, 0, 1, 0, 0.9512989, 0, 0.30826998, -32.822636, 3.6509182, 34.232155)
+
+[node name="stump_roundDetailed23" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -33.023655, 3.7204733, 34.8743)
+
+[node name="stump_square23" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -33.703133, 3.663379, 34.14978)
+
+[node name="stump_squareDetailed23" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -33.387375, 3.6705353, 33.321926)
+
+[node name="stump_squareDetailedWide12" parent="Stumps2" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -34.550613, 3.7204733, 33.636597)
+
+[node name="stump_squareDetailed24" parent="Stumps2" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9408571, 0, -0.33880362, 0, 1, 0, 0.33880362, 0, -0.9408571, -34.39586, 3.6757855, 34.70601)
+
+[node name="stump_square24" parent="Stumps2" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.30826998, 0, -0.9512989, 0, 1, 0, 0.9512989, 0, 0.30826998, -32.4713, 3.6509182, 33.70549)
+
+[node name="stump_roundDetailed24" parent="Stumps2" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9084936, 0, -0.41789883, 0, 1, 0, 0.41789883, 0, -0.9084936, -34.308533, 3.7204733, 32.908806)
+
+[node name="stump_round24" parent="Stumps2" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9976413, 0, -0.06864217, 0, 1, 0, 0.06864217, 0, -0.9976413, -35.31034, 3.7334428, 34.32525)
 
 [node name="Trees" type="Node" parent="."]
 

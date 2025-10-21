@@ -11,7 +11,8 @@ var outline_mesh: MeshInstance3D = null
 #config de outline
 const OUTLINE_COLOR = Color(0.809, 0.955, 0.0, 1.0)
 const OUTLINE_SCALE = 1.1 
-
+#sprite
+@onready var SpriteDoPlantavel: Sprite3D = $Sprite3D
 func find_first_mesh_instance(node: Node) -> MeshInstance3D:
 	if node is MeshInstance3D:
 		return node
@@ -83,3 +84,8 @@ func interact(player):
 		Timing.start()
 		await Timing.timeout
 		WarningLabel.text = ""
+
+
+func set_sprite_visible(visibilidade: bool):
+	if SpriteDoPlantavel:
+		SpriteDoPlantavel.visible = visibilidade

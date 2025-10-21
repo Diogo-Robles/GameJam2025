@@ -15,7 +15,7 @@ var rotation_y = 0.0
 
 @export var max_outline_distance: float = 1.50
 @export var interact_distance: float = 2.0
-@export var interact_angle: float = 25.0
+@export var interact_angle: float = 35.0
 var current_outline_target: Node3D = null 
 
 #Relacionado a item aqui em baixo
@@ -92,16 +92,21 @@ func _physics_process(delta: float) -> void:
 	if outline_target != current_outline_target:
 		if current_outline_target:
 			current_outline_target.set_outline_visible(false)
-		
+			if "set_sprite_visible" in current_outline_target:
+				current_outline_target.set_sprite_visible(false)
 		if outline_target:
 			outline_target.set_outline_visible(true)
-		
+			if "set_sprite_visible" in outline_target:
+				outline_target.set_sprite_visible(true)
+				
 		current_outline_target = outline_target
 
 	if interact_target and Input.is_action_just_pressed("interact"):
 		interact_target.interact(self)
 		if current_outline_target:
 			current_outline_target.set_outline_visible(false)
+			if "set_sprite_visible" in current_outline_target:
+				current_outline_target.set_sprite_visible(false)
 			current_outline_target = null
 	#fim do sobre interagiveis
 	

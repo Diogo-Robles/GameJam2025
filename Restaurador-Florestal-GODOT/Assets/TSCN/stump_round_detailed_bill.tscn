@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dib1tl7vd13sr"]
+
+[ext_resource type="PackedScene" uid="uid://bww3aqcl7gibr" path="res://Assets/kenney_nature-kit/Models/DAE format/stump_roundDetailed.dae" id="1_sky83"]
+[ext_resource type="Script" uid="uid://c5sa5fcfd2se2" path="res://Assets/Scripts/TreeStump.gd" id="2_liapw"]
+[ext_resource type="Texture2D" uid="uid://b5d0rq1xlthbp" path="res://Assets/Sprites/AxeSignSprite.png" id="2_m1kn4"]
+
+[node name="stump_roundDetailed" instance=ExtResource("1_sky83")]
+script = ExtResource("2_liapw")
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.36493576, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_m1kn4")

@@ -3,6 +3,7 @@ extends Node3D
 
 const ITEM_CENA = preload("res://Assets/TSCN/Plantable.tscn")
 
+
 #nodes necessarias
 @onready var PlayerNode = get_tree().get_first_node_in_group("player")
 @onready var Timing: Timer =  get_tree().get_first_node_in_group("Timer")
@@ -12,7 +13,8 @@ const ITEM_CENA = preload("res://Assets/TSCN/Plantable.tscn")
 const OUTLINE_COLOR = Color(0.809, 0.955, 0.0, 1.0)
 const OUTLINE_SCALE = 1.03
 var outline_mesh: MeshInstance3D = null
-
+#sprite
+@onready var SpriteNoToco: Sprite3D = $Sprite3D
 
 func find_first_mesh_instance(node: Node) -> MeshInstance3D:
 	if node is MeshInstance3D:
@@ -62,9 +64,9 @@ func _ready():
 	
 	add_to_group("interactables")
 	
-func set_outline_visible(visible: bool):
+func set_outline_visible(visibilidade: bool):
 	if outline_mesh:
-		outline_mesh.visible = visible 
+		outline_mesh.visible = visibilidade 
 		
 func interact(player):
 	print("--- INTERAGIDO! ---")
@@ -99,3 +101,7 @@ func spawnar_e_remover():
 	
 	print("Item de madeira spawnado na posição: ", novo_item.global_position)
 	queue_free()
+
+func set_sprite_visible(visibilidade: bool):
+	if SpriteNoToco:
+		SpriteNoToco.visible = visibilidade
