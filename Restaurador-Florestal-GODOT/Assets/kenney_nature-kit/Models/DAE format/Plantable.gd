@@ -8,11 +8,23 @@ var outline_mesh: MeshInstance3D = null
 @onready var Timing: Timer =  get_tree().get_first_node_in_group("Timer")
 @onready var WarningLabel : Label = get_tree().get_first_node_in_group("WarningLabel")
 
+
 #config de outline
 const OUTLINE_COLOR = Color(0.809, 0.955, 0.0, 1.0)
 const OUTLINE_SCALE = 1.1 
 #sprite
 @onready var SpriteDoPlantavel: Sprite3D = $Sprite3D
+const TEXTURA_AGUA = preload("res://Assets/Sprites/WaterSignSprite.png")
+const TEXTURA_SEMENTE = preload("res://Assets/Sprites/SeedSignSprite.png")
+
+var hasSeed : bool = false
+
+func _physics_process(delta: float) -> void:
+	if hasSeed:
+		set_sprite_texture(TEXTURA_AGUA)
+	else:
+		set_sprite_texture(TEXTURA_SEMENTE)
+		
 func find_first_mesh_instance(node: Node) -> MeshInstance3D:
 	if node is MeshInstance3D:
 		return node
@@ -25,7 +37,7 @@ func find_first_mesh_instance(node: Node) -> MeshInstance3D:
 	return null
 func _ready():
 	var main_mesh = find_first_mesh_instance(self)
-
+	
 	if main_mesh == null:
 		print("DEBUG: Mesh principal não encontrada")
 
@@ -59,9 +71,11 @@ func _ready():
 
 		# 6. Adiciona como filho
 		add_child(outline_mesh)
+		
 	
 	add_to_group("interactables")
 	
+		
 func set_outline_visible(visible: bool):
 	if outline_mesh:
 		outline_mesh.visible = visible
@@ -72,20 +86,45 @@ func interact(player):
 	print("foi interagido por: ", player.name)
 	
 	set_outline_visible(false)
-	if player.HoldingItem == "Seed": 
-		WarningLabel.text = ""
-		set_process(false)
-		queue_free()
-		remove_from_group("interactables")
-	else:
-		WarningLabel.text = "Use uma Semente para interagir!"
-		Timing.wait_time = 2.0
-		Timing.one_shot = true
-		Timing.start()
-		await Timing.timeout
-		WarningLabel.text = ""
+	if !hasSeed:
+		if player.HoldingItem == "Seed":
+			WarningLabel.text = ""
+			hasSeed = true
+			return
+			#set_process(false)
+			#queue_free()
+			#remove_from_group("interactables")
+		else:
+			WarningLabel.text = "Use semente para plantar"
+			Timing.wait_time = 2.0
+			Timing.one_shot = true
+			Timing.start()
+			await Timing.timeout
+			WarningLabel.text = ""
+			return
+	if hasSeed:
+		if player.HoldingItem == "Water" && hasSeed:
+			WarningLabel.text = ""
+			hasSeed = true
+			set_process(false)
+			queue_free()
+			remove_from_group("interactables")
+			return
+		elif hasSeed:
+			WarningLabel.text = "Use água para regar"
+			Timing.wait_time = 2.0
+			Timing.one_shot = true
+			Timing.start()
+			await Timing.timeout
+			WarningLabel.text = ""
+			return
+
 
 
 func set_sprite_visible(visibilidade: bool):
 	if SpriteDoPlantavel:
 		SpriteDoPlantavel.visible = visibilidade
+
+func set_sprite_texture(new_texture: Texture2D):
+	if SpriteDoPlantavel:
+		SpriteDoPlantavel.texture = new_texture
