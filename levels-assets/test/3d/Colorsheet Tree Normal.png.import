@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2kmp88g0gel5"
-path.s3tc="res://.godot/imported/kid_idle0001.png-1c837f35f7a6e1cb9218851da94552b6.s3tc.ctex"
+uid="uid://cgwailcqjjvgx"
+path.s3tc="res://.godot/imported/Colorsheet Tree Normal.png-67cd88add1fbb71cbfb9af229117e6f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Characters/Player/kid/idle/kid_idle0001.png"
-dest_files=["res://.godot/imported/kid_idle0001.png-1c837f35f7a6e1cb9218851da94552b6.s3tc.ctex"]
+source_file="res://levels-assets/test/3d/Colorsheet Tree Normal.png"
+dest_files=["res://.godot/imported/Colorsheet Tree Normal.png-67cd88add1fbb71cbfb9af229117e6f6.s3tc.ctex"]
 
 [params]
 

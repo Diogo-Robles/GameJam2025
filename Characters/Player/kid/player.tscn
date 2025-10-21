@@ -17,24 +17,24 @@
 [ext_resource type="Texture2D" uid="uid://c60qkn2u2h4tj" path="res://Characters/Player/kid/idle/kid_idle0010.png" id="11_d2djq"]
 [ext_resource type="Texture2D" uid="uid://c6iwyvjxfgbpa" path="res://Characters/Player/kid/idle/kid_idle0011.png" id="12_m246n"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0dupx"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhb0c"]
 height = 42.0
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qhb0c"]
-animation = &"Idle"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hx26t"]
-animation = &"Walk"
+animation = &"Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hsv6s"]
 animation = &"Walk"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_go6rw"]
+animation = &"Walk"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_go6rw"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_qhb0c")
+blend_point_0/node = SubResource("AnimationNodeAnimation_hx26t")
 blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_hx26t")
+blend_point_1/node = SubResource("AnimationNodeAnimation_hsv6s")
 blend_point_1/pos = 1.0
-blend_point_2/node = SubResource("AnimationNodeAnimation_hsv6s")
+blend_point_2/node = SubResource("AnimationNodeAnimation_go6rw")
 blend_point_2/pos = -1.0
 blend_mode = 1
 sync = true
@@ -42,7 +42,7 @@ sync = true
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qhb0c"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_423yf"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_o8w7a"]
 states/move/node = SubResource("AnimationNodeBlendSpace1D_go6rw")
 states/move/position = Vector2(359, 100)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_qhb0c")]
@@ -156,7 +156,7 @@ _data = {
 &"Walk": SubResource("Animation_423yf")
 }
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r5shg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_423yf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -169,10 +169,10 @@ animations = [{
 "texture": ExtResource("4_hx26t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_hsv6s")
+"texture": ExtResource("6_go6rw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_go6rw")
+"texture": ExtResource("5_hsv6s")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_o8w7a")
@@ -181,10 +181,10 @@ animations = [{
 "texture": ExtResource("8_423yf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_wvq0d")
+"texture": ExtResource("10_rcmf2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_rcmf2")
+"texture": ExtResource("9_wvq0d")
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_d2djq")
@@ -214,32 +214,29 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
-
-[node name="player" type="CharacterBody2D" parent="."]
+[node name="player" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_0dupx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6)
-shape = SubResource("CapsuleShape2D_0dupx")
+shape = SubResource("CapsuleShape2D_qhb0c")
 
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(5, 5)
-
-[node name="Animetree" type="AnimationTree" parent="player"]
+[node name="Animetree" type="AnimationTree" parent="."]
 root_node = NodePath("../Anime")
-tree_root = SubResource("AnimationNodeStateMachine_423yf")
+tree_root = SubResource("AnimationNodeStateMachine_o8w7a")
 anim_player = NodePath("../AnimationPlayer")
-parameters/move/blend_position = 0.0
+parameters/move/blend_position = -0.92495924
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Anime")
 libraries = {
 &"": SubResource("AnimationLibrary_mpvkk")
 }
 
-[node name="Anime" type="AnimatedSprite2D" parent="player"]
+[node name="Anime" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0.98437166, -9)
 scale = Vector2(0.03478656, 0.038986895)
-sprite_frames = SubResource("SpriteFrames_r5shg")
+sprite_frames = SubResource("SpriteFrames_423yf")
 animation = &"walk"

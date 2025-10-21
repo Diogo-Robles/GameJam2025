@@ -8,6 +8,7 @@ var direction : Vector2 = Vector2.ZERO
 
 func _ready():
 	animation_tree.active = true
+
 	
 
 func _physics_process(delta: float) -> void:
