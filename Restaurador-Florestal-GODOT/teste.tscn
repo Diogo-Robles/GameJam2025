@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bxedn5rhcci3w"]
+[gd_scene load_steps=53 format=3 uid="uid://bxedn5rhcci3w"]
 
 [ext_resource type="PackedScene" uid="uid://x7mhyqnilryn" path="res://Assets/mapateste.glb" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://5thdr68hydqi" path="res://Player.gd" id="2_s2wow"]
@@ -23,11 +23,15 @@
 [ext_resource type="PackedScene" uid="uid://dntfena8qh7d8" path="res://Assets/kenney_nature-kit/Models/DAE format/log.dae" id="22_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://c50h3035wdo1y" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_thin.dae" id="30_guoat"]
 [ext_resource type="PackedScene" uid="uid://dr0jisf651qrx" path="res://Assets/TSCN/Stump_Square_bill.tscn" id="30_oh2g8"]
+[ext_resource type="Texture2D" uid="uid://cpwwduco2a4jc" path="res://Assets/Sprites/InventoryBar-Selected2.png" id="31_0m6ms"]
 [ext_resource type="PackedScene" uid="uid://l4v20i1mhdsk" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_simple.dae" id="31_3m8kk"]
 [ext_resource type="PackedScene" uid="uid://bf3vxg8uyoh6f" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_default.dae" id="32_0m6ms"]
+[ext_resource type="Texture2D" uid="uid://x14uouvk2dbj" path="res://Assets/Sprites/InventoryBar-Selected3.png" id="32_nu3td"]
 [ext_resource type="PackedScene" uid="uid://d2qkiglo8lycy" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_palmBend.dae" id="33_0m6ms"]
+[ext_resource type="Texture2D" uid="uid://swurvf2s48t0" path="res://Assets/Sprites/InventoryBar-Selected4.png" id="33_2krrl"]
 [ext_resource type="PackedScene" uid="uid://bh3b0xee0gmue" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_plateau.dae" id="33_nu3td"]
 [ext_resource type="PackedScene" uid="uid://bmiyfl281s6ro" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_palmDetailedShort.dae" id="34_nu3td"]
+[ext_resource type="Texture2D" uid="uid://t1fcf5j8dedn" path="res://Assets/Sprites/InventoryBar-Selected1.png" id="34_y5ym7"]
 [ext_resource type="PackedScene" uid="uid://m5uy6hep4oxh" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_palmDetailedTall.dae" id="35_2krrl"]
 [ext_resource type="Script" uid="uid://dllqimb6qc6ep" path="res://Assets/Scripts/UI/TesteUpdateUI.gd" id="38_y5ym7"]
 
@@ -103,6 +107,18 @@ data = PackedVector3Array(0.0157, 0.0255, 0.3348, -0.0157, 0.0255, -0.061199997,
 font_size = 64
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3osue"]
+frames = 4
+pause = true
+speed_scale = 0.6
+frame_0/texture = ExtResource("34_y5ym7")
+frame_1/texture = ExtResource("31_0m6ms")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("32_nu3td")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("33_2krrl")
+frame_3/duration = 1.0
 
 [node name="Node3D" type="Node3D"]
 
@@ -3731,24 +3747,19 @@ transform = Transform3D(0.20552108, 0, 0.9786528, 0, 1, 0, -0.9786528, 0, 0.2055
 [node name="tree_palmDetailedTall18" parent="Node2" instance=ExtResource("35_2krrl")]
 transform = Transform3D(0.8765671, 0, -0.48127958, 0, 1, 0, 0.48127958, 0, 0.8765671, -27.249031, 3.542048, -21.528673)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
+[node name="Label" type="Label" parent="."]
+light_mask = 0
+z_index = 1
+anchors_preset = -1
+anchor_top = 0.725
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1608.7864
-offset_bottom = 124.867065
+anchor_bottom = 0.725
+offset_left = -3.0
+offset_top = -64.80002
+offset_right = -3.0
+offset_bottom = 23.200012
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.41654795, 0.8384365)
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.06944445
-grow_horizontal = 2
 text = "teste"
 label_settings = SubResource("LabelSettings_y5ym7")
 horizontal_alignment = 1
@@ -3756,16 +3767,34 @@ uppercase = true
 script = ExtResource("38_y5ym7")
 metadata/_edit_use_anchors_ = true
 
-[node name="WarningLabel" type="Label" parent="Control" groups=["WarningLabel"]]
-layout_mode = 1
+[node name="WarningLabel" type="Label" parent="." groups=["WarningLabel"]]
 anchors_preset = -1
-anchor_top = 0.125
-anchor_right = 1.0
-anchor_bottom = 0.23886175
+anchor_left = 0.003478261
+anchor_top = 0.28858027
+anchor_right = 1.0034783
+anchor_bottom = 0.402442
+offset_left = -0.44869614
+offset_top = -21.35495
+offset_right = -0.44873047
+offset_bottom = -15.335388
 grow_horizontal = 2
 label_settings = SubResource("LabelSettings_y5ym7")
 horizontal_alignment = 1
 uppercase = true
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -238.0
+offset_top = -479.0
+offset_right = 241.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AnimatedTexture_3osue")
 
 [node name="Timer" type="Timer" parent="." groups=["Timer"]]
