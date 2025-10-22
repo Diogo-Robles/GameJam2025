@@ -1,0 +1,175 @@
+[gd_scene load_steps=16 format=3 uid="uid://bc17kbsnwtnon"]
+
+[ext_resource type="PackedScene" uid="uid://c5kd5mf463rrb" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/planks.glb" id="1_g37cu"]
+[ext_resource type="PackedScene" uid="uid://b6spslocfoge4" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/wall-wood.fbx" id="2_gyc4r"]
+[ext_resource type="PackedScene" uid="uid://brnsnf2gvp3w7" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/wall-wood-detail-diagonal.fbx" id="3_vxd08"]
+[ext_resource type="PackedScene" uid="uid://ciorhpht8g4bk" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/wall-wood-doorway-square.fbx" id="4_uwbwx"]
+[ext_resource type="PackedScene" uid="uid://c87q6mpwukkev" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/wall-wood-window-glass.fbx" id="5_bw27n"]
+[ext_resource type="PackedScene" uid="uid://b3bcgrv1bwc67" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/wall-wood-detail-cross.fbx" id="6_1l4aj"]
+[ext_resource type="PackedScene" uid="uid://8jwvjgc7pcd8" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/roof-high-flat.glb" id="7_1l4aj"]
+[ext_resource type="PackedScene" uid="uid://bja4timxqdlvy" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/roof-high-right.glb" id="8_vnk2w"]
+[ext_resource type="PackedScene" uid="uid://dwcpfkiqpq2ca" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/roof-high.glb" id="9_apth5"]
+[ext_resource type="PackedScene" uid="uid://bavm81ae83ec0" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/roof-high-left.glb" id="10_f4jcy"]
+[ext_resource type="PackedScene" uid="uid://dfn0q6q81hxcl" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/stairs-wide-wood.fbx" id="12_vnk2w"]
+[ext_resource type="PackedScene" uid="uid://cdv85on357ed" path="res://Assets/kenney_furniture-kit/Models/DAE format/table.dae" id="13_87kuy"]
+[ext_resource type="PackedScene" uid="uid://ecakyg2n885e" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/FBX format/fence.fbx" id="13_f4jcy"]
+[ext_resource type="PackedScene" uid="uid://j5182sam8cyx" path="res://Assets/kenney_furniture-kit/Models/DAE format/cabinetBedDrawerTable.dae" id="14_lbmoy"]
+[ext_resource type="PackedScene" uid="uid://co6fj2v7tvwbc" path="res://Assets/kenney_furniture-kit/Models/DAE format/bedSingle.dae" id="15_hcwld"]
+
+[node name="House" type="Node3D"]
+
+[node name="planks2" parent="." instance=ExtResource("1_g37cu")]
+
+[node name="planks3" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="planks4" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="planks5" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="planks6" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="planks7" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="planks14" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.963, -1)
+
+[node name="planks15" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.957, 0.963, -1.002)
+
+[node name="planks16" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031, 0.963, -1)
+
+[node name="planks20" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.963, 0)
+
+[node name="planks21" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.957, 0.963, -0.0019999743)
+
+[node name="planks22" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031, 0.963, 0)
+
+[node name="planks17" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9628787, -2)
+
+[node name="planks18" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.958947, 0.9628787, -2)
+
+[node name="planks19" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03088364, 0.9628787, -2)
+
+[node name="planks8" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996326, 0, -1.9996984)
+
+[node name="planks9" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="planks10" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="planks11" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="planks12" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="planks13" parent="." instance=ExtResource("1_g37cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="wall-wood2" parent="." instance=ExtResource("2_gyc4r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="wall-wood-detail-diagonal" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="wall-wood-detail-diagonal2" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.9, 0, 0)
+
+[node name="wall-wood-detail-diagonal5" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.9000001, 0, 0)
+
+[node name="wall-wood4" parent="." instance=ExtResource("2_gyc4r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -2)
+
+[node name="wall-wood-detail-diagonal3" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="wall-wood-detail-diagonal6" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0, 0.9)
+
+[node name="wall-wood-detail-diagonal4" parent="." instance=ExtResource("3_vxd08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, -2)
+rotation_edit_mode = 1
+
+[node name="wall-wood-doorway-square" parent="." instance=ExtResource("4_uwbwx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -2)
+
+[node name="wall-wood-window-glass" parent="." instance=ExtResource("5_bw27n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, -1)
+
+[node name="wall-wood-window-glass2" parent="." instance=ExtResource("5_bw27n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -2)
+
+[node name="wall-wood-detail-cross3" parent="." instance=ExtResource("6_1l4aj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
+
+[node name="wall-wood-detail-cross4" parent="." instance=ExtResource("6_1l4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+
+[node name="wall-wood-detail-cross5" parent="." instance=ExtResource("6_1l4aj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, -1)
+
+[node name="roof-high-right2" parent="." instance=ExtResource("8_vnk2w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 1, 0)
+
+[node name="roof-high-right6" parent="." instance=ExtResource("8_vnk2w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, -2)
+
+[node name="roof-high2" parent="." instance=ExtResource("9_apth5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 1, 0)
+
+[node name="roof-high3" parent="." instance=ExtResource("9_apth5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 1, -2)
+
+[node name="roof-high-left2" parent="." instance=ExtResource("10_f4jcy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0)
+
+[node name="roof-high-left3" parent="." instance=ExtResource("10_f4jcy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 1, -2)
+
+[node name="roof-high-flat3" parent="." instance=ExtResource("7_1l4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -1)
+
+[node name="roof-high-flat4" parent="." instance=ExtResource("7_1l4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+
+[node name="roof-high-flat5" parent="." instance=ExtResource("7_1l4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
+
+[node name="fence" parent="." instance=ExtResource("13_f4jcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="fence2" parent="." instance=ExtResource("13_f4jcy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -3)
+
+[node name="fence3" parent="." instance=ExtResource("13_f4jcy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -3)
+
+[node name="fence4" parent="." instance=ExtResource("13_f4jcy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -3)
+
+[node name="stairs-wide-wood" parent="." instance=ExtResource("12_vnk2w")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 1, -0.93770427, -4)
+
+[node name="table" parent="." instance=ExtResource("13_87kuy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5079659, 0.060000062, -0.06162101)
+
+[node name="cabinetBedDrawerTable" parent="." instance=ExtResource("14_lbmoy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2850941, 0.060000002, 0.18988875)
+
+[node name="bedSingle" parent="." instance=ExtResource("15_hcwld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7281353, 0.060000032, -0.7094393)
