@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://buxuchovcrshs"]
+[gd_scene load_steps=2 format=3 uid="uid://buxuchovcrshs"]
 
-[node name="Seedling" type="Node2D"]
+[ext_resource type="Script" uid="uid://d0foxiujlr5ct" path="res://Assets/Scripts/Replanting.gd" id="1_b0l6s"]
+
+[node name="Seedling" type="Node3D"]
+script = ExtResource("1_b0l6s")
+
+[node name="Timer" type="Timer" parent="."]

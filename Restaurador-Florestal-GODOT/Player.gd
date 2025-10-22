@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 #Relacionados a movimento aqui em baixo
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed = 3.0
@@ -21,6 +21,9 @@ var current_outline_target: Node3D = null
 #Relacionado a item aqui em baixo
 
 @export var HoldingItem: String = "Axe"
+
+#indica que vegetação é a area onde o player esta
+var PlayerArea: String = "SimpleTrees"
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

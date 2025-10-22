@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bxedn5rhcci3w"]
+[gd_scene load_steps=62 format=3 uid="uid://bxedn5rhcci3w"]
 
 [ext_resource type="PackedScene" uid="uid://x7mhyqnilryn" path="res://Assets/mapateste.glb" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://5thdr68hydqi" path="res://Player.gd" id="2_s2wow"]
@@ -16,7 +16,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bom6pnee48gcv" path="res://Assets/kenney_nature-kit/Models/OBJ format/campfire_bricks.obj" id="19_7utew"]
 [ext_resource type="ArrayMesh" uid="uid://dnhy2bfdldn5i" path="res://Assets/kenney_nature-kit/Models/OBJ format/campfire_logs.obj" id="20_q3cu2"]
 [ext_resource type="ArrayMesh" uid="uid://ca1j6f8jduby5" path="res://Assets/kenney_nature-kit/Models/OBJ format/canoe.obj" id="21_jpnjb"]
-[ext_resource type="PackedScene" uid="uid://buxuchovcrshs" path="res://Assets/TSCN/Seedling.tscn" id="22_5mp7k"]
 [ext_resource type="ArrayMesh" uid="uid://wfr4t8wrlo58" path="res://Assets/kenney_nature-kit/Models/OBJ format/canoe_paddle.obj" id="22_b5wkr"]
 [ext_resource type="PackedScene" uid="uid://c50h3035wdo1y" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_thin.dae" id="30_guoat"]
 [ext_resource type="PackedScene" uid="uid://dr0jisf651qrx" path="res://Assets/TSCN/Stump_Square_bill.tscn" id="30_oh2g8"]
@@ -3419,9 +3418,6 @@ transform = Transform3D(3.974916, 0, 0.44726348, 0, 4, 0, -0.44726348, 0, 3.9749
 [node name="tree_default18" parent="Simple Trees" instance=ExtResource("32_0m6ms")]
 transform = Transform3D(1.987458, 0, 0.22363174, 0, 2, 0, -0.22363174, 0, 1.987458, 17.335865, 3.586831, -5.867532)
 
-[node name="Seedling" parent="Simple Trees" instance=ExtResource("22_5mp7k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3481965, 3.627854, 17.078308)
-
 [node name="Plateau trees" type="Node" parent="."]
 
 [node name="tree_plateau8" parent="Plateau trees" instance=ExtResource("33_nu3td")]
@@ -3939,6 +3935,3 @@ script = ExtResource("42_5mp7k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SimpleAreaTrigger"]
 shape = SubResource("BoxShape3D_5mp7k")
-
-[connection signal="body_entered" from="SimpleAreaTrigger" to="SimpleAreaTrigger" method="_on_body_entered"]
-[connection signal="body_exited" from="SimpleAreaTrigger" to="SimpleAreaTrigger" method="_on_body_exited"]

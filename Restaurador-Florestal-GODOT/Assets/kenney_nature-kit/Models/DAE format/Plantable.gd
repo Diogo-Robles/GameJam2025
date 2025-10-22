@@ -18,6 +18,7 @@ const TEXTURA_AGUA = preload("res://Assets/Sprites/WaterSignSprite.png")
 const TEXTURA_SEMENTE = preload("res://Assets/Sprites/SeedSignSprite.png")
 
 var hasSeed : bool = false
+const SEEDLING = preload("res://Assets/TSCN/Seedling.tscn")
 
 func _physics_process(delta: float) -> void:
 	if hasSeed:
@@ -106,9 +107,14 @@ func interact(player):
 		if player.HoldingItem == "Water" && hasSeed:
 			WarningLabel.text = ""
 			hasSeed = true
+			var SeedPosition = global_position
+			var _seedling = SEEDLING.instantiate()
+			_seedling.global_transform.origin = SeedPosition
+			get_parent().add_child(_seedling)
 			set_process(false)
 			queue_free()
 			remove_from_group("interactables")
+
 			return
 		elif hasSeed:
 			WarningLabel.text = "Use água para regar"

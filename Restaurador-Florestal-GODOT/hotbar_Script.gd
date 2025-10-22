@@ -5,7 +5,6 @@ var anim_texture: AnimatedTexture
 
 func _ready():
 	if self.texture is AnimatedTexture:
-		print("aaaaaaaa")
 		anim_texture = self.texture as AnimatedTexture
 		anim_texture.pause = true
 	else:
