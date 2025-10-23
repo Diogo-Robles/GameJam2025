@@ -8,8 +8,8 @@ var jump_speed = 2.0
 @onready var camera = $Camera3D
 @export var sensibilidade = 0.02
 
-var rotation_x = 0.0
-var rotation_y = 0.0
+@onready var rotation_x = global_rotation.x
+@onready var rotation_y = global_rotation.y
 
 #relacionados a interação aqui a baixo
 
