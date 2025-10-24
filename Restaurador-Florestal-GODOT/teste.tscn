@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bxedn5rhcci3w"]
+[gd_scene load_steps=82 format=3 uid="uid://bxedn5rhcci3w"]
 
 [ext_resource type="PackedScene" uid="uid://x7mhyqnilryn" path="res://Assets/mapateste.glb" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://5thdr68hydqi" path="res://Player.gd" id="2_s2wow"]
@@ -139,6 +139,9 @@ size = Vector3(0.98036194, 0.30322266, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gi0x1"]
 size = Vector3(2.1576538, 1, 2.3416138)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tyadp"]
+size = Vector3(2.337616, 1, 2.728302)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qh13i"]
 size = Vector3(2.303833, 1, 1.5875244)
 
@@ -162,6 +165,18 @@ size = Vector3(30.344215, 8.883667, 10.11792)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lt3g6"]
 size = Vector3(36.321533, 9.914001, 10.144012)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_owq3q"]
+size = Vector3(8.823914, 47.13913, 159.27435)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qshiq"]
+size = Vector3(157.92564, 47.13913, 10.478989)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3kfae"]
+size = Vector3(19.204033, 47.13913, 146.77405)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3dmt"]
+size = Vector3(166.41843, 47.13913, 8.173035)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f7php"]
 size = Vector3(2.9111328, 6.5786133, 1)
@@ -1331,6 +1346,141 @@ transform = Transform3D(0.57074225, 0, -0.8211294, 0, 1, 0, 0.8211294, 0, 0.5707
 [node name="stump_round32" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
 transform = Transform3D(0.053747624, 0, -0.99855465, 0, 1, 0, 0.99855465, 0, 0.053747624, -27.639475, 3.6567135, 17.956303)
 
+[node name="stump_round65" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.9957619, 0, 0.09197104, 0, 1, 0, -0.09197104, 0, 0.9957619, -30.699703, 3.6567135, 15.63762)
+
+[node name="stump_roundDetailed63" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9957619, 0, 0.09197104, 0, 1, 0, -0.09197104, 0, 0.9957619, -30.65686, 3.6567137, 14.966112)
+
+[node name="stump_squareDetailed61" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.99876606, 0, -0.049668968, 0, 1, 0, 0.049668968, 0, 0.99876606, -29.283928, 3.6567132, 14.803859)
+
+[node name="stump_round66" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.5257391, 0, 0.850646, 0, 1, 0, -0.850646, 0, -0.5257391, -29.866516, 3.6567135, 12.071575)
+
+[node name="stump_roundDetailed64" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.5257391, 0, 0.850646, 0, 1, 0, -0.850646, 0, -0.5257391, -29.206823, 3.6567137, 11.939052)
+
+[node name="stump_square63" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.8787007, 0, 0.47737354, 0, 1, 0, -0.47737354, 0, -0.8787007, -29.515354, 3.6495569, 12.883209)
+
+[node name="stump_squareDetailed62" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.5257391, 0, 0.850646, 0, 1, 0, -0.850646, 0, -0.5257391, -30.393047, 3.6567135, 13.004425)
+
+[node name="stump_squareDetailedWide31" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.8367356, 0, -0.54760706, 0, 1, 0, 0.54760706, 0, -0.8367356, -29.557802, 3.6567132, 13.873039)
+
+[node name="stump_squareDetailed63" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8367356, 0, -0.54760706, 0, 1, 0, 0.54760706, 0, -0.8367356, -28.694553, 3.6567132, 13.22313)
+
+[node name="stump_square64" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.5257391, 0, 0.850646, 0, 1, 0, -0.850646, 0, -0.5257391, -30.497234, 3.6567135, 12.016769)
+
+[node name="stump_roundDetailed65" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.750953, 0, -0.66035557, 0, 1, 0, 0.66035557, 0, -0.750953, -30.312336, 3.6567132, 14.010745)
+
+[node name="stump_round67" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.8367356, 0, -0.54760706, 0, 1, 0, 0.54760706, 0, -0.8367356, -28.588678, 3.6567135, 14.2080345)
+
+[node name="stump_square65" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9913581, 0, 0.1311838, 0, 1, 0, -0.1311838, 0, 0.9913581, -33.30216, 3.6495569, 15.242943)
+
+[node name="stump_squareDetailedWide32" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.70719314, 0, -0.70702046, 0, 1, 0, 0.70702046, 0, -0.70719314, -32.55804, 3.6567132, 15.897047)
+
+[node name="stump_squareDetailed64" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.7647414, 0, 0.6443373, 0, 1, 0, -0.6443373, 0, 0.7647414, -32.522476, 3.6567132, 14.817091)
+
+[node name="stump_roundDetailed66" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.3542093, 0, 0.93516624, 0, 1, 0, -0.93516624, 0, 0.3542093, -32.924232, 3.6567132, 16.570984)
+
+[node name="stump_round68" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.70281154, 0, -0.71137625, 0, 1, 0, 0.71137625, 0, 0.70281154, -31.689129, 3.6567135, 15.352608)
+
+[node name="stump_round69" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.77043533, 0, 0.63751817, 0, 1, 0, -0.63751817, 0, -0.77043533, -31.950436, 3.6567135, 12.082578)
+
+[node name="stump_roundDetailed67" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.92793393, 0, -0.37274495, 0, 1, 0, 0.37274495, 0, -0.92793393, -31.293499, 3.6567137, 12.228136)
+
+[node name="stump_square66" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.062337637, 0, 0.9980552, 0, 1, 0, -0.9980552, 0, 0.062337637, -31.957474, 3.6495569, 12.96689)
+
+[node name="stump_squareDetailed65" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.82040143, 0, -0.571788, 0, 1, 0, 0.571788, 0, 0.82040143, -32.809223, 3.6567135, 12.7228365)
+
+[node name="stump_squareDetailedWide33" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9844879, 0, -0.17545265, 0, 1, 0, 0.17545265, 0, -0.9844879, -32.396557, 3.6567132, 13.855021)
+
+[node name="stump_squareDetailed66" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.14278448, 0, 0.9897539, 0, 1, 0, -0.9897539, 0, 0.14278448, -31.34423, 3.6567132, 13.609691)
+
+[node name="stump_roundDetailed68" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.020209521, 0, -0.9997958, 0, 1, 0, 0.9997958, 0, 0.020209521, -33.142334, 3.6567132, 13.675851)
+
+[node name="stump_round70" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.5084855, 0, -0.8610706, 0, 1, 0, 0.8610706, 0, -0.5084855, -31.645668, 3.6567135, 14.553296)
+
+[node name="stump_round71" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.49290958, 0, 0.8700807, 0, 1, 0, -0.8700807, 0, 0.49290958, -23.468472, 3.6567135, 12.755293)
+
+[node name="stump_roundDetailed69" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.49290958, 0, 0.8700807, 0, 1, 0, -0.8700807, 0, 0.49290958, -23.995363, 3.6567137, 12.33679)
+
+[node name="stump_squareDetailed67" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.6109193, 0, 0.79169315, 0, 1, 0, -0.79169315, 0, 0.6109193, -23.344854, 3.6567132, 11.11691)
+
+[node name="stump_squareDetailed68" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.9985453, 0, 0.05392188, 0, 1, 0, -0.05392188, 0, -0.9985453, -25.45543, 3.6567135, 11.00037)
+
+[node name="stump_squareDetailedWide34" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.028026313, 0, -0.9996072, 0, 1, 0, 0.9996072, 0, -0.028026313, -24.265453, 3.6567132, 10.810426)
+
+[node name="stump_square68" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9985453, 0, 0.05392188, 0, 1, 0, -0.05392188, 0, -0.9985453, -26.325829, 3.65242, 10.522118)
+
+[node name="stump_roundDetailed71" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.11351526, 0, -0.99353623, 0, 1, 0, 0.99353623, 0, 0.11351526, -24.583107, 3.6567132, 11.508552)
+
+[node name="stump_square69" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.45819962, 0, 0.88884926, 0, 1, 0, -0.88884926, 0, 0.45819962, -25.278118, 3.6495569, 14.666765)
+
+[node name="stump_squareDetailedWide35" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.17680997, 0, -0.98424506, 0, 1, 0, 0.98424506, 0, 0.17680997, -24.316286, 3.6567132, 14.42919)
+
+[node name="stump_squareDetailed70" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.09249231, 0, 0.99571335, 0, 1, 0, -0.99571335, 0, -0.09249231, -25.182692, 3.6567132, 13.7835045)
+
+[node name="stump_roundDetailed72" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.5656294, 0, 0.8246596, 0, 1, 0, -0.8246596, 0, -0.5656294, -23.971981, 3.6567132, 15.114567)
+
+[node name="stump_round74" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.985277, 0, 0.17096624, 0, 1, 0, -0.17096624, 0, 0.985277, -24.26729, 3.6567135, 13.404972)
+
+[node name="stump_round75" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.96323764, 0, -0.26865074, 0, 1, 0, 0.26865074, 0, -0.96323764, -27.101345, 3.6567135, 11.752849)
+
+[node name="stump_roundDetailed73" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.22365838, 0, -0.97466755, 0, 1, 0, 0.97466755, 0, -0.22365838, -26.606825, 3.6567137, 11.2965555)
+
+[node name="stump_square70" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.78387773, 0, 0.62091535, 0, 1, 0, -0.62091535, 0, -0.78387773, -26.37929, 3.6495569, 12.263431)
+
+[node name="stump_squareDetailed71" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.93779206, 0, 0.34719747, 0, 1, 0, -0.34719747, 0, 0.93779206, -27.065887, 3.6567135, 12.823451)
+
+[node name="stump_squareDetailedWide36" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.4179305, 0, -0.908479, 0, 1, 0, 0.908479, 0, -0.4179305, -25.900728, 3.6567132, 13.130927)
+
+[node name="stump_squareDetailed72" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7311394, 0, 0.6822282, 0, 1, 0, -0.6822282, 0, -0.7311394, -25.501446, 3.6567132, 12.12686)
+
+[node name="stump_roundDetailed74" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.8324283, 0, -0.5541327, 0, 1, 0, 0.5541327, 0, 0.8324283, -26.473558, 3.6567132, 13.640976)
+
+[node name="stump_round76" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.416725, 0, -0.9090326, 0, 1, 0, 0.9090326, 0, 0.416725, -24.898764, 3.6567135, 12.913008)
+
 [node name="stump_round33" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
 transform = Transform3D(-0.4961864, 0, 0.86821604, 0, 1, 0, -0.86821604, 0, -0.4961864, -31.23849, 3.6567135, 18.014101)
 
@@ -1345,6 +1495,102 @@ transform = Transform3D(0.568203, 0, -0.8228885, 0, 1, 0, 0.8228885, 0, 0.568203
 
 [node name="stump_square33" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
 transform = Transform3D(0.5294602, 0, 0.8483348, 0, 1, 0, -0.8483348, 0, 0.5294602, -31.052998, 3.6567135, 17.408787)
+
+[node name="stump_round72" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.99650615, 0, 0.08352108, 0, 1, 0, -0.08352108, 0, -0.99650615, -36.168434, 3.6567135, 13.10202)
+
+[node name="stump_roundDetailed70" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.99650615, 0, 0.08352108, 0, 1, 0, -0.08352108, 0, -0.99650615, -36.328003, 3.6567137, 13.755698)
+
+[node name="stump_square67" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9990252, 0, 0.04414229, 0, 1, 0, -0.04414229, 0, -0.9990252, -33.67505, 3.6495569, 13.945572)
+
+[node name="stump_squareDetailedWide37" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.81990206, 0, 0.5725038, 0, 1, 0, -0.5725038, 0, 0.81990206, -34.293358, 3.6567132, 13.171456)
+
+[node name="stump_squareDetailed69" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8656061, 0, -0.5007255, 0, 1, 0, 0.5007255, 0, -0.8656061, -34.517166, 3.6567132, 14.228565)
+
+[node name="stump_roundDetailed75" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.51223755, 0, -0.85884386, 0, 1, 0, 0.85884386, 0, -0.51223755, -33.814987, 3.6567132, 12.571915)
+
+[node name="stump_round73" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.56762844, 0, 0.823285, 0, 1, 0, -0.823285, 0, -0.56762844, -35.24407, 3.6567135, 13.555612)
+
+[node name="stump_round77" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.6471225, 0, -0.76238596, 0, 1, 0, 0.76238596, 0, 0.6471225, -35.55844, 3.6567135, 16.820967)
+
+[node name="stump_roundDetailed76" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9788067, 0, 0.20478663, 0, 1, 0, -0.20478663, 0, 0.9788067, -36.179817, 3.6567137, 16.562807)
+
+[node name="stump_square71" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.23585448, 0, -0.97178847, 0, 1, 0, 0.97178847, 0, -0.23585448, -35.396915, 3.6495569, 15.951503)
+
+[node name="stump_squareDetailed73" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7078099, 0, 0.70640296, 0, 1, 0, -0.70640296, 0, -0.7078099, -34.60095, 3.6567135, 16.340698)
+
+[node name="stump_squareDetailedWide38" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.9999998, 0, 0.00064586103, 0, 1, 0, -0.00064586103, 0, 0.9999998, -34.809338, 3.6567132, 15.153807)
+
+[node name="stump_squareDetailed74" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.3136113, 0, -0.9495515, 0, 1, 0, 0.9495515, 0, -0.3136113, -35.888344, 3.6567132, 15.211395)
+
+[node name="stump_roundDetailed77" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.15488273, 0, 0.9879328, 0, 1, 0, -0.9879328, 0, 0.15488273, -34.10636, 3.6567132, 15.460593)
+
+[node name="stump_round78" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.65118486, 0, 0.7589191, 0, 1, 0, -0.7589191, 0, 0.65118486, -35.42659, 3.6567135, 14.335017)
+
+[node name="stump_square72" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.66961014, 0, -0.74271274, 0, 1, 0, 0.74271274, 0, -0.66961014, -35.51095, 3.6567135, 11.419889)
+
+[node name="stump_round79" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.99650615, 0, 0.08352108, 0, 1, 0, -0.08352108, 0, -0.99650615, -36.508198, 3.6567135, 20.390894)
+
+[node name="stump_roundDetailed78" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.99650615, 0, 0.08352108, 0, 1, 0, -0.08352108, 0, -0.99650615, -36.667767, 3.6567137, 21.04457)
+
+[node name="stump_square73" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.9990252, 0, 0.04414229, 0, 1, 0, -0.04414229, 0, -0.9990252, -34.014812, 3.6495569, 21.234446)
+
+[node name="stump_squareDetailedWide39" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.81990206, 0, 0.5725038, 0, 1, 0, -0.5725038, 0, 0.81990206, -34.63312, 3.6567132, 20.460331)
+
+[node name="stump_squareDetailed75" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.8656061, 0, -0.5007255, 0, 1, 0, 0.5007255, 0, -0.8656061, -34.85693, 3.6567132, 21.517439)
+
+[node name="stump_roundDetailed79" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.51223755, 0, -0.85884386, 0, 1, 0, 0.85884386, 0, -0.51223755, -34.15475, 3.6567132, 19.860788)
+
+[node name="stump_round80" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.56762844, 0, 0.823285, 0, 1, 0, -0.823285, 0, -0.56762844, -35.58383, 3.6567135, 20.844486)
+
+[node name="stump_round81" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.6471225, 0, -0.76238596, 0, 1, 0, 0.76238596, 0, 0.6471225, -35.898205, 3.6567135, 24.10984)
+
+[node name="stump_roundDetailed80" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9788067, 0, 0.20478663, 0, 1, 0, -0.20478663, 0, 0.9788067, -36.51958, 3.6567137, 23.85168)
+
+[node name="stump_square74" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.23585448, 0, -0.97178847, 0, 1, 0, 0.97178847, 0, -0.23585448, -35.73668, 3.6495569, 23.240376)
+
+[node name="stump_squareDetailed76" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.7078099, 0, 0.70640296, 0, 1, 0, -0.70640296, 0, -0.7078099, -34.940712, 3.6567135, 23.629572)
+
+[node name="stump_squareDetailedWide40" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(0.9999998, 0, 0.00064586103, 0, 1, 0, -0.00064586103, 0, 0.9999998, -35.1491, 3.6567132, 22.44268)
+
+[node name="stump_squareDetailed77" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.3136113, 0, -0.9495515, 0, 1, 0, 0.9495515, 0, -0.3136113, -36.228107, 3.6567132, 22.500269)
+
+[node name="stump_roundDetailed81" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.15488273, 0, 0.9879328, 0, 1, 0, -0.9879328, 0, 0.15488273, -34.446125, 3.6567132, 22.749466)
+
+[node name="stump_round82" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.65118486, 0, 0.7589191, 0, 1, 0, -0.7589191, 0, 0.65118486, -35.766354, 3.6567135, 21.62389)
+
+[node name="stump_square75" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.66961014, 0, -0.74271274, 0, 1, 0, 0.74271274, 0, -0.66961014, -35.85071, 3.6567135, 18.708763)
 
 [node name="stump_round34" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
 transform = Transform3D(-0.93602276, 0, -0.35193983, 0, 1, 0, 0.35193983, 0, -0.93602276, -33.594936, 3.6567135, 18.8169)
@@ -1764,13 +2010,13 @@ transform = Transform3D(0.021675458, 0, -0.99976516, 0, 1, 0, 0.99976516, 0, 0.0
 transform = Transform3D(-0.5568467, 0, 0.8306153, 0, 1, 0, -0.8306153, 0, -0.5568467, -33.41926, 3.6567135, 25.34142)
 
 [node name="stump_round15" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.249107, 3.7883112, 27.00074)
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.249107, 3.768081, 27.00074)
 
 [node name="stump_roundDetailed15" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
-transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.404175, 3.764527, 26.345978)
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.404175, 3.7518532, 26.345978)
 
 [node name="stump_square15" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
-transform = Transform3D(-0.446963, 0, -0.8945524, 0, 1, 0, 0.8945524, 0, -0.446963, -35.449993, 3.734456, 26.621954)
+transform = Transform3D(-0.446963, 0, -0.8945524, 0, 1, 0, 0.8945524, 0, -0.446963, -35.449993, 3.6968794, 26.621954)
 
 [node name="stump_squareDetailed15" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
 transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -35.29875, 3.7397385, 27.494978)
@@ -1782,7 +2028,7 @@ transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.575
 transform = Transform3D(0.5759759, 0, -0.81746674, 0, 1, 0, 0.81746674, 0, 0.5759759, -35.138416, 3.6920936, 25.789982)
 
 [node name="stump_square16" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
-transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.282257, 3.8133783, 27.632967)
+transform = Transform3D(-0.8321187, 0, -0.5545975, 0, 1, 0, 0.5545975, 0, -0.8321187, -36.282257, 3.795988, 27.632967)
 
 [node name="stump_roundDetailed16" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
 transform = Transform3D(0.6857167, 0, -0.72786856, 0, 1, 0, 0.72786856, 0, 0.6857167, -34.29579, 3.6978035, 27.379805)
@@ -1818,10 +2064,10 @@ transform = Transform3D(-0.9467617, 0, 0.32193518, 0, 1, 0, -0.32193518, 0, -0.9
 transform = Transform3D(0.68685925, 0, 0.72679055, 0, 1, 0, -0.72679055, 0, 0.68685925, -32.90751, 3.6567135, 28.709778)
 
 [node name="stump_round19" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(-0.6107258, 0, -0.7918421, 0, 1, 0, 0.7918421, 0, -0.6107258, -36.166656, 3.8357372, 29.08306)
+transform = Transform3D(-0.6107258, 0, -0.7918421, 0, 1, 0, 0.7918421, 0, -0.6107258, -36.166656, 3.8320704, 29.08306)
 
 [node name="stump_roundDetailed19" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
-transform = Transform3D(0.40434358, 0, -0.91460717, 0, 1, 0, 0.91460717, 0, 0.40434358, -36.04371, 3.8134189, 28.421515)
+transform = Transform3D(0.40434358, 0, -0.91460717, 0, 1, 0, 0.91460717, 0, 0.40434358, -36.04371, 3.7966738, 28.421515)
 
 [node name="stump_square19" parent="StumpsHouseSide" instance=ExtResource("30_oh2g8")]
 transform = Transform3D(-0.9996057, 0, 0.028078705, 0, 1, 0, -0.028078705, 0, -0.9996057, -35.282623, 3.8285806, 29.059767)
@@ -1854,10 +2100,10 @@ transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10
 transform = Transform3D(0.10454571, 0, 0.99452007, 0, 1, 0, -0.99452007, 0, 0.10454571, -35.856304, 3.8285806, 32.616005)
 
 [node name="stump_squareDetailed21" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
-transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -36.574142, 3.8357372, 32.096626)
+transform = Transform3D(-0.99943215, 0, 0.033695765, 0, 1, 0, -0.033695765, 0, -0.99943215, -36.574142, 3.8862777, 32.096626)
 
 [node name="stump_squareDetailedWide11" parent="StumpsHouseSide" instance=ExtResource("12_mk30p")]
-transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.571445, 3.8607543, 33.301674)
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.571217, 3.856071, 33.296272)
 
 [node name="stump_squareDetailed22" parent="StumpsHouseSide" instance=ExtResource("11_3osue")]
 transform = Transform3D(0.9986784, 0, 0.051394835, 0, 1, 0, -0.051394835, 0, 0.9986784, -35.498447, 3.7204733, 33.429146)
@@ -1866,10 +2112,10 @@ transform = Transform3D(0.9986784, 0, 0.051394835, 0, 1, 0, -0.051394835, 0, 0.9
 transform = Transform3D(-0.44388476, 0, 0.89608383, 0, 1, 0, -0.89608383, 0, -0.44388476, -35.966423, 3.8357372, 31.311138)
 
 [node name="stump_roundDetailed22" parent="StumpsHouseSide" instance=ExtResource("9_oh2g8")]
-transform = Transform3D(0.2747982, 0, 0.9615019, 0, 1, 0, -0.9615019, 0, 0.2747982, -37.21172, 3.943539, 32.87938)
+transform = Transform3D(0.2747982, 0, 0.9615019, 0, 1, 0, -0.9615019, 0, 0.2747982, -37.21172, 3.9292376, 32.87938)
 
 [node name="stump_round22" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.103043, 3.8357372, 34.21382)
+transform = Transform3D(-0.19205943, 0, -0.98138326, 0, 1, 0, 0.98138326, 0, -0.19205943, -36.09225, 3.7861373, 34.202873)
 
 [node name="stump_round23" parent="StumpsHouseSide" instance=ExtResource("12_oh2g8")]
 transform = Transform3D(0.30826998, 0, -0.9512989, 0, 1, 0, 0.9512989, 0, 0.30826998, -32.822636, 3.6509182, 34.232155)
@@ -3782,7 +4028,7 @@ transform = Transform3D(2.9811866, 0, 0.3354478, 0, 3, 0, -0.3354478, 0, 2.98118
 transform = Transform3D(3.974916, 0, 0.44726348, 0, 4, 0, -0.44726348, 0, 3.974916, 17.724033, 3.4884038, -7.092429)
 
 [node name="tree_default18" parent="Simple Trees" instance=ExtResource("32_0m6ms")]
-transform = Transform3D(1.987458, 0, 0.22363174, 0, 2, 0, -0.22363174, 0, 1.987458, 17.335865, 3.586831, -5.867532)
+transform = Transform3D(1.987458, 0, 0.22363174, 0, 2, 0, -0.22363174, 0, 1.987458, 17.335865, 3.3422174, -5.867532)
 
 [node name="tree_thin38" parent="Simple Trees" instance=ExtResource("30_guoat")]
 transform = Transform3D(-0.44290975, 0, -2.9671254, 0, 2.9999998, 0, 2.9671254, 0, -0.44290975, 27.649921, 3.493997, -11.998093)
@@ -4151,6 +4397,14 @@ script = ExtResource("42_5mp7k")
 transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000434, -0.5862734, 0, 0.6708279)
 shape = SubResource("BoxShape3D_gi0x1")
 
+[node name="SimpleAreaTrigger2" type="Area3D" parent="."]
+transform = Transform3D(27.433514, 0, 0, 0, 9.389527, 0, 0, 0, 25.29141, 54.942593, 4.003549, -56.810432)
+script = ExtResource("42_5mp7k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SimpleAreaTrigger2"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000505, -0.6762545, 0, 0.864182)
+shape = SubResource("BoxShape3D_tyadp")
+
 [node name="TallAreaTrigger" type="Area3D" parent="."]
 transform = Transform3D(35.63597, 0, 0, 0, 9.389527, 0, 0, 0, 31.641739, 24.132061, 4.003549, 33.28244)
 script = ExtResource("44_al6ht")
@@ -4204,6 +4458,30 @@ shape = SubResource("BoxShape3D_1u8j2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node4/StaticBody3D7"]
 transform = Transform3D(0.97022396, 0, -0.24220979, 0, 1, 0, 0.24220979, 0, 0.97022396, -50.671707, 4.4266663, -1.9121479)
 shape = SubResource("BoxShape3D_lt3g6")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="Node4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node4/StaticBody3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.966095, 23.03923, 4.8892136)
+shape = SubResource("BoxShape3D_owq3q")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="Node4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node4/StaticBody3D11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8098984, 23.03923, -69.50847)
+shape = SubResource("BoxShape3D_qshiq")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="Node4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node4/StaticBody3D12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.17071, 23.03923, -1.3609467)
+shape = SubResource("BoxShape3D_3kfae")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="Node4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node4/StaticBody3D13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5635147, 23.03923, 67.93956)
+shape = SubResource("BoxShape3D_n3dmt")
 
 [node name="StaticBody3D8" type="StaticBody3D" parent="Node4"]
 
@@ -4355,13 +4633,13 @@ transform = Transform3D(-0.42309278, 0, -0.9060864, 0, 1, 0, 0.9060864, 0, -0.42
 transform = Transform3D(0.85921896, 0, 0.511608, 0, 1, 0, -0.511608, 0, 0.85921896, 38.03536, 5.9112244, -33.45433)
 
 [node name="stump_round10" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 37.382076, 5.9112244, -37.4766)
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 37.331768, 5.9112244, -37.4766)
 
 [node name="stump_roundDetailed10" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
-transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.9893207, 37.211823, 5.9112244, -36.455475)
+transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.9893207, 37.161514, 5.9112244, -36.455475)
 
 [node name="stump_square10" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
-transform = Transform3D(0.9336492, 0, -0.3581887, 0, 1, 0, 0.3581887, 0, 0.9336492, 38.086285, 5.9112244, -36.707695)
+transform = Transform3D(0.9336492, 0, -0.3581887, 0, 1, 0, 0.3581887, 0, 0.9336492, 38.035976, 5.9112244, -36.707695)
 
 [node name="stump_squareDetailed10" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
 transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.79355514, 36.00307, 5.9112244, -36.86573)
@@ -4370,7 +4648,7 @@ transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.
 transform = Transform3D(0.31432378, 0, -0.9493158, 0, 1, 0, 0.9493158, 0, 0.31432378, 36.571762, 5.9112244, -35.748566)
 
 [node name="stump_round11" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 39.86831, 5.9112244, -35.117188)
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 39.818, 5.9112244, -35.117188)
 
 [node name="stump_roundDetailed11" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
 transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.9893207, 39.698055, 5.9112244, -34.09606)
@@ -4379,25 +4657,226 @@ transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.989
 transform = Transform3D(0.9336492, 0, -0.3581887, 0, 1, 0, 0.3581887, 0, 0.9336492, 40.572517, 5.9112244, -34.34828)
 
 [node name="stump_squareDetailed11" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
-transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.79355514, 38.489304, 5.9112244, -34.506317)
+transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.79355514, 38.438995, 5.9112244, -34.506317)
 
 [node name="stump_squareDetailedWide11" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
 transform = Transform3D(0.31432378, 0, -0.9493158, 0, 1, 0, 0.9493158, 0, 0.31432378, 39.057995, 5.9112244, -33.389153)
 
 [node name="stump_round12" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
-transform = Transform3D(0.8340014, 0, 0.5517622, 0, 1, 0, -0.5517622, 0, 0.8340014, 40.082638, 5.9112244, -35.82525)
+transform = Transform3D(0.8340014, 0, 0.5517622, 0, 1, 0, -0.5517622, 0, 0.8340014, 40.03233, 5.9112244, -35.82525)
 
 [node name="stump_roundDetailed12" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
 transform = Transform3D(-0.62558305, 0, -0.7801575, 0, 1, 0, 0.7801575, 0, -0.62558305, 39.287407, 5.9112244, -36.488037)
 
 [node name="stump_square12" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
-transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 39.063313, 5.9112244, -35.60595)
+transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 37.50151, 5.9112244, -35.60595)
+
+[node name="stump_roundDetailed40" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.07097523, 0, 0.99747807, 0, 1, 0, -0.99747807, 0, -0.07097523, 40.204906, 5.9112244, -31.961864)
+
+[node name="stump_square41" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.14846532, 0, 0.9889176, 0, 1, 0, -0.9889176, 0, 0.14846532, 39.770077, 5.9112244, -32.76138)
+
+[node name="stump_square62" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 40.54965, 5.9112244, -33.64089)
+
+[node name="stump_roundDetailed41" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.07097523, 0, 0.99747807, 0, 1, 0, -0.99747807, 0, -0.07097523, 41.22215, 5.9003153, -30.756353)
+
+[node name="stump_square63" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.14846532, 0, 0.9889176, 0, 1, 0, -0.9889176, 0, 0.14846532, 40.78732, 5.9003153, -31.555868)
+
+[node name="stump_square64" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 41.56689, 5.9003153, -32.43538)
 
 [node name="stump_squareDetailed12" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
-transform = Transform3D(0.92603534, 0, 0.3774367, 0, 1, 0, -0.3774367, 0, 0.92603534, 40.252117, 5.9112244, -37.323936)
+transform = Transform3D(0.92603534, 0, 0.3774367, 0, 1, 0, -0.3774367, 0, 0.92603534, 40.20181, 5.9112244, -37.323936)
 
 [node name="stump_squareDetailedWide12" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
-transform = Transform3D(-0.9780604, 0, 0.20832151, 0, 1, 0, -0.20832151, 0, -0.9780604, 39.000698, 5.9112244, -37.397537)
+transform = Transform3D(-0.9780604, 0, 0.20832151, 0, 1, 0, -0.20832151, 0, -0.9780604, 38.95039, 5.9112244, -37.397537)
+
+[node name="stump_round64" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 35.124744, 3.6578927, -19.460419)
+
+[node name="stump_roundDetailed42" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.9893207, 34.95449, 3.6578927, -18.439293)
+
+[node name="stump_square65" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9336492, 0, -0.3581887, 0, 1, 0, 0.3581887, 0, 0.9336492, 35.828953, 3.6578927, -18.691513)
+
+[node name="stump_round65" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 37.610977, 3.6578927, -17.101007)
+
+[node name="stump_squareDetailed43" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.79355514, 36.23197, 3.6578927, -16.490137)
+
+[node name="stump_round66" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.8340014, 0, 0.5517622, 0, 1, 0, -0.5517622, 0, 0.8340014, 37.825306, 3.6578927, -17.809069)
+
+[node name="stump_roundDetailed43" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.62558305, 0, -0.7801575, 0, 1, 0, 0.7801575, 0, -0.62558305, 37.080383, 3.6578927, -18.471855)
+
+[node name="stump_square66" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 35.294487, 3.6578927, -17.58977)
+
+[node name="stump_squareDetailed44" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.92603534, 0, 0.3774367, 0, 1, 0, -0.3774367, 0, 0.92603534, 37.994785, 3.6578927, -19.307755)
+
+[node name="stump_squareDetailedWide40" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9780604, 0, 0.20832151, 0, 1, 0, -0.20832151, 0, -0.9780604, 36.743366, 3.6578927, -19.381355)
+
+[node name="stump_round67" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 37.007473, 3.6578927, -16.388542)
+
+[node name="stump_roundDetailed64" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.9893207, 0, -0.14575492, 0, 1, 0, 0.14575492, 0, 0.9893207, 36.83722, 3.6578927, -15.367416)
+
+[node name="stump_square67" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.9336492, 0, -0.3581887, 0, 1, 0, 0.3581887, 0, 0.9336492, 37.71168, 3.6578927, -15.619637)
+
+[node name="stump_round68" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.89750475, 0, 0.4410047, 0, 1, 0, -0.4410047, 0, -0.89750475, 39.493706, 3.6578927, -14.029131)
+
+[node name="stump_squareDetailed63" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.79355514, 0, 0.60849833, 0, 1, 0, -0.60849833, 0, -0.79355514, 38.1147, 3.6566105, -13.418261)
+
+[node name="stump_round69" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.8340014, 0, 0.5517622, 0, 1, 0, -0.5517622, 0, 0.8340014, 39.708035, 3.6578927, -14.737192)
+
+[node name="stump_roundDetailed65" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.62558305, 0, -0.7801575, 0, 1, 0, 0.7801575, 0, -0.62558305, 38.96311, 3.6578927, -15.399979)
+
+[node name="stump_square68" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.78079045, 0, -0.62479305, 0, 1, 0, 0.62479305, 0, -0.78079045, 37.177216, 3.6578927, -14.517893)
+
+[node name="stump_squareDetailed64" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.92603534, 0, 0.3774367, 0, 1, 0, -0.3774367, 0, 0.92603534, 39.877514, 3.6578927, -16.235878)
+
+[node name="stump_squareDetailedWide41" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9780604, 0, 0.20832151, 0, 1, 0, -0.20832151, 0, -0.9780604, 38.626095, 3.6578927, -16.309479)
+
+[node name="stump_round70" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.715644, 0, -0.69846517, 0, 1, 0, 0.69846517, 0, -0.715644, 32.461277, 3.6578927, -14.331966)
+
+[node name="stump_roundDetailed66" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.4680686, 0, 0.8836921, 0, 1, 0, -0.8836921, 0, 0.4680686, 33.366753, 3.6578927, -13.830177)
+
+[node name="stump_square69" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.6496736, 0, 0.7602132, 0, 1, 0, -0.7602132, 0, 0.6496736, 33.42135, 3.6578927, -14.738647)
+
+[node name="stump_round71" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.715644, 0, -0.69846517, 0, 1, 0, 0.69846517, 0, -0.715644, 35.516037, 3.6578927, -15.886513)
+
+[node name="stump_squareDetailed65" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.83875614, 0, -0.54450727, 0, 1, 0, 0.54450727, 0, -0.83875614, 35.630814, 3.6578927, -14.382635)
+
+[node name="stump_round72" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.24124432, 0, 0.97046435, 0, 1, 0, -0.97046435, 0, -0.24124432, 34.92035, 3.6578927, -16.325195)
+
+[node name="stump_roundDetailed67" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.52616936, 0, -0.8503797, 0, 1, 0, 0.8503797, 0, 0.52616936, 34.04668, 3.6578927, -15.844669)
+
+[node name="stump_square70" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.32786098, 0, -0.94472593, 0, 1, 0, 0.94472593, 0, 0.32786098, 34.281063, 3.6578927, -13.866648)
+
+[node name="stump_squareDetailed66" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.046182334, 0, 0.998933, 0, 1, 0, -0.998933, 0, -0.046182334, 33.56452, 3.6578927, -16.985888)
+
+[node name="stump_squareDetailedWide42" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.5232723, 0, -0.8521655, 0, 1, 0, 0.8521655, 0, -0.5232723, 33.076843, 3.6578927, -15.831054)
+
+[node name="stump_round73" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.715644, 0, -0.69846517, 0, 1, 0, 0.69846517, 0, -0.715644, 28.479895, 3.620757, -14.896639)
+
+[node name="stump_roundDetailed68" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.4680686, 0, 0.8836921, 0, 1, 0, -0.8836921, 0, 0.4680686, 29.38537, 3.620757, -14.39485)
+
+[node name="stump_square71" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.6496736, 0, 0.7602132, 0, 1, 0, -0.7602132, 0, 0.6496736, 29.439966, 3.620757, -15.30332)
+
+[node name="stump_round74" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.715644, 0, -0.69846517, 0, 1, 0, 0.69846517, 0, -0.715644, 31.534655, 3.620757, -16.451185)
+
+[node name="stump_roundDetailed71" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.41316792, 0, -0.91065466, 0, 1, 0, 0.91065466, 0, -0.41316792, 32.57006, 3.6578927, -17.252909)
+
+[node name="stump_squareDetailed69" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.80389845, 0, 0.5947666, 0, 1, 0, -0.5947666, 0, 0.80389845, 33.24929, 3.6578927, -18.289013)
+
+[node name="stump_squareDetailedWide64" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9991965, 0, -0.040079385, 0, 1, 0, 0.040079385, 0, -0.9991965, 32.01855, 3.6578927, -18.050783)
+
+[node name="stump_squareDetailed70" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.80389845, 0, 0.5947666, 0, 1, 0, -0.5947666, 0, 0.80389845, 34.344223, 3.6380491, -20.025642)
+
+[node name="stump_squareDetailedWide65" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.9991965, 0, -0.040079385, 0, 1, 0, 0.040079385, 0, -0.9991965, 33.113483, 3.6380491, -19.787413)
+
+[node name="stump_round76" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.9786993, 0, 0.20529899, 0, 1, 0, -0.20529899, 0, -0.9786993, 31.674564, 3.620757, -19.677002)
+
+[node name="stump_squareDetailed67" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.83875614, 0, -0.54450727, 0, 1, 0, 0.54450727, 0, -0.83875614, 31.649431, 3.620757, -14.947308)
+
+[node name="stump_round77" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.715644, 0, -0.69846517, 0, 1, 0, 0.69846517, 0, -0.715644, 23.802402, 3.6578927, -11.876107)
+
+[node name="stump_roundDetailed72" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.4680686, 0, 0.8836921, 0, 1, 0, -0.8836921, 0, 0.4680686, 24.707878, 3.6578927, -10.5240755)
+
+[node name="stump_square73" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.6496736, 0, 0.7602132, 0, 1, 0, -0.7602132, 0, 0.6496736, 24.762474, 3.6578927, -11.432546)
+
+[node name="stump_roundDetailed73" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.52616936, 0, -0.8503797, 0, 1, 0, 0.8503797, 0, 0.52616936, 25.387806, 3.6578927, -12.538568)
+
+[node name="stump_square74" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.32786098, 0, -0.94472593, 0, 1, 0, 0.94472593, 0, 0.32786098, 25.622189, 3.6578927, -10.560546)
+
+[node name="stump_squareDetailedWide66" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.5232723, 0, -0.8521655, 0, 1, 0, 0.8521655, 0, -0.5232723, 24.417969, 3.6578927, -12.524952)
+
+[node name="stump_squareDetailed71" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.83875614, 0, -0.54450727, 0, 1, 0, 0.54450727, 0, -0.83875614, 22.990557, 3.620757, -11.641206)
+
+[node name="stump_round78" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(0.13453966, 0, 0.99090815, 0, 1, 0, -0.99090815, 0, 0.13453966, 22.255793, 3.6578927, -12.255311)
+
+[node name="stump_roundDetailed74" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.17459348, 0, -0.9846405, 0, 1, 0, 0.9846405, 0, 0.17459348, 21.233234, 3.6578927, -12.093902)
+
+[node name="stump_square75" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.044543445, 0, -0.99900734, 0, 1, 0, 0.99900734, 0, -0.044543445, 21.749052, 3.6578927, -11.344081)
+
+[node name="stump_roundDetailed75" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(-0.9379553, 0, 0.3467555, 0, 1, 0, -0.3467555, 0, -0.9379553, 21.93643, 3.6578927, -10.087413)
+
+[node name="stump_square76" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(-0.83964825, 0, 0.54313046, 0, 1, 0, -0.54313046, 0, -0.83964825, 20.53483, 3.6578927, -11.502696)
+
+[node name="stump_squareDetailedWide67" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.11167696, 0, 0.9937445, 0, 1, 0, -0.9937445, 0, -0.11167696, 22.69267, 3.6578927, -10.694758)
+
+[node name="stump_squareDetailed72" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(0.32631063, 0, 0.94526255, 0, 1, 0, -0.94526255, 0, 0.32631063, 23.89574, 3.6308558, -10.429665)
+
+[node name="stump_round75" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
+transform = Transform3D(-0.24124432, 0, 0.97046435, 0, 1, 0, -0.97046435, 0, -0.24124432, 30.938967, 3.620757, -16.889868)
+
+[node name="stump_roundDetailed69" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.52616936, 0, -0.8503797, 0, 1, 0, 0.8503797, 0, 0.52616936, 30.065298, 3.620757, -16.409342)
+
+[node name="stump_roundDetailed70" parent="StumpsSwampSide" instance=ExtResource("9_oh2g8")]
+transform = Transform3D(0.52616936, 0, -0.8503797, 0, 1, 0, 0.8503797, 0, 0.52616936, 30.580917, 3.620757, -15.592663)
+
+[node name="stump_square72" parent="StumpsSwampSide" instance=ExtResource("30_oh2g8")]
+transform = Transform3D(0.32786098, 0, -0.94472593, 0, 1, 0, 0.94472593, 0, 0.32786098, 30.29968, 3.620757, -14.43132)
+
+[node name="stump_squareDetailed68" parent="StumpsSwampSide" instance=ExtResource("11_3osue")]
+transform = Transform3D(-0.046182334, 0, 0.998933, 0, 1, 0, -0.998933, 0, -0.046182334, 29.84998, 3.6442761, -17.065311)
+
+[node name="stump_squareDetailedWide43" parent="StumpsSwampSide" instance=ExtResource("12_mk30p")]
+transform = Transform3D(-0.5232723, 0, -0.8521655, 0, 1, 0, 0.8521655, 0, -0.5232723, 29.09546, 3.620757, -16.395725)
 
 [node name="stump_round13" parent="StumpsSwampSide" instance=ExtResource("12_oh2g8")]
 transform = Transform3D(-0.23712645, 0, -0.9714788, 0, 1, 0, 0.9714788, 0, -0.23712645, 36.17326, 5.9112244, -39.873016)
@@ -5124,5 +5603,7 @@ transform = Transform3D(-0.17306367, 0, 0.9849107, 0, 1, 0, -0.9849107, 0, -0.17
 
 [connection signal="body_entered" from="SimpleAreaTrigger" to="SimpleAreaTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="SimpleAreaTrigger" to="SimpleAreaTrigger" method="_on_body_exited"]
+[connection signal="body_entered" from="SimpleAreaTrigger2" to="SimpleAreaTrigger2" method="_on_body_entered"]
+[connection signal="body_exited" from="SimpleAreaTrigger2" to="SimpleAreaTrigger2" method="_on_body_exited"]
 [connection signal="body_entered" from="TallAreaTrigger" to="TallAreaTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="TallAreaTrigger" to="TallAreaTrigger" method="_on_body_exited"]

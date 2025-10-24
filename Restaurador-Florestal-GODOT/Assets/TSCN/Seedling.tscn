@@ -1,8 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://buxuchovcrshs"]
+[gd_scene load_steps=6 format=3 uid="uid://buxuchovcrshs"]
 
 [ext_resource type="Script" uid="uid://d0foxiujlr5ct" path="res://Assets/Scripts/Replanting.gd" id="1_b0l6s"]
+[ext_resource type="Texture2D" uid="uid://b68k6y8mqsbw0" path="res://Assets/Sprites/Particles/GrowthEffectFrames/GrowthEffect1.png" id="2_ax0wa"]
+[ext_resource type="Texture2D" uid="uid://dadhejb3sgxap" path="res://Assets/Sprites/Particles/GrowthEffectFrames/GrowthEffect2.png" id="3_3o47k"]
+[ext_resource type="Script" uid="uid://bsf6ksucsnbpw" path="res://Assets/TSCN/growth_particle.gd" id="4_h44fd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vuok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ax0wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3o47k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ax0wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3o47k")
+}],
+"loop": false,
+"name": &"1",
+"speed": 1.0
+}]
 
 [node name="Seedling" type="Node3D"]
 script = ExtResource("1_b0l6s")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="GrowthParticle" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_6vuok")
+animation = &"1"
+frame_progress = 1.0
+script = ExtResource("4_h44fd")
+
+[node name="Timer" type="Timer" parent="GrowthParticle"]

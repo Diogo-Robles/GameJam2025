@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var PlayerNode = get_tree().get_first_node_in_group("player")
 @onready var TimerNode : Timer = $Timer
+@onready var Growth = $GrowthParticle
 #SimpleTrees
 const TREE_DEFAULT = preload("res://Assets/TSCN/Trees/Tree_default_replanted.tscn")
 const TREE_THIN = preload("res://Assets/TSCN/Trees/tree_thin_Replanted.tscn")
@@ -9,11 +10,12 @@ const TREE_SIMPLE = preload("res://Assets/TSCN/Trees/tree_simple_replanted.tscn"
 #TallTrees
 const TREE_TALL = preload("res://Assets/TSCN/Trees/tree_tall_replanted.tscn")
 
-@export var duration = 300.0
+@export var duration = 100
 
 func Crescer(final_scale : float):
-	duration = final_scale * 10
 	var _tween : Tween = create_tween()
+	Growth.start_effect()
+	_tween.finished.connect(Growth.stop_effect)
 	
 	_tween.tween_property(
 		self,
