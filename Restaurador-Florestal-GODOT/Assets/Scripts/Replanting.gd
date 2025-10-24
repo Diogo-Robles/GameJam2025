@@ -25,6 +25,8 @@ func Crescer(final_scale : float):
 	
 	_tween.set_trans(Tween.TRANS_BOUNCE)
 	
+	
+	
 
 func _ready() -> void:
 	var nova_arvore
