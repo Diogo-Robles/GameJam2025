@@ -12,18 +12,16 @@ var jump_speed = 2.0
 @onready var rotation_y = global_rotation.y
 
 #relacionados a interação aqui a baixo
-
 @export var max_outline_distance: float = 1.50
 @export var interact_distance: float = 2.0
 @export var interact_angle: float = 35.0
 var current_outline_target: Node3D = null 
 
-#Relacionado a item aqui em baixo
-
+#relacionado a item aqui em baixo
 @export var HoldingItem: String = "Axe"
 
 #indica que vegetação é a area onde o player esta
-var PlayerArea: String = "SimpleTrees"
+var PlayerArea: String = "DefaultValue"
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

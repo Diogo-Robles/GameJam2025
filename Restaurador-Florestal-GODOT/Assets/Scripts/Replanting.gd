@@ -39,7 +39,10 @@ func _ready() -> void:
 				nova_arvore = TREE_THIN.instantiate()
 	elif PlayerNode.PlayerArea == "TallTrees":
 		nova_arvore = TREE_TALL.instantiate()
-		
+	
+	
+	if PlayerNode.PlayerArea == "DefaultValue":
+		nova_arvore = TREE_DEFAULT.instantiate()
 	add_child(nova_arvore)
 	scale = Vector3(0.1,0.1,0.1)
 	var rand2 : float = randf_range(1,3)
