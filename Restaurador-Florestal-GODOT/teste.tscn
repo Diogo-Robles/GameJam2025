@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bxedn5rhcci3w"]
+[gd_scene load_steps=77 format=3 uid="uid://bxedn5rhcci3w"]
 
 [ext_resource type="PackedScene" uid="uid://x7mhyqnilryn" path="res://Assets/mapateste.glb" id="1_7w86a"]
 [ext_resource type="Script" uid="uid://5thdr68hydqi" path="res://Player.gd" id="2_s2wow"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cg3x3wueti27" path="res://Assets/TSCN/stump_old_bill.tscn" id="8_a62kb"]
 [ext_resource type="PackedScene" uid="uid://dib1tl7vd13sr" path="res://Assets/TSCN/stump_round_detailed_bill.tscn" id="9_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://bp71ucojsg8uj" path="res://Assets/TSCN/stump_square_detailed_bill.tscn" id="11_3osue"]
+[ext_resource type="Script" uid="uid://b1mnixc4dnrtp" path="res://CounterScript.gd" id="12_a62kb"]
 [ext_resource type="PackedScene" uid="uid://c4pmngll5ubw5" path="res://Assets/TSCN/stump_square_detailed_wide_bill.tscn" id="12_mk30p"]
 [ext_resource type="PackedScene" uid="uid://q7i6ondfdmfi" path="res://Assets/TSCN/stump_round_bill.tscn" id="12_oh2g8"]
 [ext_resource type="PackedScene" uid="uid://xh4ixd8lg7h6" path="res://Assets/kenney_nature-kit/Models/DAE format/lily_large.dae" id="15_sqasj"]
@@ -37,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://m5uy6hep4oxh" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_palmDetailedTall.dae" id="35_2krrl"]
 [ext_resource type="PackedScene" uid="uid://1hghcogrbqbu" path="res://Assets/kenney_nature-kit/Models/DAE format/path_stoneCircle.dae" id="35_vo20h"]
 [ext_resource type="PackedScene" uid="uid://b83ct0pi86qpi" path="res://Assets/kenney_nature-kit/Models/DAE format/path_stoneEnd.dae" id="36_4vq13"]
+[ext_resource type="Texture2D" uid="uid://cv5bbrwgak5t3" path="res://Assets/Sprites/Counter.png" id="36_ra77c"]
 [ext_resource type="PackedScene" uid="uid://bc17kbsnwtnon" path="res://Assets/TSCN/House.tscn" id="37_2krrl"]
 [ext_resource type="PackedScene" uid="uid://crlb3rdnyyvkd" path="res://Assets/kenney_nature-kit/Models/DAE format/path_stoneCorner.dae" id="37_5mp7k"]
 [ext_resource type="PackedScene" uid="uid://bltfs6iy6q7l0" path="res://Assets/kenney_nature-kit/Models/DAE format/path_wood.dae" id="38_b17fa"]
@@ -44,6 +46,28 @@
 [ext_resource type="PackedScene" uid="uid://bgde1yujso60p" path="res://Assets/kenney_nature-kit/Models/DAE format/log_large.dae" id="39_al6ht"]
 [ext_resource type="Script" uid="uid://bpljd2kgui8y7" path="res://simple_area_trigger.gd" id="42_5mp7k"]
 [ext_resource type="Script" uid="uid://56jiyyco6iea" path="res://tall_area_trigger.gd" id="44_al6ht"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3osue"]
+frames = 4
+pause = true
+speed_scale = 0.6
+frame_0/texture = ExtResource("34_y5ym7")
+frame_1/texture = ExtResource("31_0m6ms")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("32_nu3td")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("33_2krrl")
+frame_3/duration = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_y5ym7"]
+font_size = 50
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ra77c"]
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3iyrq"]
 
@@ -109,23 +133,6 @@ data = PackedVector3Array(0.0157, 0.0255, 0.3348, -0.0157, 0.0255, -0.061199997,
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mk30p"]
 data = PackedVector3Array(0.0157, 0.0255, 0.3348, -0.0157, 0.0255, -0.061199997, 0.0157, 0.0255, -0.061199997, -0.0157, 0.0255, -0.061199997, 0.0157, 0.0255, 0.3348, -0.0157, 0.0255, 0.3348, -0.0157, 0.0106999995, 0.3348, 0.0157, 0.0255, 0.3348, 0.0157, 0.0106999995, 0.3348, 0.0157, 0.0255, 0.3348, -0.0157, 0.0106999995, 0.3348, -0.0157, 0.0255, 0.3348, -0.038399998, 0, -0.099999994, 0.0157, 0.0106999995, -0.061199997, 0.038399998, 0, -0.099999994, 0.0157, 0.0106999995, -0.061199997, -0.038399998, 0, -0.099999994, -0.0157, 0.0106999995, -0.061199997, 0, 0.01, -0.2554, 0.038399998, 0.0361, -0.20539999, 0, 0.026099999, -0.2554, 0.038399998, 0.0361, -0.20539999, 0, 0.01, -0.2554, 0.038399998, 0, -0.20539999, -0.038399998, 0.0361, -0.20539999, -0.038399998, 0, -0.099999994, -0.038399998, 0, -0.20539999, -0.038399998, 0, -0.099999994, -0.038399998, 0.0361, -0.20539999, -0.038399998, 0.0361, -0.099999994, 0.038399998, 0, -0.099999994, 0.0157, 0.0255, -0.061199997, 0.038399998, 0.0361, -0.099999994, 0.0157, 0.0255, -0.061199997, 0.038399998, 0, -0.099999994, 0.0157, 0.0106999995, -0.061199997, 0, 0.01, -0.2554, -0.038399998, 0, -0.20539999, 0.038399998, 0, -0.20539999, 0.038399998, 0.0361, -0.099999994, -0.038399998, 0.0361, -0.20539999, 0.038399998, 0.0361, -0.20539999, -0.038399998, 0.0361, -0.20539999, 0.038399998, 0.0361, -0.099999994, -0.038399998, 0.0361, -0.099999994, 0.0157, 0.0255, -0.061199997, -0.038399998, 0.0361, -0.099999994, 0.038399998, 0.0361, -0.099999994, -0.038399998, 0.0361, -0.099999994, 0.0157, 0.0255, -0.061199997, -0.0157, 0.0255, -0.061199997, 0, 0.026099999, -0.2554, -0.038399998, 0, -0.20539999, 0, 0.01, -0.2554, -0.038399998, 0, -0.20539999, 0, 0.026099999, -0.2554, -0.038399998, 0.0361, -0.20539999, 0.0157, 0.0106999995, -0.061199997, -0.0157, 0.0106999995, 0.3348, 0.0157, 0.0106999995, 0.3348, -0.0157, 0.0106999995, 0.3348, 0.0157, 0.0106999995, -0.061199997, -0.0157, 0.0106999995, -0.061199997, 0.0157, 0.0106999995, -0.061199997, 0.0157, 0.0255, 0.3348, 0.0157, 0.0255, -0.061199997, 0.0157, 0.0255, 0.3348, 0.0157, 0.0106999995, -0.061199997, 0.0157, 0.0106999995, 0.3348, -0.038399998, 0.0361, -0.099999994, -0.0157, 0.0106999995, -0.061199997, -0.038399998, 0, -0.099999994, -0.0157, 0.0106999995, -0.061199997, -0.038399998, 0.0361, -0.099999994, -0.0157, 0.0255, -0.061199997, 0.038399998, 0, -0.20539999, -0.038399998, 0, -0.099999994, 0.038399998, 0, -0.099999994, -0.038399998, 0, -0.099999994, 0.038399998, 0, -0.20539999, -0.038399998, 0, -0.20539999, 0.038399998, 0, -0.20539999, 0.038399998, 0.0361, -0.099999994, 0.038399998, 0.0361, -0.20539999, 0.038399998, 0.0361, -0.099999994, 0.038399998, 0, -0.20539999, 0.038399998, 0, -0.099999994, 0.038399998, 0.0361, -0.20539999, -0.038399998, 0.0361, -0.20539999, 0, 0.026099999, -0.2554, -0.0157, 0.0255, -0.061199997, -0.0157, 0.0106999995, 0.3348, -0.0157, 0.0106999995, -0.061199997, -0.0157, 0.0106999995, 0.3348, -0.0157, 0.0255, -0.061199997, -0.0157, 0.0255, 0.3348)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_3osue"]
-frames = 4
-pause = true
-speed_scale = 0.6
-frame_0/texture = ExtResource("34_y5ym7")
-frame_1/texture = ExtResource("31_0m6ms")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("32_nu3td")
-frame_2/duration = 1.0
-frame_3/texture = ExtResource("33_2krrl")
-frame_3/duration = 1.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_y5ym7"]
-font_size = 64
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_2krrl"]
 size = Vector3(0.98036194, 0.30322266, 1)
 
@@ -166,6 +173,141 @@ size = Vector3(0.59814453, 9.1015625, 1)
 
 [node name="mapateste" parent="." instance=ExtResource("1_7w86a")]
 transform = Transform3D(0.29999998, 4.5774463e-13, 1.0471976e-05, -4.577446e-13, 0.3, 0, -1.0471975e-05, 0, 0.3, -0.1850264, -6.8255854, 0.04678631)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -199.5
+offset_top = -399.0
+offset_right = 199.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AnimatedTexture_3osue")
+script = ExtResource("34_2krrl")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextureRect"]
+light_mask = 0
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.49500003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.5
+offset_top = 0.4949646
+offset_right = -14.5
+offset_bottom = -11.400024
+grow_horizontal = 2
+grow_vertical = 2
+text = "teste"
+label_settings = SubResource("LabelSettings_y5ym7")
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("38_y5ym7")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 269.5
+offset_right = -247.5
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_0m6ms")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 142.5
+offset_top = 288.5
+offset_right = -147.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("33_4vq13")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 262.5
+offset_top = 286.5
+offset_right = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("34_5mp7k")
+
+[node name="WarningLabel" type="Label" parent="CanvasLayer/Control" groups=["WarningLabel"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004729771
+anchor_top = 0.15486875
+anchor_right = 1.0047297
+anchor_bottom = 0.26873046
+offset_left = -0.44869614
+offset_top = -21.35495
+offset_right = -0.44873047
+offset_bottom = -7.1373444
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_y5ym7")
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -153.0
+offset_bottom = 153.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("36_ra77c")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 175.0
+offset_top = 126.04002
+offset_right = -14.0
+offset_bottom = -119.95998
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_ra77c")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_a62kb")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(-0.29379866, 0, 0.06068237, 0, 0.29999998, 0, -0.06068237, 0, -0.29379866, -0.72448176, 4.055591, 25.383259)
@@ -3924,107 +4066,6 @@ transform = Transform3D(0.20552108, 0, 0.9786528, 0, 1, 0, -0.9786528, 0, 0.2055
 
 [node name="tree_palmDetailedTall18" parent="Node2" instance=ExtResource("35_2krrl")]
 transform = Transform3D(0.8765671, 0, -0.48127958, 0, 1, 0, 0.48127958, 0, 0.8765671, -27.249031, 3.542048, -21.528673)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -238.0
-offset_top = -479.0
-offset_right = 241.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = SubResource("AnimatedTexture_3osue")
-script = ExtResource("34_2krrl")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/TextureRect"]
-light_mask = 0
-z_index = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.49500003
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -0.10501099
-offset_right = -18.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "teste"
-label_settings = SubResource("LabelSettings_y5ym7")
-horizontal_alignment = 1
-uppercase = true
-script = ExtResource("38_y5ym7")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 315.0
-offset_right = -293.0
-offset_bottom = 14.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("35_0m6ms")
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 173.0
-offset_top = 349.0
-offset_right = -177.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("33_4vq13")
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 315.0
-offset_top = 346.0
-offset_right = -31.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("34_5mp7k")
-
-[node name="WarningLabel" type="Label" parent="CanvasLayer/Control" groups=["WarningLabel"]]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.004729771
-anchor_top = 0.15486875
-anchor_right = 1.0047297
-anchor_bottom = 0.26873046
-offset_left = -0.44869614
-offset_top = -21.35495
-offset_right = -0.44873047
-offset_bottom = -7.1373444
-grow_horizontal = 2
-label_settings = SubResource("LabelSettings_y5ym7")
-horizontal_alignment = 1
-uppercase = true
-metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="." groups=["Timer"]]
 

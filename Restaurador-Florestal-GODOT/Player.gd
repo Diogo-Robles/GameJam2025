@@ -23,6 +23,8 @@ var current_outline_target: Node3D = null
 #indica que vegetação é a area onde o player esta
 var PlayerArea: String = "DefaultValue"
 
+var PlantedTrees: int = 0
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
