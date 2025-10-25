@@ -6,7 +6,7 @@ var speed = 3.0
 var jump_speed = 2.0
 
 @onready var camera = $Camera3D
-@export var sensibilidade = 0.02
+var Sensibility = 0.02
 
 @onready var rotation_x = global_rotation.x
 @onready var rotation_y = global_rotation.y
@@ -27,6 +27,7 @@ var PlantedTrees: int = 0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Sensibility = PlayerConfig.get_config(AppSettings.INPUT_SECTION, "Sensibilidade", Sensibility)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -39,8 +40,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				break
 
 func _process_mouse_motion(relative: Vector2) -> void:
-	rotation_x -= relative.y * sensibilidade
-	rotation_y -= relative.x * sensibilidade
+	rotation_x -= relative.y * Sensibility
+	rotation_y -= relative.x * Sensibility
 	
 	rotation_x = clamp(rotation_x, deg_to_rad(-89), deg_to_rad(89))
 	

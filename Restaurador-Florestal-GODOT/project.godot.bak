@@ -11,16 +11,9 @@ config_version=5
 [application]
 
 config/name="RestauradorFlorestal"
-run/main_scene="res://Assets/ExampleScenes/scenes/opening/opening.tscn"
+run/main_scene="uid://bxedn5rhcci3w"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[autoload]
-
-AppConfig="*res://addons/maaacks_menus_template/base/nodes/autoloads/app_config/app_config.tscn"
-SceneLoader="*res://addons/maaacks_menus_template/base/nodes/autoloads/scene_loader/scene_loader.tscn"
-ProjectMusicController="*res://addons/maaacks_menus_template/base/nodes/autoloads/music_controller/project_music_controller.tscn"
-ProjectUISoundController="*res://addons/maaacks_menus_template/base/nodes/autoloads/ui_sound_controller/project_ui_sound_controller.tscn"
 
 [display]
 
@@ -29,14 +22,6 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="RestauradorFlorestal"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/maaacks_menus_template/plugin.cfg")
-
-[gui]
-
-theme/custom="res://Assets/ExampleScenes/resources/themes/grow.tres"
 
 [input]
 
@@ -95,7 +80,6 @@ locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/
 disable_install_audio_busses=true
 disable_update_check=false
 disable_install_wizard=true
-copy_path="res://Assets/ExampleScenes/"
 
 [rendering]
 
