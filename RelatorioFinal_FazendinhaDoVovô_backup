@@ -1,0 +1,27 @@
+Relatório final
+Restaurador Florestal
+Pela equipe “Fazendinha do Vovô”
+Membros:
+Rodrigo Pereira de Carvalho
+Leonardo Cesar
+Raquel Quiterio
+
+Ferramenta utilizada:Godot
+Descrição do projeto: Sandbox, Casual
+Temas utilizados: 
+Educação de qualidade(obrigatório) foi implementado atráves da conscientização de plantar arvores em si, além de livros informativos de flora, fauna e sobrevivência na Amazônia
+Ação contra mudança global do clima foi implementado no ato de plantar arvores, uma vez que isso confronta a queima e desmatamento de áreas florestais
+
+Descrição Geral do projeto: O jogador é um restaurador enviado á uma área florestal que foi afetada por queimadas e desmatamentos, o objetivo dele é replantar as áreas afetadas
+
+Arquitetura e solução: Godot atráves de GDScript
+
+Tecnologias e padrões: foi utilizado IAs em breves partes do projeto, além de template de menu 
+
+Instruções: Já vem compilado(em RestauradorFlorestal-Release), só baixar do GitHub e jogar
+
+Mudanças entre relatório inicial e final: Trocado o tema, visto que no inicio era sobre vida terrestre, ai percebemos que não conseguiríamos implementar animais, então focamos nas arvores.
+
+ 
+ 
+ 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx5q5hn58lqwh"]
+
+[ext_resource type="PackedScene" uid="uid://bf3vxg8uyoh6f" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_default.dae" id="1_4dodo"]
+
+[node name="TreeDefaultReplanted" type="Node3D"]
+
+[node name="tree_default" parent="." instance=ExtResource("1_4dodo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0, 0)

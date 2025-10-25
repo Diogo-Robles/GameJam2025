@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i0et7ax7c4qe"]
+
+[resource]
+resource_name = "woodInner"
+cull_mode = 2
+albedo_color = Color(0.960784, 0.843137, 0.733333, 1)
+metallic = 0.5
+roughness = 0.09607843

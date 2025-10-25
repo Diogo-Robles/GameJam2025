@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh5h4lypnl2db"]
+
+[ext_resource type="PackedScene" uid="uid://c50h3035wdo1y" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_thin.dae" id="1_ncol1"]
+
+[node name="tree_thin" instance=ExtResource("1_ncol1")]
