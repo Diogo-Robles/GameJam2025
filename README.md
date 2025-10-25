@@ -10,7 +10,7 @@ Você é um restaurador florestal, seu objetivo é restaurar a floresta de queim
 
 # Como baixar:
 
-Baixe "RestauradorFlorestal-Release", que esta dentro da pasta "RestauradorFlorestal-Godot"
+Baixe "RestauradorFlorestal-Release"
 
 # Creditos extra:
 Kenney Fantasy Town kit 2.0
