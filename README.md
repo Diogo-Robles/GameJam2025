@@ -14,8 +14,13 @@ Baixe "RestauradorFlorestal-Release", que esta dentro da pasta "RestauradorFlore
 
 # Creditos extra:
 Kenney Fantasy Town kit 2.0
+
 Kenney Furniture kit
+
 Kenney Nature kit
+
 Kenney Survival kit
+
 Google Gemini (em porções do código)
+
 Freesounds.org
