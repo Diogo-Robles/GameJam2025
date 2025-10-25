@@ -4,6 +4,7 @@ extends OverlaidMenu
 @export var options_packed_scene : PackedScene
 ## Defines the path to the main menu. Hides the Main Menu button if not set.
 ## Will attempt to read from AppConfig if left empty.
+signal menu_closed
 @export_file("*.tscn") var main_menu_scene_path : String
 
 var popup_open : Node
@@ -47,6 +48,7 @@ func _handle_cancel_input() -> void:
 	if popup_open != null:
 		close_popup()
 	else:
+		menu_closed.emit()
 		super._handle_cancel_input()
 
 func _hide_exit_for_web() -> void:

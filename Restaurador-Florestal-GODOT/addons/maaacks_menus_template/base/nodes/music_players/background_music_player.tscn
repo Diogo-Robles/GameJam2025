@@ -4,3 +4,4 @@
 process_mode = 3
 autoplay = true
 bus = &"Music"
+playback_type = 1

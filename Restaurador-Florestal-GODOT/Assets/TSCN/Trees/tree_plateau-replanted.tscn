@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx21ft54ng3ia"]
+
+[ext_resource type="PackedScene" uid="uid://bh3b0xee0gmue" path="res://Assets/kenney_nature-kit/Models/DAE format/tree_plateau.dae" id="1_524gd"]
+
+[node name="tree_plateau" instance=ExtResource("1_524gd")]

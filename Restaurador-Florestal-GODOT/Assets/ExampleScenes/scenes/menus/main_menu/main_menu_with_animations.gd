@@ -8,6 +8,7 @@ func intro_done() -> void:
 	animation_state_machine.travel("OpenMainMenu")
 
 func _is_in_intro() -> bool:
+	
 	return animation_state_machine.get_current_node() == "Intro"
 
 func _event_skips_intro(event : InputEvent) -> bool:
@@ -32,7 +33,15 @@ func _input(event : InputEvent) -> void:
 
 func _ready() -> void:
 	super._ready()
+	$BackgroundMusicPlayer.play()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 
 func _on_continue_game_button_pressed() -> void:
+	load_game_scene()
+
+func _on_new_game_button_pressed() -> void:
+	$BackgroundMusicPlayer.autoplay = false
+	$BackgroundMusicPlayer.stop()
+	$BackgroundMusicPlayer.playing = false
+	
 	load_game_scene()

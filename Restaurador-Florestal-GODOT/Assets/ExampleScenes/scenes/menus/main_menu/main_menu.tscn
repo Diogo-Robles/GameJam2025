@@ -1,11 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfoyeixxlevi6"]
+[gd_scene load_steps=6 format=3 uid="uid://dfoyeixxlevi6"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_40o61"]
-[ext_resource type="Script" path="res://Assets/ExampleScenes/scenes/menus/main_menu/main_menu.gd" id="2_ixgvd"]
-[ext_resource type="PackedScene" path="res://Assets/ExampleScenes/scenes/overlaid_menus/main_menu_options_overlaid_menu.tscn" id="3_ot0df"]
-[ext_resource type="PackedScene" path="res://Assets/ExampleScenes/scenes/overlaid_menus/main_menu_credits_overlaid_menu.tscn" id="4_c6prt"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_40o61"]
+[ext_resource type="Script" uid="uid://b0hexoax742k" path="res://Assets/ExampleScenes/scenes/menus/main_menu/main_menu.gd" id="2_ixgvd"]
+[ext_resource type="PackedScene" uid="uid://ckckadap47ty3" path="res://Assets/ExampleScenes/scenes/overlaid_menus/main_menu_options_overlaid_menu.tscn" id="3_ot0df"]
+[ext_resource type="PackedScene" uid="uid://b7587tk5kqeow" path="res://Assets/ExampleScenes/scenes/overlaid_menus/main_menu_credits_overlaid_menu.tscn" id="4_c6prt"]
+[ext_resource type="AudioStream" uid="uid://d2uhqcfmbo038" path="res://Assets/Songs/MainMenu.mp3" id="6_c6prt"]
 
 [node name="MainMenu" instance=ExtResource("1_40o61")]
 script = ExtResource("2_ixgvd")
+game_scene_path = "uid://bxedn5rhcci3w"
 options_packed_scene = ExtResource("3_ot0df")
 credits_packed_scene = ExtResource("4_c6prt")
+
+[node name="BackgroundMusicPlayer" parent="." index="1"]
+stream = ExtResource("6_c6prt")
+volume_db = -20.0
+autoplay = false
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "v0.1.0"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Restaurador Florestal"
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+text = "Por:
+Raquel Quiterio, Rodrigo Carvalho e Leonardo Cesar"
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
+text = "Jogar"
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
+text = "Opções"
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+visible = false
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+text = "Sair"

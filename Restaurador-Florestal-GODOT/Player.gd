@@ -5,6 +5,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed = 3.0
 var jump_speed = 2.0
 
+const PAUSE_MENU_SCENE = preload("res://Assets/ExampleScenes/scenes/overlaid_menus/pause_menu.tscn")
+@onready var HUD = get_tree().get_first_node_in_group("hud")
+var pause_menu_instance: Node = null
+var _ignore_next_mouse_motion: bool = false
+
 @onready var camera = $Camera3D
 var Sensibility = 0.02
 
@@ -29,15 +34,31 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Sensibility = PlayerConfig.get_config(AppSettings.INPUT_SECTION, "Sensibilidade", Sensibility)
 
+
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause_game"):
+		if get_tree().paused and pause_menu_instance:
+			_unpause_game()
+		else:
+			_pause_game()
+		return
+	if get_tree().paused:
+		return
+	if _ignore_next_mouse_motion:
+		if event is InputEventMouseMotion:
+			_ignore_next_mouse_motion = false
+			return 
+			
 	if event is InputEventMouseMotion:
 		_process_mouse_motion(event.relative)
+		
 	if event.is_pressed():
 		var actions = InputMap.get_actions()
 		for acao_name in actions:
 			if event.is_action_pressed(acao_name):
 				processar_acao(acao_name)
 				break
+
 
 func _process_mouse_motion(relative: Vector2) -> void:
 	rotation_x -= relative.y * Sensibility
@@ -61,7 +82,6 @@ func processar_acao(acao: StringName):
 			print("item 3")
 			
 func _physics_process(delta: float) -> void:
-	
 	#sobre movimento
 	var input2d := Input.get_vector("move_left", "move_right", "move_back","move_forward")
 	var direction: Vector3 = Vector3.ZERO
@@ -174,3 +194,29 @@ func get_target_center(target: Node3D) -> Vector3:
 		return visual_node.to_global(local_center)
 	
 	return target.global_transform.origin
+
+func _pause_game() -> void:
+	HUD.visible = false
+	if pause_menu_instance == null:
+		pause_menu_instance = PAUSE_MENU_SCENE.instantiate()
+
+# Conecta o sinal de fechamento do menu à função de despausamento do Player
+		if pause_menu_instance.has_signal("menu_closed"):
+			pause_menu_instance.menu_closed.connect(_on_menu_closed)
+
+		add_child(pause_menu_instance)
+		
+func _unpause_game() -> void:
+	_ignore_next_mouse_motion = true
+
+	HUD.visible = true
+	if pause_menu_instance != null:
+		pause_menu_instance.queue_free()
+		pause_menu_instance = null
+
+func _on_menu_closed():
+	_unpause_game()
+
+func _on_book_menu_closed():
+	HUD.visible = true 
+	_ignore_next_mouse_motion = true 
