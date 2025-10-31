@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="PredioData" load_steps=4 format=3 uid="uid://c7wjsoh013y8n"]
+
+[ext_resource type="Script" uid="uid://gocwvwp6h60f" path="res://Predios/predio_resource_data.gd" id="1_tplq2"]
+[ext_resource type="Texture2D" uid="uid://iactduhjdfse" path="res://Assets/Sprites/CP_V1.1.0_nyknck/CP_V1.0.4_nyknck/CP_V1.0.4.png" id="2_7rbbu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awt6c"]
+atlas = ExtResource("2_7rbbu")
+region = Rect2(32, 32, 48, 97)
+
+[resource]
+script = ExtResource("1_tplq2")
+nome = "Laborátorio Quimica"
+preco = 2500.0
+descricao = "Laborátorio Quimica
+Preço: 2500
+Buuf: Dá 300% de verba 
+base a mais.
+Despesas: 750"
+texture = SubResource("AtlasTexture_awt6c")
+buff_multiplicador = 3.0
+metadata/_custom_type_script = "uid://gocwvwp6h60f"

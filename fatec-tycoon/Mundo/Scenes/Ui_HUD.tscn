@@ -1,0 +1,229 @@
+[gd_scene load_steps=22 format=3 uid="uid://bmskdwoh34vem"]
+
+[ext_resource type="Script" uid="uid://dwtwbjxauaqve" path="res://Mundo/Scripts/ui_hud.gd" id="1_bplc1"]
+[ext_resource type="Texture2D" uid="uid://da34a6wawskx3" path="res://Assets/Sprites/Sprite sheet for Basic Pack.png" id="2_1oq8u"]
+[ext_resource type="Texture2D" uid="uid://d2cba4qqq0nco" path="res://Assets/Sprites/botaoPlay.png" id="2_ahxor"]
+[ext_resource type="Texture2D" uid="uid://dqjt7vbldl04n" path="res://Assets/Sprites/botaoPlayPress.png" id="3_7027l"]
+[ext_resource type="Texture2D" uid="uid://bi4k5qss36b4" path="res://Assets/Sprites/botaoPause.png" id="4_osx18"]
+[ext_resource type="Texture2D" uid="uid://o7iy2jycilxv" path="res://Assets/Sprites/botaoPausePress.png" id="5_db2ao"]
+[ext_resource type="FontFile" uid="uid://buq8ceijr7g0i" path="res://Assets/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="7_7027l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bplc1"]
+atlas = ExtResource("2_1oq8u")
+region = Rect2(610, 135, 28, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oq8u"]
+atlas = ExtResource("2_1oq8u")
+region = Rect2(610, 167, 28, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wws32"]
+texture = ExtResource("2_1oq8u")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(275, 212, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wv0mo"]
+texture = ExtResource("2_1oq8u")
+region_rect = Rect2(805, 166, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahxor"]
+texture = ExtResource("2_1oq8u")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(773, 164, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db2ao"]
+texture = ExtResource("2_1oq8u")
+region_rect = Rect2(610, 167, 28, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u66t"]
+texture = ExtResource("2_1oq8u")
+region_rect = Rect2(610, 135, 28, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwwr7"]
+texture = ExtResource("3_7027l")
+region_rect = Rect2(20, 21, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vlxg"]
+texture = ExtResource("4_osx18")
+region_rect = Rect2(21, 20, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbwvi"]
+texture = ExtResource("2_ahxor")
+region_rect = Rect2(20, 20, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jm7b1"]
+texture = ExtResource("2_1oq8u")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(869, 230, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jspuf"]
+texture = ExtResource("2_1oq8u")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(837, 228, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_osx18"]
+texture = ExtResource("2_1oq8u")
+region_rect = Rect2(805, 134, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7027l"]
+texture = ExtResource("2_1oq8u")
+region_rect = Rect2(773, 132, 22, 24)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bplc1")
+play_texture = ExtResource("2_ahxor")
+play_texture_press = ExtResource("3_7027l")
+pause_texture = ExtResource("4_osx18")
+pause_texture_press = ExtResource("5_db2ao")
+doubleSpeed = SubResource("AtlasTexture_bplc1")
+normalSpeed = SubResource("AtlasTexture_1oq8u")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_constants/v_separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 131
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(800, 90)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label6" type="Label" parent="GridContainer/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_7027l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tempo" type="Label" parent="GridContainer/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_7027l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wws32")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dinheiro" type="Label" parent="GridContainer/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_7027l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wws32")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PontoConhecimento" type="Label" parent="GridContainer/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_7027l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wws32")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="Button" parent="GridContainer/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_wv0mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wv0mo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ahxor")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 16
+
+[node name="2xSpeed" type="Button" parent="GridContainer/HBoxContainer2/HBoxContainer2"]
+process_mode = 3
+custom_minimum_size = Vector2(75, 40)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_db2ao")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3u66t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_db2ao")
+toggle_mode = true
+
+[node name="Pause2" type="Button" parent="GridContainer/HBoxContainer2/HBoxContainer2"]
+process_mode = 3
+custom_minimum_size = Vector2(54, 54)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_xwwr7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0vlxg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lbwvi")
+toggle_mode = true
+
+[node name="Button2" type="Button" parent="GridContainer/HBoxContainer2/HBoxContainer2"]
+process_mode = 3
+custom_minimum_size = Vector2(60, 60)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_jm7b1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jm7b1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jspuf")
+
+[node name="CloseAudio" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Upg_Modal" type="Button" parent="."]
+custom_minimum_size = Vector2(22, 24)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = -26.0
+offset_right = 63.0
+offset_bottom = 27.0
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_osx18")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_osx18")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7027l")
+
+[connection signal="pressed" from="GridContainer/HBoxContainer2/HBoxContainer/Stats" to="." method="_on_stats_pressed"]
+[connection signal="toggled" from="GridContainer/HBoxContainer2/HBoxContainer2/2xSpeed" to="." method="_on_x_speed_toggled"]
+[connection signal="pressed" from="GridContainer/HBoxContainer2/HBoxContainer2/Pause2" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="GridContainer/HBoxContainer2/HBoxContainer2/Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Upg_Modal" to="." method="_on_upg_modal_pressed"]

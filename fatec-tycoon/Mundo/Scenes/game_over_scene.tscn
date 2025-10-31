@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://buaen7m8vt7cr"]
+
+[ext_resource type="Script" uid="uid://c5mfqseearoau" path="res://Mundo/Scenes/game_over_scene.gd" id="1_1jclu"]
+[ext_resource type="Texture2D" uid="uid://bx3qso0n1ng8v" path="res://Assets/Sprites/spritesheet-coisas.png" id="1_bmbt0"]
+[ext_resource type="FontFile" uid="uid://buq8ceijr7g0i" path="res://Assets/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_bmcet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is4pw"]
+atlas = ExtResource("1_bmbt0")
+region = Rect2(448, 192, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcc8s"]
+texture = ExtResource("1_bmbt0")
+region_rect = Rect2(96, 576, 48, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgl32"]
+texture = ExtResource("1_bmbt0")
+region_rect = Rect2(0, 576, 48, 24)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1jclu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_is4pw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(60, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -100.0
+offset_right = 158.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 42
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_bmcet")
+theme_override_font_sizes/font_size = 62
+text = "Tu Perdeu!"
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_bmcet")
+theme_override_font_sizes/font_size = 36
+text = "Seu dinheiro chegou a zero."
+
+[node name="Button" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -136.0
+offset_right = 52.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_wcc8s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wcc8s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xgl32")
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

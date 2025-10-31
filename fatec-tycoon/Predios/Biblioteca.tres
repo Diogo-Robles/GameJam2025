@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="PredioData" load_steps=4 format=3 uid="uid://csf8am2i48mrr"]
+
+[ext_resource type="Script" uid="uid://gocwvwp6h60f" path="res://Predios/predio_resource_data.gd" id="1_i8jqe"]
+[ext_resource type="Texture2D" uid="uid://iactduhjdfse" path="res://Assets/Sprites/CP_V1.1.0_nyknck/CP_V1.0.4_nyknck/CP_V1.0.4.png" id="2_omk58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh4dp"]
+atlas = ExtResource("2_omk58")
+region = Rect2(192, 170, 64, 54)
+
+[resource]
+script = ExtResource("1_i8jqe")
+nome = "Biblioteca"
+preco = 2000.0
+descricao = "Biblioteca
+Preco: 2000
+Buff:  x10 conhecimento
+por ciclo
+Despesas: 165"
+texture = SubResource("AtlasTexture_sh4dp")
+buff_multiplicador = 1.0
+metadata/_custom_type_script = "uid://gocwvwp6h60f"

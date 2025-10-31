@@ -1,0 +1,180 @@
+[gd_scene load_steps=8 format=3 uid="uid://ben805jqlnalo"]
+
+[ext_resource type="Texture2D" uid="uid://bx3qso0n1ng8v" path="res://Assets/Sprites/spritesheet-coisas.png" id="1_7stj6"]
+[ext_resource type="Script" uid="uid://bi3lcgrmn2vrg" path="res://Mundo/Scripts/tutorial.gd" id="1_ur0l0"]
+[ext_resource type="FontFile" uid="uid://buq8ceijr7g0i" path="res://Assets/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_exsud"]
+[ext_resource type="Texture2D" uid="uid://da34a6wawskx3" path="res://Assets/Sprites/Sprite sheet for Basic Pack.png" id="3_vuq58"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cv4l4"]
+texture = ExtResource("1_7stj6")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(384, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sn1om"]
+texture = ExtResource("3_vuq58")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+region_rect = Rect2(642, 169, 28, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8v6w"]
+texture = ExtResource("3_vuq58")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+region_rect = Rect2(578, 169, 28, 14)
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ur0l0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_cv4l4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+custom_minimum_size = Vector2(250, 520)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 39
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Bem vindo a Fatec Tycoon
+Seu objetivo e ganhar o máximo 
+de dinheiro sem falir."
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Construa Prédios que dão mais
+dinheiros e bônus para o seu 
+negócio. "
+
+[node name="Label3" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Foque nos pontos de Conheci
+mento, ele aumenta sua renda 
+em porcentagem!!"
+
+[node name="Label4" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Seu prédio principal é a propria
+FATEC, melhore sua renda e 
+construa prédios!!"
+
+[node name="Button" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_exsud")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_sn1om")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sn1om")
+theme_override_styles/normal = SubResource("StyleBoxTexture_w8v6w")
+text = "Fechar"
+
+[node name="TextureRect3" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_cv4l4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect3"]
+custom_minimum_size = Vector2(250, 520)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "Topo da tela: indicadores que 
+mostram o tempo de ciclo,
+dinheiro e pontos de conhe
+cimento. Junto com 4 botões, o
+mais a esquerda mostra o
+status de bônus que voce possui
+e suas despesas, logo após o 
+outro botão acelera o tempo, o 
+seguinte pausa e o ultimo abre
+este menu."
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect3/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Terras marrons: são lugares de
+compra de prédios, ao clicar 
+abre um menu de compra, cada 
+prédio mostra seus detalhes no
+quadrado a esquerda, ao clicar,
+se tiver dinheiro suficiente você 
+compra o prédio. "
+
+[node name="Label3" type="Label" parent="HBoxContainer/TextureRect3/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Esqueda: um único botão de 
+que abre uma loja de upgrade 
+mais caros e melhores."
+
+[connection signal="pressed" from="HBoxContainer/TextureRect/VBoxContainer/Button" to="." method="_on_button_pressed"]

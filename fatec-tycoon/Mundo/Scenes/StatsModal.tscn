@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://bysious0rmr7m"]
+
+[ext_resource type="Script" uid="uid://djudt6a64s7tm" path="res://Mundo/Scripts/stats_modal.gd" id="1_tanps"]
+[ext_resource type="FontFile" uid="uid://buq8ceijr7g0i" path="res://Assets/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_77h73"]
+[ext_resource type="Texture2D" uid="uid://da34a6wawskx3" path="res://Assets/Sprites/Sprite sheet for Basic Pack.png" id="2_a4dxm"]
+[ext_resource type="Texture2D" uid="uid://bx3qso0n1ng8v" path="res://Assets/Sprites/spritesheet-coisas.png" id="2_mb3xj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iroc6"]
+atlas = ExtResource("2_mb3xj")
+region = Rect2(192, 432, 64, 65)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tanps"]
+texture = ExtResource("2_a4dxm")
+region_rect = Rect2(467, 164, 10, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4dxm"]
+texture = ExtResource("2_a4dxm")
+region_rect = Rect2(451, 162, 10, 12)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tanps")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_iroc6")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 62
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Titulo" type="Label" parent="TextureRect/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_77h73")
+
+[node name="VerbaBase" type="Label" parent="TextureRect/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_77h73")
+
+[node name="GanhoConhecimento" type="Label" parent="TextureRect/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_77h73")
+
+[node name="Despesas" type="Label" parent="TextureRect/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_77h73")
+
+[node name="Fechar" type="Button" parent="TextureRect/VBoxContainer2"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_tanps")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tanps")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a4dxm")

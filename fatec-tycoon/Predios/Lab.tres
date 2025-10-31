@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="PredioData" load_steps=4 format=3 uid="uid://bmpe33bh014rh"]
+
+[ext_resource type="Script" uid="uid://gocwvwp6h60f" path="res://Predios/predio_resource_data.gd" id="1_gxplj"]
+[ext_resource type="Texture2D" uid="uid://iactduhjdfse" path="res://Assets/Sprites/CP_V1.1.0_nyknck/CP_V1.0.4_nyknck/CP_V1.0.4.png" id="2_oxl1t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh4dp"]
+atlas = ExtResource("2_oxl1t")
+region = Rect2(112, 33, 48, 95)
+
+[resource]
+script = ExtResource("1_gxplj")
+nome = "Laborátorio de Informática"
+preco = 900.0
+descricao = "Laborátorio.
+Preco: 900
+Buff: x4 de 
+conhecimento a
+mais por ciclo 
+e 125% a mais de verba base.
+Despesas: 270
+"
+texture = SubResource("AtlasTexture_sh4dp")
+buff_multiplicador = 2.5
+metadata/_custom_type_script = "uid://gocwvwp6h60f"

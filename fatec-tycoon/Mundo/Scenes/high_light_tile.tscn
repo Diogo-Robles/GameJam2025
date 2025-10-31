@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0jpxd15ush3g"]
+
+[ext_resource type="Script" uid="uid://drrap7ujaxpiu" path="res://Mundo/Scripts/high_light_tile.gd" id="1_tw1yx"]
+[ext_resource type="Texture2D" uid="uid://b4y5cawfwpl7x" path="res://Assets/Sprites/panel_border_grey.png" id="2_1osxb"]
+
+[node name="HighLightTile" type="Node2D"]
+script = ExtResource("1_tw1yx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(17, 16)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1osxb")

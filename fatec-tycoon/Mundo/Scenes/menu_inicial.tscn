@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=3 uid="uid://b80sfp0ii3nen"]
+
+[ext_resource type="Script" uid="uid://ccnsujkr0p5" path="res://menu_incial.gd" id="1_81o0m"]
+[ext_resource type="Texture2D" uid="uid://bdm3njrur0esn" path="res://Assets/Sprites/Captura de tela 2025-10-25 001017.png" id="2_jie62"]
+[ext_resource type="Texture2D" uid="uid://bx3qso0n1ng8v" path="res://Assets/Sprites/spritesheet-coisas.png" id="3_jij32"]
+[ext_resource type="Texture2D" uid="uid://da34a6wawskx3" path="res://Assets/Sprites/Sprite sheet for Basic Pack.png" id="4_yq77q"]
+[ext_resource type="FontFile" uid="uid://buq8ceijr7g0i" path="res://Assets/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="5_jie62"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dwyn5"]
+texture = ExtResource("2_jie62")
+modulate_color = Color(0.382691, 0.308204, 0.263366, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36rmv"]
+atlas = ExtResource("3_jij32")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bw025"]
+texture = ExtResource("4_yq77q")
+region_rect = Rect2(275, 276, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knab2"]
+texture = ExtResource("4_yq77q")
+region_rect = Rect2(275, 242, 90, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jqxh"]
+texture = ExtResource("3_jij32")
+region_rect = Rect2(96, 576, 48, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqvre"]
+texture = ExtResource("3_jij32")
+region_rect = Rect2(0, 576, 48, 24)
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_81o0m")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dwyn5")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_36rmv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -54.0
+offset_right = 75.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="play_button" type="Button" parent="Panel/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_bw025")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bw025")
+theme_override_styles/normal = SubResource("StyleBoxTexture_knab2")
+
+[node name="close_button" type="Button" parent="Panel/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_5jqxh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jqxh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gqvre")
+
+[node name="titulo" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -229.0
+offset_top = 96.0
+offset_right = 230.0
+offset_bottom = 197.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_jie62")
+theme_override_font_sizes/font_size = 90
+text = "Fatec Tycoon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/TextureRect/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/VBoxContainer/close_button" to="." method="_on_close_button_pressed"]

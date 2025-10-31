@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="PredioData" load_steps=4 format=3 uid="uid://7icxs4ygarky"]
+
+[ext_resource type="Script" uid="uid://gocwvwp6h60f" path="res://Predios/predio_resource_data.gd" id="1_d7vax"]
+[ext_resource type="Texture2D" uid="uid://bx3qso0n1ng8v" path="res://Assets/Sprites/spritesheet-coisas.png" id="2_u14p4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyjji"]
+atlas = ExtResource("2_u14p4")
+region = Rect2(448, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_d7vax")
+nome = "Quadra"
+preco = 1200.0
+descricao = "Quadra.
+Preco: 2000
+Buff: Da 200% a maid de
+verba base.
+Dsspesas: 360"
+texture = SubResource("AtlasTexture_qyjji")
+buff_multiplicador = 2.0
+metadata/_custom_type_script = "uid://gocwvwp6h60f"

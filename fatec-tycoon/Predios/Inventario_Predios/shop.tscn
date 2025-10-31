@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://dk0e0nbjoub0d"]
+
+[ext_resource type="Script" uid="uid://2yvj1cgne22m" path="res://Predios/Inventario_Predios/shop.gd" id="1_0q4rf"]
+[ext_resource type="PackedScene" uid="uid://fdg4kb3s826e" path="res://Predios/Inventario_Predios/PredioSlot.tscn" id="1_d11yn"]
+[ext_resource type="Script" uid="uid://t6rcrylp2yok" path="res://Predios/Inventario_Predios/inventory_ui.gd" id="2_dgt7x"]
+[ext_resource type="Texture2D" uid="uid://bcuxu1av86eq3" path="res://Assets/Sprites/panel_brown.png" id="2_jjlic"]
+[ext_resource type="Resource" uid="uid://b6hv2552s4ck4" path="res://Predios/Inventario_Predios/construcoes_disponiveis.tres" id="3_jjlic"]
+[ext_resource type="Texture2D" uid="uid://da34a6wawskx3" path="res://Assets/Sprites/Sprite sheet for Basic Pack.png" id="6_uv2ya"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv2ya"]
+texture = ExtResource("2_jjlic")
+texture_margin_left = 15.0
+texture_margin_top = 14.0
+texture_margin_right = 15.0
+texture_margin_bottom = 14.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjlic"]
+texture = ExtResource("2_jjlic")
+expand_margin_left = 45.0
+expand_margin_top = 32.0
+expand_margin_right = 32.0
+expand_margin_bottom = 32.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1ijf"]
+texture = ExtResource("6_uv2ya")
+region_rect = Rect2(467, 164, 10, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1flf3"]
+texture = ExtResource("6_uv2ya")
+region_rect = Rect2(451, 162, 10, 12)
+
+[node name="Control" type="Control"]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0q4rf")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -112.0
+offset_right = 114.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uv2ya")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+light_mask = 3
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+columns = 5
+script = ExtResource("2_dgt7x")
+data = ExtResource("3_jjlic")
+
+[node name="PredioSlot" parent="PanelContainer/GridContainer" instance=ExtResource("1_d11yn")]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PredioSlot2" parent="PanelContainer/GridContainer" instance=ExtResource("1_d11yn")]
+z_index = 1
+layout_mode = 2
+
+[node name="PredioSlot3" parent="PanelContainer/GridContainer" instance=ExtResource("1_d11yn")]
+z_index = 1
+layout_mode = 2
+
+[node name="Descrição" type="Label" parent="."]
+custom_minimum_size = Vector2(144, 128)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -277.0
+offset_top = -245.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_jjlic")
+
+[node name="close_menu_shop_button" type="Button" parent="."]
+z_index = 3
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 30.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_w1ijf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w1ijf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1flf3")
+
+[connection signal="pressed" from="close_menu_shop_button" to="." method="_on_close_menu_shop_button_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://fdg4kb3s826e"]
+
+[ext_resource type="Script" uid="uid://rfcphj7fitds" path="res://Predios/Inventario_Predios/predio_slot.gd" id="1_i60a8"]
+[ext_resource type="Texture2D" uid="uid://iactduhjdfse" path="res://Assets/Sprites/CP_V1.1.0_nyknck/CP_V1.0.4_nyknck/CP_V1.0.4.png" id="1_s3lbg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijduk"]
+bg_color = Color(0.8913, 0.851825, 0.669904, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i60a8"]
+atlas = ExtResource("1_s3lbg")
+region = Rect2(16, 278, 64, 42)
+
+[node name="PredioSlot" type="Button"]
+custom_minimum_size = Vector2(112, 112)
+offset_right = 112.0
+offset_bottom = 112.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ijduk")
+text = "item"
+script = ExtResource("1_i60a8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 112.0
+texture = SubResource("AtlasTexture_i60a8")
+stretch_mode = 3
